@@ -21,28 +21,6 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 
-
-intents:
-  - saludo:
-    use_entities: false
-  - despedida:
-    use_entities: false
-  - afirmar:
-    use_entities: true
-  - negar:
-    use_entities: true
-  - stop:
-    use_entities: true
-  - bot_challenge:
-    use_entities: false
-  - proporcionar_nombre:
-    use_entities: true
-  - interes_materias:
-    use_entities: true
-  - informar:
-    use_entities: true
-
-
 entities:
   - nombre
   - asignatura
@@ -66,7 +44,19 @@ slots:
     influence_conversation: true
     mappings:
     - type: from_entity
-      ntity: tipo_dato
+      entity: tipo_dato
+
+intents:
+- saludo
+- despedida
+- afirmar
+- negar
+- stop
+- bot_challenge
+- proporcionar_nombre
+- interes_materias
+- informar
+
 
 forms:
   asignatura_tipo_dato_form:

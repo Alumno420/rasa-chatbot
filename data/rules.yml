@@ -12,11 +12,6 @@ rules:
     - intent: bot_challenge
     - action: utter_iamabot
 
-- rule: Pedir al usuario que repita ante baja confianza en el NLU
-  steps:
-    - intent: nlu_fallback
-    - action: utter_repite
-
 - rule: Activar el formulario
   steps:
     - or:
