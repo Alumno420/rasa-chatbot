@@ -1,0 +1,148 @@
+# Aquí se especifican los intents, entities, spaces y actions que 
+# se han deifinido que el chatbot conoce y maneja
+#
+# intents: se indican las intenciones definidas en el fichero nlu.md, 
+# representan las posibles peticiones que puede hacer el usuario
+# entities: variables que se van modificando conforme avanza el 
+# diálogo entre el usuario y el chatbot.
+# slots: se utilizan para almacenar información proporcionada por el 
+# usuario. Cada slot definido en domain.yml consiste en una clave a la 
+# cual se le asignará posteriormente un valor determinado.
+# responses: en este apartado se encuentran mensajes que le aparecerán al usuario.
+# actions: acciones ejecutadas por el chatbot como respuesta al mensaje del usuario.
+# forms: formularios utilizados por el chatbot
+
+version: "3.1"
+
+config:
+  store_entities_as_slots: true
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+
+intents:
+  - saludo:
+    use_entities: false
+  - despedida:
+    use_entities: false
+  - afirmar:
+    use_entities: true
+  - negar:
+    use_entities: true
+  - stop:
+    use_entities: true
+  - bot_challenge:
+    use_entities: false
+  - proporcionar_nombre:
+    use_entities: true
+  - interes_materias:
+    use_entities: true
+  - informar:
+    use_entities: true
+
+
+entities:
+  - nombre
+  - asignatura
+  - tipo_dato
+
+
+slots:
+  nombre:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: nombre
+  asignatura:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: asignatura
+  tipo_dato:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      ntity: tipo_dato
+
+forms:
+  asignatura_tipo_dato_form:
+    required_slots:
+      - asignatura
+      - tipo_dato
+
+actions:
+  - action_default_fallback
+  - validate_asignatura_tipo_dato_form
+  - action_deactivate_loop
+
+responses:
+  utter_saludo:
+    - text: "Hola soy un Chatbot creado para informarle sobre las asignaturas. Primero, ¿cómo se llama?"
+    - text: ¡Hola! Soy un Chatbot especializado en brindar información sobre las asignaturas. Antes de comenzar, ¿me podría decir su nombre?
+    - text: ¡Saludos! Soy un Chatbot diseñado para ayudarle con información sobre las asignaturas. Antes de empezar, ¿me gustaría saber cómo se llama?
+    - text: Bienvenido al Chatbot informativo sobre las asignaturas. Antes de continuar, ¿podría proporcionarme su nombre?
+    - text: ¡Hola! Soy un Chatbot especializado en brindar información sobre las asignaturas. Antes de empezar, ¿podría decirme su nombre?
+    - text: Saludos. Soy un Chatbot creado para asistirle con información sobre las asignaturas. Antes de continuar, ¿podría proporcionarme su nombre?
+
+  utter_asignatura:
+    - text: "Hola, {nombre} ¿En qué asignatura puedo ayudarte? Puedes elegir entre Teoría del conocimiento, Matemáticas, Física o Tecnología."
+    - text: ¿En qué asignatura puedo ayudarte? Puedes elegir entre Teoría del conocimiento, Matemáticas, Física o Tecnología."
+    - text: ¡Hola, {nombre}! ¿En qué asignatura puedo brindarte ayuda? Puedes elegir entre Teoría del conocimiento, Matemáticas, Física o Tecnología.
+    - text: ¡Saludos! ¿En qué asignatura puedo asistirte? Puedes elegir entre Teoría del conocimiento, Matemáticas, Física o Tecnología.
+    - text: Hola, {nombre}, ¿necesitas ayuda en alguna asignatura en particular? Puedes elegir entre Teoría del conocimiento, Matemáticas, Física o Tecnología.
+    - text: ¡Hola! ¿En qué asignatura puedo ofrecerte ayuda? Tienes la opción de elegir entre Teoría del conocimiento, Matemáticas, Física o Tecnología.
+    - text: Saludos, {nombre}. ¿En qué asignatura puedo brindarte asistencia? Puedes seleccionar entre Teoría del conocimiento, Matemáticas, Física o Tecnología.
+
+  utter_despedida:
+    - text: Adiós, {nombre}. ¡Gracias por usar este chatbot!
+    - text: Adiós. ¡Gracias por usar este chatbot!
+    - text: ¡Hasta luego! ¡Gracias por utilizar este chatbot!
+    - text: Adiós, que tengas un buen día. ¡Gracias por utilizar este chatbot!
+    - text: Espero haberte sido de ayuda. ¡Adiós y gracias por usar este chatbot!
+    - text: Gracias {nombre} por utilizar este chatbot. ¡Que tengas un excelente día!
+
+  utter_iamabot:
+    - text: "Soy un bot, potenciado por Rasa."
+    - text: ¡Soy un bot desarrollado con la tecnología de Rasa!
+    - text: Soy un bot creado con Rasa, listo para ayudarte.
+    - text: Soy un bot impulsado por Rasa, aquí para asistirte.
+    - text: ¡Hola! Soy un bot alimentado por Rasa.
+
+  utter_repite:
+    - text: "No le he entendido, por favor responda a mi cuestión."
+    - text: Disculpe, no le he entendido. Por favor, responda a mi pregunta.
+    - text: Lo siento, no he comprendido su mensaje. ¿Podría por favor repetir su consulta?
+    - text: Perdón, no he entendido su respuesta. Le agradecería que repita su pregunta.
+    - text: Disculpe, parece que no he entendido correctamente. ¿Podría repetir su cuestión, por favor?
+    - text: Lamentablemente, no he logrado entender su mensaje. Le ruego que vuelva a plantear su pregunta.
+  
+  utter_default:
+    - text: "Lo siento, no lo he entendido. ¿Podría decirlo de otra manera?"
+    - text: Mis disculpas, no he logrado entenderlo. ¿Podría reformular su pregunta, por favor?
+    - text: Lo siento, no pude comprender su consulta. ¿Podría expresarlo de otra manera?
+    - text: Disculpe, no he entendido su mensaje. ¿Podría reformularlo para que pueda ayudarle mejor?
+    - text: Perdón, no pude captar su mensaje. ¿Podría expresarlo de otra manera, por favor?
+    - text: Lamentablemente, no he logrado comprenderlo. ¿Podría decirlo de otra forma para que pueda asistirle adecuadamente?
+
+  utter_ask_continue:
+    - text: ¿Estás seguro de que quieres para abortar el formulario?
+    - text: ¿Estás seguro de que quieres dejar la conversación?
+
+  utter_ask_asignatura:
+    - text: ¿Qué asignatura quieres consultar? De momento puedo informarte sobre matemáticas, física y tecnología.
+    - text: ¿Qué asignatura le interesa? De momento puedo informarte sobre matemáticas, física y tecnología.
+  
+  utter_ask_tipo_dato:
+    - text: ¿Qué tipo de datos quieres que te cuente sobre {asignatura}? Cuento con información de {asignatura}, sobre los profesores y sobre los exámenes.
+
+  utter_submit:
+    - text: De eso sí que te puedo hablar.
+    - text: Tengo información de ello.
+    - text: Ok, muy bien.
+
+  utter_asignatura_tipo_dato_slots:
+    - text: Te presento la información de {tipo_dato} de la materia {asignatura}

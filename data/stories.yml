@@ -1,0 +1,177 @@
+# Distintos escenarios que pueden ocurrir
+# Contiene un nombre, unos intents del usuario con sus correspondientes
+# y las actions que ejecuta el chatbot cuando se dan
+
+version: "3.1"
+
+stories:
+
+- story: Saludo y solicitud del nombre y de la asignatura y tipo de dato
+  steps:
+    
+    - intent: saludo
+    - action: utter_saludo
+    - intent: proporcionar_nombre
+    - slot_was_set:
+      - nombre: Juan
+    - action: utter_ask_asignatura
+    - or:
+      - intent: informar
+      - intent: interes_materias
+    - action: asignatura_tipo_dato_form
+    - active_loop: asignatura_tipo_dato_form
+    - slot_was_set:
+      - requested_slot: asignatura
+    - slot_was_set:
+      - asignatura: matemáticas
+    - slot_was_set:
+      - requested_slot: tipo_dato
+    - slot_was_set:
+      - tipo_dato: profesores
+    - slot_was_set:
+      - requested_slot: null
+    - active_loop: null
+    - action: utter_submit
+    - action: utter_asignatura_tipo_dato_slots
+    - intent: despedida
+    - action: utter_despedida
+  
+- story: El usuario interrumpe el form y no quiere continuar
+  steps:
+    - intent: saludo
+    - action: utter_saludo
+    - intent: proporcionar_nombre
+    - slot_was_set:
+      - nombre: Marcos
+    - action: utter_ask_asignatura
+    - or:
+      - intent: informar
+      - intent: interes_materias
+    - action: asignatura_tipo_dato_form
+    - active_loop: asignatura_tipo_dato_form
+    - intent: stop
+    - action: utter_ask_continue
+    - or:
+      - intent: stop
+      - intent: afirmar
+    - action: action_deactivate_loop
+    - active_loop: action_deactivate_loop
+    - active_loop: null
+
+- story: historia interactiva 2
+  steps:
+    - intent: saludo
+    - action: utter_saludo
+    - intent: proporcionar_nombre
+    - slot_was_set:
+      - nombre: Marcos
+    - action: utter_ask_asignatura
+    - or:
+      - intent: informar
+      - intent: interes_materias
+    - action: asignatura_tipo_dato_form
+    - active_loop: asignatura_tipo_dato_form
+    - slot_was_set:
+      - requested_slot: asignatura
+    - intent: stop
+    - action: utter_ask_continue
+    - or:
+      - intent: stop
+      - intent: afirmar
+    - action: action_deactivate_loop
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - intent: despedida
+    - action: utter_despedida
+
+- story: historia interactiva 3
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: informar
+  - action: asignatura_tipo_dato_form
+  - active_loop: asignatura_tipo_dato_form
+  - slot_was_set:
+    - requested_slot: asignatura
+  - slot_was_set:
+    - asignatura: física
+  - slot_was_set:
+    - requested_slot: tipo_dato
+  - intent: stop
+  - action: utter_ask_continue
+  - or:
+    - intent: afirmar
+    - intent: stop
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - intent: despedida
+  - action: utter_despedida
+
+- story: historia interactiva 4
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: interes_materias
+  - action: asignatura_tipo_dato_form
+  - active_loop: asignatura_tipo_dato_form
+  - slot_was_set:
+    - requested_slot: asignatura
+  - intent: stop
+  - action: utter_ask_continue
+  - intent: afirmar
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - or:
+    - intent: interes_materias
+    - intent: informar
+  - action: asignatura_tipo_dato_form
+  - active_loop: asignatura_tipo_dato_form
+  - slot_was_set:
+    - requested_slot: asignatura
+  - slot_was_set:
+    - asignatura: tecnología
+  - slot_was_set:
+    - asignatura: matemáticas
+  - slot_was_set:
+    - requested_slot: tipo_dato
+  - slot_was_set:
+    - tipo_dato: profesores
+  - slot_was_set:
+    - tipo_dato: exámenes
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_asignatura_tipo_dato_slots
+
+- story: historia interactiva 5
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: interes_materias
+  - action: asignatura_tipo_dato_form
+  - active_loop: asignatura_tipo_dato_form
+  - slot_was_set:
+    - requested_slot: asignatura
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - action: asignatura_tipo_dato_form
+  - slot_was_set:
+    - requested_slot: tipo_dato
+  - intent: stop
+  - action: utter_ask_continue
+  - intent: afirmar
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - intent: despedida
+  - action: utter_despedida
+
+
+

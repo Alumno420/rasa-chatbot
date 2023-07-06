@@ -1,0 +1,390 @@
+version: "3.1"
+nlu:
+- intent: saludo
+  examples: |
+    - hola
+    - buenos días
+    - buenas tardes
+    - buenas noches
+    - qué tal
+    - ¿cómo estás?
+    - ¿cómo estás hoy?
+    - ¿qué hay de nuevo?
+    - saludos
+    - hey
+    - ¿cómo va todo?
+    - qué onda
+    - ¿qué tal?
+    - ¿cómo va?
+    - buenas
+    - qué hubo
+    - ¿cómo estás?
+    - ¿cómo estás hoy?
+    - ¿qué cuentas?
+    - saludos
+    - buen día
+    - qué pasa
+    - buenas
+    - hi
+    - yo
+
+
+- intent: despedida
+  examples: |
+    - adiós
+    - hasta luego
+    - nos vemos
+    - chao
+    - hasta pronto
+    - hasta la próxima
+    - que tengas un buen día
+    - cuídate
+    - hasta mañana
+    - hasta otra
+    - que estés bien
+    - que te vaya bien
+    - que tengas una buena tarde
+    - que descanses
+    - que tengas un buen fin de semana
+    - que todo te vaya bien
+    - que tengas una excelente noche
+    - hasta luego
+    - que Dios te bendiga
+    - hasta la vista, baby
+    - que la fuerza te acompañe
+
+- intent: afirmar
+  examples: |
+    - sí
+    - correcto
+    - exacto
+    - claro
+    - por supuesto
+    - sin duda
+    - ciertamente
+    - absolutamente
+    - indudablemente
+    - efectivamente
+    - de acuerdo
+    - así es
+    - estoy de acuerdo
+    - por cierto
+    - desde luego
+    - por descontado
+    - evidentemente
+    - indiscutiblemente
+    - sin lugar a dudas
+    - no cabe duda
+    - sí, eso es correcto
+    - rotundamente
+    - sin lugar a discusión
+    - en efecto
+    - por supuesto que sí
+    - no hay ninguna duda al respecto
+    - estoy completamente de acuerdo
+    - así es, sin lugar a equivocaciones
+    - absolutamente seguro/a
+    - no me cabe la menor duda
+    - de eso no hay ninguna pregunta
+    - completamente convencido/a
+    - sin ninguna sombra de duda
+    - afirmativo
+    - sin ninguna vacilación
+    - no tengo ninguna objeción
+    - sin ninguna reserva
+    - puedo afirmar con toda certeza
+    - no hay ni una pizca de incertidumbre
+    - sin ninguna ambigüedad
+    - puedo asegurarte que es así
+  
+- intent: negar
+  examples: |
+    - not
+    - no
+    - de ninguna manera
+    - ni hablar
+    - en absoluto
+    - de ningún modo
+    - para nada
+    - jamás
+    - de eso nada
+    - imposible
+    - no es cierto
+    - no estoy de acuerdo
+    - de eso no se trata
+    - no pienso hacerlo
+    - no lo creo
+    - de ningún modo
+    - no cabe duda
+    - no way
+    - incorrecto
+    - ni por asomo
+    - en ningún caso
+    - mal
+    - no es así
+    - ni por casualidad
+    - en ninguna circunstancia
+    - para nada del mundo
+    - de ninguna manera posible
+    - en ningún momento
+    - no es posible
+    - no lo acepto
+    - ni en sueños
+    - en absoluto no
+    - de ningún modo imaginable
+    - no lo admito
+    - de eso ni hablar
+    - ni remotamente
+    - bajo ningún concepto
+    - no lo permito
+    - de ninguna forma
+    - no es factible
+    - en ningún sentido
+    - no lo consiento
+    - no existe tal cosa
+
+- intent: stop
+  examples: |
+    - para
+    - stop
+    - da igual
+    - quiero parar
+    - quiero que pares
+    - déjalo
+    - para el formulario
+    - abortar
+    - no quiero continuar
+    - detén
+    - finaliza
+    - basta
+    - termina
+    - cesa
+    - alto
+    - suspende
+    - ya no
+    - no más
+    - cancelar
+    - salir
+
+- intent: bot_challenge
+  examples: |
+    - ¿Eres un chatbot?
+    - ¿Eres un bot?
+    - ¿Eres una inteligencia artificial?
+    - ¿Eres una máquina?
+    - ¿Eres un programa de computadora?
+    - ¿Eres un robot?
+    - ¿Eres una entidad virtual?
+    - ¿Eres un sistema automatizado?
+    - ¿Eres una entidad no humana?
+    - ¿Eres un agente virtual?
+    - Estoy hablando con un chatbot, ¿verdad?
+    - Esto es obra de un bot, ¿cierto?
+    - Sé que eres un bot.
+    - Tienes que ser un chatbot.
+    - No creo que seas humano, eres un bot.
+    - Me di cuenta de que eres un robot.
+    - Vaya, un bot respondiendo.
+    - Está claro que eres una inteligencia artificial.
+    - Creo que estoy interactuando con un chatbot.
+    - No me engañas, eres un programa de IA.
+    - Solo un bot podría contestar así.
+    - No eres una persona, eres un bot.
+    - Estoy seguro/a de que no eres humano, eres un robot.
+    - Eres un chatbot muy inteligente.
+    - No puedes ser humano, eres un bot.
+    - Me sorprende lo bien que un bot puede responder.
+    - No hay manera de que seas una persona, eres un chatbot.
+    - ¿Puedes confirmar que eres un bot?
+    - Si eres un bot, dime.
+    - No esperaba encontrarme con un chatbot aquí.
+    - ¿Eres una máquina programada para responder?
+    - ¿Eres humano?
+    - ¿Eres una persona real?
+    - ¿Eres un ser humano?
+    - ¿Tienes conciencia como un humano?
+    - ¿Eres una inteligencia artificial o un humano?
+    - ¿Hay un humano detrás de tus respuestas?
+    - ¿Eres un programa o alguien real?
+    - ¿Estoy hablando con un humano o un bot?
+    - ¿Puedo estar seguro de que eres un ser humano?
+    - ¿Tienes emociones como los humanos?
+    - ¿Eres un humano o un programa de IA avanzado?
+    - ¿Eres una máquina o alguien con sentimientos?
+    - ¿Eres un humano disfrazado de chatbot?
+    - ¿Existe un ser humano detrás de esta conversación?
+    - ¿Eres una persona real o un algoritmo inteligente?
+    - ¿Puedes experimentar sensaciones como un ser humano?
+    - ¿Hay una persona controlando tus respuestas o eres automático?
+    - ¿Eres un ser humano auténtico o solo un programa de computadora?
+    - ¿Eres una inteligencia artificial imitando a un humano o un humano real?
+    - ¿Tienes un cuerpo físico como los seres humanos o solo existes digitalmente?
+
+- intent: interes_materias
+  examples: |
+    - ¿Cuáles son las asignaturas disponibles?
+    - Me gustaría saber más sobre las materias.
+    - ¿Qué asignaturas se ofrecen?
+    - ¿Qué asignaturas hay disponibles?
+    - Estoy interesado en conocer las opciones de asignaturas.
+    - ¿Cuál es el plan de estudios?
+    - Quisiera obtener información sobre las materias.
+    - ¿Cuáles son las asignaturas optativas disponibles?
+    - ¿Puedes darme detalles sobre las clases teóricas?
+    - Me gustaría saber más sobre las asignaturas
+    - ¿Cuáles son las asignaturas en el instituto?
+    - ¿Cuáles son las asignaturas en el centro?
+    - ¿Se ofrecen asignaturas?
+    - ¿Cuáles son las asignaturas más populares?
+    - ¿Cuáles son las asignaturas más actualizadas?
+
+- intent: informar
+  examples: |
+    - dame [información](tipo_dato)
+    - quiero saber los [profesores](tipo_dato)
+    - dame [información](tipo_dato) sobre [biología](asignatura)
+    - dame [información](tipo_dato) sobre [biología](asignatura)
+    - quiero saber los [profesores](tipo_dato) de [historia](asignatura)
+    - ¿Puedes darme una lista de los [docentes](tipo_dato) de [historia](asignatura)?
+    - ¿hay [exámenes] pasados de [matemáticas](asignatura)?
+    - ¿Puedes darme [información](tipo_dato) sobre el formato de los exámenes en [matemáticas](asignatura)?
+    - ahora quiero que me digas el número de [exámenes](tipo_dato) de [teoría del conocimiento](asignatura)
+    - ¿Cuántos [exámenes](tipo_dato) se realizan en [teoría del conocimiento](asignatura)?
+    - ¿Cuál es la cantidad de [exámenes](tipo_dato) que hay en [teoría del conocimiento](asignatura)?
+    - ¿Hay múltiples [exámenes](tipo_dato) en [teoría del conocimiento](asignatura)?
+    - ¿Puedes darme [información](tipo_dato) sobre la cantidad de [exámenes](tipo_dato) en [teoría del conocimiento](asignatura)?
+    - Necesito saber cuántas [evaluaciones](tipo_dato) hay en [teoría del conocimiento](asignatura).
+    - ¿Cuál es el número de [pruebas](tipo_dato) o [exámenes](tipo_dato) programados para [teoría del conocimiento](asignatura)?
+    - ¿Los [exámenes](tipo_dato) en [teoría del conocimiento](asignatura) son trimestrales, semestrales o anuales?
+    - ¿Cuántas [evaluaciones](tipo_dato) escritas hay en [teoría del conocimiento](asignatura)?
+    - ¿Puedes proporcionarme [información](tipo_dato) sobre el sistema de [evaluación](tipo_dato) y la cantidad de [exámenes](tipo_dato) en [teoría del conocimiento](asignatura)?
+    - ¿Cuántos [exámenes](tipo_dato) se consideran en la [calificación](tipo_dato) final de [teoría del conocimiento](asignatura)?
+    - ¿Puedes decirme los [requisitos](tipo_dato) para el curso de [física](asignatura)?
+    - ¿Cuáles son los [requisitos](tipo_dato) previos para tomar el curso de [física](asignatura)?
+    - Necesito [información](tipo_dato) sobre los [prerrequisitos](tipo_dato) de [física](asignatura).
+    - ¿Cuáles son las [condiciones](tipo_dato) necesarias para inscribirse en el curso de [física](asignatura)?
+    - ¿Puedes darme [detalles](tipo_dato) sobre los [requisitos](tipo_dato) de admisión para [física](asignatura)?
+    - ¿Hay algún curso [previo](tipo_dato) que deba completar antes de [física](asignatura)?
+    - ¿Existen [restricciones](tipo_dato) o recomendaciones en cuanto a los [conocimientos](tipo_dato) previos para cursar [física](asignatura)?
+    - ¿Cuáles son las [habilidades](tipo_dato) fundamentales necesarias para tener éxito en [física](asignatura)?
+    - ¿Puedes proporcionarme [información](tipo_dato)
+    - Necesito [información](tipo_dato) sobre los proyectos en [biología](asignatura)
+    - ¿Cuáles son los [objetivos](tipo_dato) de los proyectos en [biología](asignatura)?
+    - ¿Puedes darme más detalles sobre los proyectos realizados en [biología](asignatura)?
+    - ¿Cuál es la [duración](tipo_dato) típica de los proyectos en [biología](asignatura)?
+    - ¿Existen [requisitos](tipo_dato) específicos para participar en los proyectos de [biología](asignatura)?
+    - ¿Cuáles son los [resultados](tipo_dato) esperados de los proyectos en [biología](asignatura)?
+    - ¿Qué [recursos](tipo_dato) o [materiales](tipo_dato) se utilizan en los proyectos de [biología](asignatura)?
+    - ¿Cuál es la [metodología](tipo_dato) empleada en los proyectos de [biología](asignatura)?
+    - ¿Se realizan [presentaciones](tipo_dato) o [exposiciones](tipo_dato) de los proyectos en [biología](asignatura)?
+    - ¿Cuál es la [evaluación](tipo_dato) de los proyectos en [biología](asignatura)?
+    - ¿Hay [oportunidades](tipo_dato) de [colaboración](tipo_dato) en los proyectos de [biología](asignatura)?
+    - ¿Cuáles son los [requisitos](tipo_dato) para participar en los proyectos de [biología](asignatura)?
+    - ¿Qué [etapas](tipo_dato) o fases tiene un proyecto típico en [biología](asignatura)?
+    - ¿Cuál es el [alcance](tipo_dato) de los proyectos en [biología](asignatura)?
+    - ¿Hay [proyectos](tipo_dato) disponibles para estudiantes de [biología](asignatura)?
+    - ¿Existen [proyectos](tipo_dato) de investigación en [biología](asignatura)?
+    - ¿Los proyectos en [biología](asignatura) están relacionados con la [práctica](tipo_dato) o la [teoría](tipo_dato)?
+    - ¿Se pueden desarrollar [proyectos](tipo_dato) individuales o en [equipo](tipo_dato) en [biología](asignatura)?
+    - ¿Cuál es la [frecuencia](tipo_dato) de los proyectos en [biología](asignatura)?
+    - ¿Cuáles son las [habilidades](tipo_dato) requeridas para participar en los proyectos de [biología](asignatura)?
+    - necesito información sobre [teoría del conocimiento](asignatura)
+    - necesito ayuda con [matemáticas](asignatura)
+    - qué sabes de [física](asignatura)
+    - cuentame algo de [tecnología](asignatura)
+    - necesito ayuda con [matemáticas](asignatura)
+    - ¿Puedes explicarme un problema de [álgebra](asignatura)?
+    - ¿Sabes cómo resolver ecuaciones de segundo grado en [geometría](asignatura)?
+    - ¿Podrías ayudarme a entender el teorema de Pitágoras en [trigonometría](asignatura)?
+    - ¿Cuál es la fórmula para calcular áreas en [geometría](asignatura)?
+    - ¿Qué métodos se utilizan para derivar funciones en [cálculo](asignatura)?
+    - ¿Puedes darme ejemplos de operaciones con fracciones en [aritmética](asignatura)?
+    - ¿Cómo se resuelven problemas de probabilidad en [estadística](asignatura)?
+    - Necesito ayuda con los [conceptos](tipo_dato) de [geometría analítica](asignatura).
+    - ¿Qué estrategias se utilizan para resolver problemas de optimización en [cálculo](asignatura)?
+    - ¿Puedes explicarme el principio de conservación de la energía en [física](asignatura)?
+    - Tengo dudas en [biología](asignatura)
+    - ¿Cuáles son las [características](tipo_dato) principales de los seres vivos en [biología](asignatura)?
+    - ¿Puedes explicarme el ciclo celular en [genética](asignatura)?
+    - Necesito ayuda con la [clasificación](tipo_dato) de los seres vivos en [taxonomía](asignatura).
+    - ¿Cómo se realiza la fotosíntesis en [botánica](asignatura)?
+    - ¿Cuáles son los sistemas del cuerpo humano en [anatomía](asignatura)?
+    - ¿Podrías explicarme el proceso de respiración en [fisiología](asignatura)?
+    - ¿Cuál es la diferencia entre mitosis y meiosis en [biología celular](asignatura)?
+    - ¿Cómo se heredan los rasgos genéticos en [genética](asignatura)?
+    - Necesito comprender el sistema nervioso en [neurociencia](asignatura).
+    - ¿Puedes explicarme el ciclo del agua en [ecología](asignatura)?
+    - Quiero aprender más sobre [historia](asignatura)
+    - ¿Cuáles fueron las causas de la Segunda Guerra Mundial en [historia contemporánea](asignatura)?
+    - ¿Puedes hablarme sobre la Revolución Industrial en [historia económica](asignatura)?
+    - Necesito entender el [proceso](tipo_dato) de independencia de los países latinoamericanos en [historia de América Latina](asignatura).
+    - ¿Cuál fue el impacto de la Revolución Francesa en [historia mundial](asignatura)?
+    - ¿Cuáles fueron las principales civilizaciones de la antigua Grecia en [historia antigua](asignatura)?
+    - ¿Puedes explicarme la Guerra Fría en [historia contemporánea](asignatura)?
+    - ¿Qué ocurrió durante la Revolución Mexicana en [historia de México](asignatura)?
+    - Necesito [información](tipo_dato) sobre el Renacimiento en [historia del arte](asignatura).
+    - ¿Cuál fue el [proceso](tipo_dato) de descolonización en África en [historia colonial](asignatura)?
+    - ¿Puedes explicar la Revolución Industrial en Inglaterra en [historia económica](asignatura)?
+    - Tengo preguntas sobre [literatura](asignatura)
+    - ¿Cuáles son las [características](tipo_dato) del movimiento del Realismo en [literatura](asignatura)?
+    - ¿Puedes hablarme sobre la obra "Don Quijote de la Mancha" en [literatura española](asignatura)?
+    - Necesito entender el [concepto](tipo_dato) de "mimesis" en [teoría literaria](asignatura).
+    - ¿Cuál es el [significado](tipo_dato) de la "piedra filosofal" en [literatura fantástica](asignatura)?
+    - ¿Cuáles son los principales exponentes del Modernismo en [literatura hispanoamericana](asignatura)?
+    - ¿Puedes explicarme la [estructura](tipo_dato) de un soneto en [poesía](asignatura)?
+    - ¿Qué [características](tipo_dato) definen la novela gótica en [literatura](asignatura)?
+    - Necesito [información](tipo_dato) sobre la obra "Cien años de soledad" en [literatura latinoamericana](asignatura).
+    - ¿Cuál es la importancia del "stream of consciousness" en [narrativa](asignatura)?
+    - ¿Puedes explicar el [concepto](tipo_dato) de "intertextualidad" en [teoría literaria](asignatura)?
+
+
+- intent: proporcionar_nombre
+  examples: |
+    - mi nombre es [álvaro](nombre)
+    - soy [Jorge](nombre)
+    - mi nombre es [Juan](nombre)
+    - me llamo [María](nombre)
+    - soy [Luis](nombre)
+    - puedes llamarme [Ana](nombre)
+    - me dicen [Carlos](nombre)
+    - yo soy [Laura](nombre)
+    - mi nombre real es [Pedro](nombre)
+    - soy conocido como [Sofía](nombre)
+    - llámame [Diego](nombre)
+    - puedes referirte a mí como [Elena](nombre)
+    - me presento, [Miguel](nombre) es mi nombre
+    - mi nombre de pila es [Isabella](nombre)
+    - [Andrés](nombre), para servirte
+    - me conocen como [Valentina](nombre)
+    - puedes decirme [Javier](nombre)
+    - soy [Camila](nombre), mucho gusto
+    - me llamo [Gabriel](nombre), encantado
+    - [Paula](nombre), a tu disposición
+    - [Daniel](nombre) es como me llamo
+    - me presento, [Lucía](nombre) a tu servicio
+    - puedes referirte a mí como [Alejandro](nombre)
+    - soy [Valeria](nombre), mucho gusto
+    - me dicen [Juan Pablo](nombre)
+    - [Catalina](nombre) es mi nombre, ¿y tú?
+    - [Hugo](nombre) para servirte
+    - me presento, [Victoria](nombre) es mi nombre
+    - me puedes llamar [Ricardo](nombre)
+    - [Alejandra](nombre) a tu disposición
+    - soy [Fernando](nombre), mucho gusto
+    - puedes decirme [Marina](nombre)
+    - me conocen como [Sebastián](nombre)
+    - me llamo [Paola](nombre), encantada
+    - [Gonzalo](nombre) para servirte
+    - [Carolina](nombre) a tu servicio
+    - me presento, [Roberto](nombre) es mi nombre
+    - puedes referirte a mí como [Raquel](nombre)
+    - [Héctor](nombre), un placer conocerte
+    - me dicen [Beatriz](nombre)
+    - soy [Eduardo](nombre), encantado de conocerte
+    - [Constanza](nombre), mucho gusto
+    - puedes llamarme [Felipe](nombre)
+    - me llamo [Gisela](nombre), ¿y tú?
+    - [Samuel](nombre) para servirte
+    - [Marcela](nombre) a tu disposición
+    - me presento, [Pablo](nombre) es mi nombre
+    - puedes decirme [Julieta](nombre)
