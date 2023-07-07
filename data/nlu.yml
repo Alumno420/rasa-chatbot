@@ -240,6 +240,7 @@ nlu:
 
 - intent: informar
   examples: |
+    - me interesa la [música](asignatura) hay    
     - dame [información](tipo_dato)
     - quiero saber los [profesores](tipo_dato)
     - dame [información](tipo_dato) sobre [biología](asignatura)
