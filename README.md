@@ -1,7 +1,5 @@
 # rasa-chatbot: mi proyecto de STEMBach
 
-# Eichhörnchen Tissot Projekt
-
 ### Instalación:
 La última versión oficial de Rasa 6.0 tiene demasiados bugs, por lo que hay que empezar downgrading:
 
