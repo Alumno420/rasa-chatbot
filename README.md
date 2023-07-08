@@ -1,5 +1,5 @@
 # rasa-chatbot: mi proyecto de STEMBach
-
+![Demo Chatbot](https://raw.githubusercontent.com/Alumno420/rasa-chatbot/main/DEMO-chatbot.png)  
 ### Instalación:
 La última versión oficial de Rasa 6.0 tiene demasiados bugs, por lo que hay que empezar downgrading:
 
