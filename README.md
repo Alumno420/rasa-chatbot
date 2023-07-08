@@ -25,7 +25,7 @@ Viajar dentro del directorio del repositorio y ejecutar:
 
 `rasa shell` o `rasa interactive`
 
-### Árbol de archivos
+## Árbol de archivos
 - **actions**
 	- ***actions.py*** : este archivo tiene el código de las acciones custom para run(). Leer los comentarios en el archivo para conocer todo lo que hace.
    	- ***dataDB.xlsx*** : este archivo funciona como DB de la información que puede proporcionar el cahtbot. No se usó .csv por su falta de soporte por defecto de Unicode, ya que usa el formato ANSI.
@@ -80,7 +80,7 @@ Viajar dentro del directorio del repositorio y ejecutar:
 	- El chatbot se despide
 	
 ## Notas del útlimo release:
-# Beta v1.0: **Snowy Trainer**
+## Beta v1.0: **Snowy Trainer**
 ## Primer release beta del rasa-chatbot de mi trabajo de STEMBach.
 ### Novedades:
 - Creada una DB en formato `.xlsx` que contiene la información que responde el chatbot
