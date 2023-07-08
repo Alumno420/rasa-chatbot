@@ -74,7 +74,7 @@ Viajar dentro del directorio del repositorio y ejecutar:
 	- El chatbot muestra un mensaje con la información solicitada
 
 3. El usuario lo agradece
-	- El cahtbot dice `De nada`
+	- El chatbot dice `De nada`
 
 4. El usuario se despide
 	- El chatbot se despide
