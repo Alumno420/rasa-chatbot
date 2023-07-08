@@ -25,6 +25,7 @@ entities:
   - nombre
   - asignatura
   - tipo_dato
+  - submitted
 
 
 slots:
@@ -34,28 +35,29 @@ slots:
     - type: from_entity
       entity: nombre
   asignatura:
-    type: text
+    type: list
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: asignatura
   tipo_dato:
-    type: text
+    type: list
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: tipo_dato
 
 intents:
-- saludo
-- despedida
-- afirmar
-- negar
-- stop
-- bot_challenge
-- proporcionar_nombre
-- interes_materias
-- informar
+  - saludo
+  - despedida
+  - afirmar
+  - negar
+  - stop
+  - bot_challenge
+  - proporcionar_nombre
+  - interes_materias
+  - informar
+  - agradecer
 
 
 forms:
@@ -65,11 +67,19 @@ forms:
       - tipo_dato
 
 actions:
+  - utter_ask_asignatura
+#  - utter_submit
   - action_default_fallback
   - validate_asignatura_tipo_dato_form
   - action_deactivate_loop
 
 responses:
+  utter_de_nada:
+    - text: De nada {nombre}.
+    - text: De nada.
+    - text: Un placer haberle ayudado, {nombre}.
+    - text: Un placee haberle ayudado.
+
   utter_saludo:
     - text: "Hola soy un Chatbot creado para informarle sobre las asignaturas. Primero, ¿cómo se llama?"
     - text: ¡Hola! Soy un Chatbot especializado en brindar información sobre las asignaturas. Antes de comenzar, ¿me podría decir su nombre?
@@ -129,10 +139,9 @@ responses:
   utter_ask_tipo_dato:
     - text: ¿Qué tipo de datos quieres que te cuente sobre {asignatura}? Cuento con información de {asignatura}, sobre los profesores y sobre los exámenes.
 
-  utter_submit:
-    - text: De eso sí que te puedo hablar.
-    - text: Tengo información de ello.
-    - text: Ok, muy bien.
+#  utter_submit:
+#    - text: De eso sí que te puedo hablar.
+#    - text: Tengo información de ello.
+#    - text: Ok, muy bien.
 
-  utter_asignatura_tipo_dato_slots:
-    - text: Te presento la información de {tipo_dato} de la materia {asignatura}
+
