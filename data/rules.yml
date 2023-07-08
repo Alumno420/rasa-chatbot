@@ -12,6 +12,11 @@ rules:
     - intent: bot_challenge
     - action: utter_iamabot
 
+- rule: Decir de nada si el usuario dice 'gracias'
+  steps:
+    - intent: agradecer
+    - action: utter_de_nada
+
 - rule: Activar el formulario
   steps:
     - or:
@@ -28,8 +33,7 @@ rules:
     - active_loop: null
     - slot_was_set:
       - requested_slot: null
-    - action: utter_submit
-    - action: utter_asignatura_tipo_dato_slots
+    #- action: utter_submit
   
 - rule: Interrupción del formulario
   condition:

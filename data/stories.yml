@@ -6,6 +6,33 @@ version: "3.1"
 
 stories:
 
+- story: Propporciona nombre directamente
+  steps:
+    - intent: proporcionar_nombre
+    - slot_was_set:
+      - nombre: Álvaro
+    - action: utter_ask_asignatura
+    - or:
+      - intent: informar
+      - intent: interes_materias
+    - action: asignatura_tipo_dato_form
+    - active_loop: asignatura_tipo_dato_form
+    - slot_was_set:
+      - requested_slot: asignatura
+    - slot_was_set:
+      - asignatura: matemáticas
+    - slot_was_set:
+      - requested_slot: tipo_dato
+    - slot_was_set:
+      - tipo_dato: profesores
+    - slot_was_set:
+      - requested_slot: null
+    - active_loop: null
+    #- action: utter_submit
+    - intent: despedida
+    - action: utter_despedida
+
+
 - story: Saludo y solicitud del nombre y de la asignatura y tipo de dato
   steps:
     
@@ -31,8 +58,7 @@ stories:
     - slot_was_set:
       - requested_slot: null
     - active_loop: null
-    - action: utter_submit
-    - action: utter_asignatura_tipo_dato_slots
+    #- action: utter_submit
     - intent: despedida
     - action: utter_despedida
   
@@ -146,8 +172,7 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
-  - action: utter_submit
-  - action: utter_asignatura_tipo_dato_slots
+  #- action: utter_submit
 
 - story: historia interactiva 5
   steps:
@@ -173,5 +198,360 @@ stories:
   - intent: despedida
   - action: utter_despedida
 
+- story: historia interactiva 6
+  steps:
+  - intent: proporcionar_nombre
+    entities:
+    - nombre: álvaro
+  - slot_was_set:
+    - nombre: álvaro
+  - action: utter_ask_asignatura
+  - intent: informar
+    entities:
+    - tipo_dato: profesores
+    - asignatura: matemáticas
+  - action: asignatura_tipo_dato_form
+  - active_loop: asignatura_tipo_dato_form
+  - slot_was_set:
+    - asignatura:
+      - matemáticas
+  - slot_was_set:
+    - tipo_dato:
+      - profesores
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  #- action: utter_submit
+
+- story: interactive_story_1
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: proporcionar_nombre
+    entities:
+    - nombre: alejandro
+  - slot_was_set:
+    - nombre: alejandro
+  - action: utter_ask_asignatura
+  - intent: informar
+    entities:
+    - tipo_dato: resumen
+    - asignatura: tecnología
+    - tipo_dato: resumen
+    - asignatura: tecnología
+  - slot_was_set:
+    - asignatura:
+      - tecnología
+      - tecnología
+  - slot_was_set:
+    - tipo_dato:
+      - resumen
+      - resumen
+  - action: asignatura_tipo_dato_form
+  - active_loop: asignatura_tipo_dato_form
+  - slot_was_set:
+    - asignatura:
+      - tecnologia
+  - slot_was_set:
+    - tipo_dato: null
+  - slot_was_set:
+    - requested_slot: tipo_dato
+  - slot_was_set:
+    - asignatura:
+      - tecnología
+      - tecnología
+  - slot_was_set:
+    - tipo_dato:
+      - resumen
+      - resumen
+  - slot_was_set:
+    - asignatura:
+      - tecnologia
+  - slot_was_set:
+    - tipo_dato:
+      - resumen
+      - resumen
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - intent: informar
+    entities:
+    - tipo_dato: resumen
+    - asignatura: tecnología
+    - tipo_dato: resumen
+    - asignatura: tecnología
+  - slot_was_set:
+    - asignatura:
+      - tecnología
+      - tecnología
+  - slot_was_set:
+    - tipo_dato:
+      - resumen
+      - resumen
+  - action: asignatura_tipo_dato_form
+  - active_loop: asignatura_tipo_dato_form
+  - slot_was_set:
+    - asignatura:
+      - tecnologia
+  - slot_was_set:
+    - tipo_dato:
+      - resumen
+      - resumen
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - intent: informar
+    entities:
+    - tipo_dato: resumen
+    - asignatura: tecnología
+    - tipo_dato: resumen
+    - asignatura: tecnología
+  - slot_was_set:
+    - asignatura:
+      - tecnología
+      - tecnología
+  - slot_was_set:
+    - tipo_dato:
+      - resumen
+      - resumen
+  - action: asignatura_tipo_dato_form
+  - active_loop: asignatura_tipo_dato_form
+  - slot_was_set:
+    - asignatura:
+      - tecnologia
+  - slot_was_set:
+    - tipo_dato:
+      - resumen
+      - resumen
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - intent: despedida
+  - action: utter_despedida
 
 
+- story: interactive_story_1
+  steps:
+  - intent: proporcionar_nombre
+    entities:
+    - nombre: álvaro
+  - slot_was_set:
+    - nombre: álvaro
+  - action: utter_ask_asignatura
+  - intent: informar
+    entities:
+    - tipo_dato: exámenes
+    - asignatura: física
+    - tipo_dato: exámenes
+    - asignatura: física
+  - slot_was_set:
+    - asignatura:
+      - física
+      - física
+  - slot_was_set:
+    - tipo_dato:
+      - exámenes
+      - exámenes
+  - action: asignatura_tipo_dato_form
+  - active_loop: asignatura_tipo_dato_form
+  - slot_was_set:
+    - asignatura:
+      - exámenes
+  - slot_was_set:
+    - tipo_dato:
+      - exámenes
+      - exámenes
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+
+- story: interactive_story_1
+  steps:
+  - intent: proporcionar_nombre
+    entities:
+    - nombre: Álvaro
+  - slot_was_set:
+    - nombre: Álvaro
+  - action: utter_ask_asignatura
+  - intent: informar
+    entities:
+    - tipo_dato: profesores
+    - asignatura: matemáticas
+    - tipo_dato: profesores
+    - asignatura: matemáticas
+  - slot_was_set:
+    - asignatura:
+      - matemáticas
+      - matemáticas
+  - slot_was_set:
+    - tipo_dato:
+      - profesores
+      - profesores
+  - action: asignatura_tipo_dato_form
+  - active_loop: asignatura_tipo_dato_form
+  - slot_was_set:
+    - asignatura:
+      - profesores
+  - slot_was_set:
+    - tipo_dato:
+      - profesores
+      - profesores
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+
+- story: interactive_story_1
+  steps:
+  - intent: proporcionar_nombre
+    entities:
+    - nombre: ÁLvaro
+  - slot_was_set:
+    - nombre: ÁLvaro
+  - action: utter_ask_asignatura
+  - intent: informar
+    entities:
+    - tipo_dato: profesores
+    - asignatura: física
+    - tipo_dato: profesores
+    - asignatura: física
+  - slot_was_set:
+    - asignatura:
+      - física
+      - física
+  - slot_was_set:
+    - tipo_dato:
+      - profesores
+      - profesores
+  - action: asignatura_tipo_dato_form
+  - active_loop: asignatura_tipo_dato_form
+  - slot_was_set:
+    - asignatura:
+      - profesores
+  - slot_was_set:
+    - tipo_dato:
+      - profesores
+      - profesores
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+
+- story: interactive_story_1
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: proporcionar_nombre
+    entities:
+    - nombre: Maike
+  - action: utter_ask_asignatura
+  - intent: informar
+    entities:
+    - tipo_dato: profesores
+    - asignatura: tecnologia
+    - tipo_dato: profesores
+    - asignatura: tecnologia
+  - slot_was_set:
+    - asignatura:
+      - tecnologia
+      - tecnologia
+  - slot_was_set:
+    - tipo_dato:
+      - profesores
+      - profesores
+  - action: asignatura_tipo_dato_form
+  - active_loop: asignatura_tipo_dato_form
+  - slot_was_set:
+    - asignatura:
+      - tecnologia
+  - slot_was_set:
+    - tipo_dato:
+      - profesores
+      - profesores
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - intent: informar
+    entities:
+    - tipo_dato: profesores
+    - tipo_dato: exámenes
+    - asignatura: física
+    - asignatura: matemáticas
+    - tipo_dato: profesores
+    - tipo_dato: exámenes
+    - asignatura: física
+    - asignatura: matemáticas
+  - slot_was_set:
+    - asignatura:
+      - física
+      - matemáticas
+      - física
+      - matemáticas
+  - slot_was_set:
+    - tipo_dato:
+      - profesores
+      - exámenes
+      - profesores
+      - exámenes
+  - action: asignatura_tipo_dato_form
+  - active_loop: asignatura_tipo_dato_form
+  - slot_was_set:
+    - asignatura:
+      - fisica
+      - matematicas
+  - slot_was_set:
+    - tipo_dato:
+      - profesores
+      - exámenes
+      - profesores
+      - exámenes
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+
+- story: interactive_story_1
+  steps:
+  - intent: proporcionar_nombre
+    entities:
+    - nombre: TIno
+  - action: utter_ask_asignatura
+  - intent: informar
+    entities:
+    - tipo_dato: exámenes
+    - asignatura: matematicas
+    - tipo_dato: exámenes
+    - asignatura: matematicas
+  - slot_was_set:
+    - asignatura:
+      - matematicas
+      - matematicas
+  - slot_was_set:
+    - tipo_dato:
+      - exámenes
+      - exámenes
+  - action: asignatura_tipo_dato_form
+  - slot_was_set:
+    - asignatura:
+      - matemáticas
+      - matemáticas
+  - slot_was_set:
+    - tipo_dato:
+      - exámenes
+      - exámenes
+  - slot_was_set:
+    - asignatura:
+      - física
+      - física
+  - slot_was_set:
+    - tipo_dato:
+      - exámenes
+      - exámenes
+  - active_loop: asignatura_tipo_dato_form
+  - slot_was_set:
+    - asignatura:
+      - fisica
+  - slot_was_set:
+    - tipo_dato:
+      - exámenes
+      - exámenes
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
