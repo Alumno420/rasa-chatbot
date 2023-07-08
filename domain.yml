@@ -25,7 +25,6 @@ entities:
   - nombre
   - asignatura
   - tipo_dato
-  - submitted
 
 
 slots:
