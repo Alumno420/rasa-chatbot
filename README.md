@@ -72,7 +72,7 @@ Viajar dentro del directorio del repositorio y ejecutar:
 	- El chatbot los detecta, activa el `form` y almacena en el `slot` la información
 	- El chatbot obtiene la información solicitada en la DB `dataDB.xlsx`
 	- El chatbot muestra un mensaje con la información solicitada
- - 
+
 3. El usuario lo agradece
 	- El cahtbot dice `De nada`
 
