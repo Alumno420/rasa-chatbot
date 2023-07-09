@@ -63,6 +63,7 @@ nlu:
     - mil gracias
     - te agradezco mucho
     - estoy muy agradecido
+    - gracias por todo
 
 - intent: afirmar
   examples: |
@@ -248,6 +249,9 @@ nlu:
     - ¿Se ofrecen asignaturas?
     - ¿Cuáles son las asignaturas más populares?
     - ¿Cuáles son las asignaturas más actualizadas?
+    - ¿Qué materias se ofrecen?
+    - Estoy interesado en conocer las opciones de materias.
+    - ¿Se ofrecen materias?
 
 - intent: informar
   examples: |
@@ -401,6 +405,95 @@ nlu:
     - me interesa saber los [exámenes][{"entity": "tipo_dato"}, {"entity": "tipo_dato"}] de [matematicas][{"entity": "asignatura"}, {"entity": "asignatura"}]
     - me interesa saber los [exámenes][{"entity": "tipo_dato"}, {"entity": "tipo_dato"}] de [matemáticas][{"entity": "asignatura"}, {"entity": "asignatura"}]
     - me interesa saber los [exámenes][{"entity": "tipo_dato"}, {"entity": "tipo_dato"}] de [física][{"entity": "asignatura"}, {"entity": "asignatura"}]
+    - ¿Cuáles son los [requisitos](tipo_dato) de ingreso para la asignatura de [matemáticas](asignatura)?
+    - ¿Qué [prerrequisitos](tipo_dato) se necesitan para la asignatura de [matemáticas](asignatura)?
+    - ¿Cuáles son los [requisitos](tipo_dato) para inscribirse en la asignatura de [matemáticas](asignatura)?
+    - ¿Se requiere tener [conocimientos](tipo_dato) de alguna asignatura específica para tomar [matemáticas](asignatura)?
+    - ¿Cuáles son los [requisitos](tipo_dato) para cursar la asignatura de [matemáticas](asignatura)?
+    - ¿Existen [restricciones](tipo_dato) de nivel académico para la asignatura de [matemáticas](asignatura)?
+    - ¿Se necesita haber aprobado alguna asignatura en particular como [prerrequisito](tipo_dato) para inscribirse en [matemáticas](asignatura)?
+    - ¿Hay algún [requisito](tipo_dato) relacionado con la edad para inscribirse en la asignatura de [matemáticas](asignatura)?
+    - ¿Cuánta [dedicación](tipo_dato) se requiere para la asignatura de [matemáticas](asignatura)?
+    - ¿Cuál es el nivel de [dedicación](tipo_dato) recomendado para la asignatura de [historia](asignatura)?
+    - ¿Se necesita una [dedicación](tipo_dato) intensiva para cursar la asignatura de [química](asignatura)?
+    - ¿Cuántas horas de [dedicación](tipo_dato) se esperan para la asignatura de [literatura](asignatura)?
+    - ¿Qué tipo de [dedicación](tipo_dato) se requiere para el curso de [programación](asignatura)?
+    - ¿Es necesario tener una [dedicación](tipo_dato) constante para la asignatura de [psicología](asignatura)?
+    - ¿Cuánto tiempo de [dedicación](tipo_dato) se recomienda para el estudio de [física](asignatura)?
+    - ¿Cuál es el nivel de [dedicación](tipo_dato) esperado para la asignatura de [economía](asignatura)?
+    - ¿Se requiere una [dedicación](tipo_dato) mínima semanal para el curso de [biología](asignatura)?
+    - ¿Cuánto tiempo de [dedicación](tipo_dato) fuera de clase se sugiere para la asignatura de [inglés](asignatura)?
+    - ¿Qué nivel de [dedicación](tipo_dato) se necesita para el estudio de [derecho](asignatura)?
+    - ¿Es recomendable una [dedicación](tipo_dato) diaria para la asignatura de [arte](asignatura)?
+    - ¿Cuántas horas de [dedicación](tipo_dato) a la semana se esperan para la asignatura de [geografía](asignatura)?
+    - ¿Se requiere una [dedicación](tipo_dato) adicional para las clases de [educación física](asignatura)?
+    - ¿Cuál es el nivel de [dedicación](tipo_dato) promedio para la asignatura de [música](asignatura)?
+    - ¿Es necesario tener una [dedicación](tipo_dato) flexible para el curso de [informática](asignatura)?
+    - ¿Cuánto tiempo de [dedicación](tipo_dato) se estima para la asignatura de [ciencias sociales](asignatura)?
+    - ¿Se requiere una [dedicación](tipo_dato) continua para las clases de [lenguaje](asignatura)?
+    - ¿Cuál es el nivel de [dedicación](tipo_dato) recomendado para el estudio de [psicología educativa](asignatura)?
+    - ¿Es necesario tener una [dedicación](tipo_dato) constante para la asignatura de [ciencias naturales](asignatura)?
+    - ¿Cuánto [esfuerzo](tipo_dato) se requiere para la asignatura de [matemáticas](asignatura)?
+    - ¿Cuál es el nivel de [compromiso](tipo_dato) recomendado para la asignatura de [historia](asignatura)?
+    - ¿Se necesita una [entrega](tipo_dato) intensiva para cursar la asignatura de [química](asignatura)?
+    - ¿Cuántas horas de [tiempo](tipo_dato) se esperan para la asignatura de [literatura](asignatura)?
+    - ¿Qué tipo de [inversión](tipo_dato) se requiere para el curso de [programación](asignatura)?
+    - ¿Se necesita una [implicación](tipo_dato) constante para la asignatura de [psicología](asignatura)?
+    - ¿Cuánto [tiempo](tipo_dato) de estudio se recomienda para el estudio de [física](asignatura)?
+    - ¿Cuál es el nivel de [entusiasmo](tipo_dato) esperado para la asignatura de [economía](asignatura)?
+    - ¿Se requiere una [dedicación](tipo_dato) mínima semanal para el curso de [biología](asignatura)?
+    - ¿Cuánto [tiempo](tipo_dato) de estudio fuera de clase se sugiere para la asignatura de [inglés](asignatura)?
+    - ¿Qué nivel de [enfoque](tipo_dato) se necesita para el estudio de [derecho](asignatura)?
+    - ¿Es recomendable una [inversión](tipo_dato) diaria para la asignatura de [arte](asignatura)?
+    - ¿Cuántas horas de [dedicación](tipo_dato) a la semana se esperan para la asignatura de [geografía](asignatura)?
+    - ¿Se requiere una [implicación](tipo_dato) adicional para las clases de [educación física](asignatura)?
+    - ¿Cuál es el nivel de [compromiso](tipo_dato) promedio para la asignatura de [música](asignatura)?
+    - ¿Es necesario tener una [entrega](tipo_dato) flexible para el curso de [informática](asignatura)?
+    - ¿Cuánto [tiempo](tipo_dato) de estudio se estima para la asignatura de [ciencias sociales](asignatura)?
+    - ¿Se requiere una [dedicación](tipo_dato) continua para las clases de [lenguaje](asignatura)?
+    - ¿Cuál es el nivel de [compromiso](tipo_dato) recomendado para el estudio de [psicología educativa](asignatura)?
+    - ¿Es necesario tener una [implicación](tipo_dato) constante para la asignatura de [ciencias naturales](asignatura)?
+    - ¿Cuál es el método de [evaluación](tipo_dato) utilizado en la asignatura de [matemáticas](asignatura)?
+    - ¿Qué [pruebas](tipo_dato) se necesitan para la asignatura de [historia](asignatura)?
+    - ¿Cuál es el sistema de [calificación](tipo_dato) utilizado para la asignatura de [química](asignatura)?
+    - ¿Qué tipo de [exámenes](tipo_dato) se esperan en la asignatura de [literatura](asignatura)?
+    - ¿Cuál es el enfoque de [evaluación](tipo_dato) utilizado en el curso de [programación](asignatura)?
+    - ¿Se utilizan [criterios](tipo_dato) específicos para la asignatura de [psicología](asignatura)?
+    - ¿Cuál es el peso de la [evaluación](tipo_dato) continua en el estudio de [física](asignatura)?
+    - ¿Qué métodos de [evaluación](tipo_dato) se emplean para la asignatura de [economía](asignatura)?
+    - ¿Se utilizan [prácticas](tipo_dato) evaluativas en el curso de [biología](asignatura)?
+    - ¿Cuál es el enfoque de [evaluación](tipo_dato) utilizado en la asignatura de [inglés](asignatura)?
+    - ¿Qué tipo de [pruebas](tipo_dato) se utilizan en el estudio de [derecho](asignatura)?
+    - ¿Es necesaria la [autoevaluación](tipo_dato) diaria para la asignatura de [arte](asignatura)?
+    - ¿Cuál es el porcentaje de [evaluación](tipo_dato) basado en proyectos en la asignatura de [geografía](asignatura)?
+    - ¿Se utilizan [actividades](tipo_dato) prácticas para la evaluación en las clases de [educación física](asignatura)?
+    - ¿Cuál es el método de [calificación](tipo_dato) promedio utilizado para la asignatura de [música](asignatura)?
+    - ¿Es necesario realizar [trabajos](tipo_dato) prácticos para la evaluación en el curso de [informática](asignatura)?
+    - ¿Qué tipo de [exámenes](tipo_dato) se estima para la asignatura de [ciencias sociales](asignatura)?
+    - ¿Se utiliza la [autoevaluación](tipo_dato) como parte de la evaluación en las clases de [lenguaje](asignatura)?
+    - ¿Cuál es el enfoque de [evaluación](tipo_dato) recomendado para el estudio de [psicología educativa](asignatura)?
+    - ¿Se utilizan [criterios](tipo_dato) orales como parte de la evaluación en la asignatura de [ciencias naturales](asignatura)?
+    - ¿Cuáles son los requisitos de ingreso a la [universidad](tipo_dato) para estudiar [matemáticas](asignatura)?
+    - ¿Qué [beneficios](tipo_dato) se obtienen al cursar la asignatura de [historia](asignatura) en la [universidad](tipo_dato)?
+    - ¿Cómo contribuirá la asignatura de [química](asignatura) a mi [formación](tipo_dato) universitaria?
+    - ¿Cuál es la [relevancia](tipo_dato) de la asignatura de [literatura](asignatura) para mi futuro académico en la [universidad](tipo_dato)?
+    - ¿Qué [oportunidades](tipo_dato) laborales ofrece la [carrera](tipo_dato) de [programación](asignatura)?
+    - ¿Cuál es la [importancia](tipo_dato) de la asignatura de [psicología](asignatura) para las [carreras](tipo_dato) relacionadas?
+    - ¿En qué medida la asignatura de [física](asignatura) es útil para mi [desarrollo profesional](tipo_dato) en la [universidad](tipo_dato)?
+    - ¿Cuáles son las [perspectivas](tipo_dato) de empleo para la [carrera](tipo_dato) de [economía](asignatura)?
+    - ¿Cómo influye la asignatura de [biología](asignatura) en mi [futura trayectoria](tipo_dato) universitaria?
+    - ¿Cuáles son las [posibilidades](tipo_dato) de especialización en la asignatura de [inglés](asignatura) dentro de la [universidad](tipo_dato)?
+    - ¿Qué [oportunidades](tipo_dato) de prácticas profesionales ofrece la [carrera](tipo_dato) de [derecho](asignatura)?
+    - ¿Cómo se relaciona la asignatura de [arte](asignatura) con mi [proyecto de vida](tipo_dato) universitario?
+    - ¿Cuáles son las [perspectivas laborales](tipo_dato) para la [carrera](tipo_dato) de [geografía](asignatura)?
+    - ¿En qué medida la asignatura de [educación física](asignatura) contribuye a mi [formación integral](tipo_dato) en la [universidad](tipo_dato)?
+    - ¿Cuál es la [relevancia](tipo_dato) de la asignatura de [música](asignatura) para mi [futuro profesional](tipo_dato) en la [universidad](tipo_dato)?
+    - ¿Qué [habilidades](tipo_dato) desarrollaré en el curso de [informática](asignatura) que sean útiles en el ámbito de las [carreras](tipo_dato) tecnológicas?
+    - ¿Cómo se relaciona la asignatura de [ciencias sociales](asignatura) con mi [proyecto de carrera](tipo_dato) en la [universidad](tipo_dato)?
+    - ¿Cuáles son las [oportunidades de investigación](tipo_dato) en la [carrera](tipo_dato) de [lenguaje](asignatura) dentro de la [universidad](tipo_dato)?
+    - ¿En qué medida la asignatura de [psicología educativa](asignatura) contribuye a mi [futura práctica](tipo_dato) profesional en la [universidad](tipo_dato)?
+    - ¿Cuáles son las [perspectivas laborales](tipo_dato) para la [carrera](tipo_dato) de [ciencias naturales](asignatura)?
+
 
 
 - lookup: tipo_dato
@@ -423,6 +516,41 @@ nlu:
     - metodologia
     - metodologías
     - metodologias
+    - requisitos
+    - requisito
+    - conocimiento
+    - conocimientos
+    - prerrequisito
+    - prerrequisitos
+    - restricciones
+    - restriccion
+    - dedicación
+    - esfuerzo
+    - tiempo
+    - dedicacion
+    - compromiso
+    - entrega
+    - inversion
+    - implicacion
+    - enfoque
+    - evaluacion
+    - evaluaciones
+    - calificacion
+    - calificaciones
+    - valoracion
+    - valoraciones
+    - criterio
+    - criterios
+    - universidad
+    - utilidad
+    - futuro
+    - carreras
+    - universidad
+    - relevancia
+    - importancia
+    - oportunidades
+    - oportunidad
+    - carrera
 
 - lookup: asignatura
   examples: |
