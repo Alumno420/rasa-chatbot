@@ -29,6 +29,28 @@ Si se tiene descargado el último release del model entrenado se puede evitar el
 
 `rasa shell --model <directorio_nombre_trained_model.tar.gz>`
 
+## Utilidad del Chatbot
+Este chatbot de Rasa fue creado para responder preguntas que podría tener los alumnos de 2º de bachillerato sobre las asignaturas.
+
+Actualmente (release v1.5 Beta Central Volume) el chatbot puede responder preguntas del usuario sobre datos de: 
+- `resumen`
+- `examenes`
+- `libros`
+- `competencias`
+- `profesores`
+- `contenidos`
+- `metodologia`
+- `requisitos`
+- `dedicacion`
+- `evaluacion`
+- `universidad`
+
+sobre las asignaturas:
+- `matematicas`
+- `tecnologia`
+- `fisica`
+
+
 ## Árbol de archivos
 - **actions**
 	- ***actions.py*** : este archivo tiene el código de las acciones custom para run(). Leer los comentarios en el archivo para conocer todo lo que hace.
