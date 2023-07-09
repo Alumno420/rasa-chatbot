@@ -25,6 +25,10 @@ Viajar dentro del directorio del repositorio y ejecutar:
 
 `rasa shell` o `rasa interactive`
 
+Si se tiene descargado el último release del model entrenado se puede evitar el `rasa train`:
+
+``rasa shell --model <directorio_nombre_trained_model.tar.gz>`
+
 ## Árbol de archivos
 - **actions**
 	- ***actions.py*** : este archivo tiene el código de las acciones custom para run(). Leer los comentarios en el archivo para conocer todo lo que hace.
