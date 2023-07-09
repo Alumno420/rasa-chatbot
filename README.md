@@ -27,7 +27,7 @@ Viajar dentro del directorio del repositorio y ejecutar:
 
 Si se tiene descargado el último release del model entrenado se puede evitar el `rasa train`:
 
-``rasa shell --model <directorio_nombre_trained_model.tar.gz>`
+`rasa shell --model <directorio_nombre_trained_model.tar.gz>`
 
 ## Árbol de archivos
 - **actions**
