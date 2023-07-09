@@ -107,7 +107,16 @@ ALLOWED_DATA_TYPES = {"resumen":["resumen", "resumenes"],
                       "competencias" : ["competencias", "competencia"],
                       "profesores":["profesores", "profesor"],
                       "contenidos" : ["contenidos", "contenido"],
-                      "metodologia" : ["metodologias", "metodologia"]} 
+                      "metodologia" : ["metodologias", "metodologia"],
+                      "requisitos" : ["requisito", "requisitos", "conocimiento", 
+                                      "conocimientos", "prerrequisito", "prerrequisitos",
+                                      "restricciones", "restricción"],
+                      "dedicacion" : ["esfuerzo", "tiempo", "dedicacion", "compromiso",
+                                      "entrega", "inversion", "implicacion", "enfoque"],
+                      "evaluacion" : ["evaluacion", "evaluaciones", "calificacion", 
+                                      "calificaciones", "valoracion", "valoraciones", "criterios", "criterio"],
+                      "universidad" : ["utilidad", "futuro", "carreras", "universidad", "relevancia",
+                                       "importancia", "oportunidades", "oportunidad", "carrera"]} 
 
 # Los print("[DEBUG] ...") se muestran solo en la terminal que contiene
 # el hilo con el syscall a `rasa run actions` que monta el server que procesa la custom actions
@@ -140,6 +149,7 @@ class ValidateAsignaturaTipoDatoForm(FormValidationAction):
 
         subjects = ', '.join(list(ALLOWED_SUBJECTS.keys()))
         asignaturas_Input = []
+        tipo_dato_Input = []
         in_Input = False
         global was_submitted
         if was_submitted == True:
@@ -156,6 +166,7 @@ class ValidateAsignaturaTipoDatoForm(FormValidationAction):
         # obtener las asignaturas que pidió el usuario obtenido su correspondencia a las ALLOWED
         for asignat in slot_value_purged:
             input = asignat.lower()
+            # Eliminar tildes
             input = unidecode.unidecode(input)
             for key, lista in ALLOWED_SUBJECTS.items():
                 if input in lista:
@@ -181,13 +192,23 @@ class ValidateAsignaturaTipoDatoForm(FormValidationAction):
                 if i not in slot_value_purged:
                     slot_value_purged.append(i)
 
+            # obtener las correspondecias de los tipos_dato en ALLOWED
+            for tipoDato in slot_value_purged:
+                input = tipoDato.lower()
+                # Eliminar tildes
+                input = unidecode.unidecode(input)
+                for key, lista in ALLOWED_DATA_TYPES.items():
+                    if input in lista:
+                        tipo_dato_Input.append(key)
+                        in_Input = True
+                        break
             print("[DEBUG] slot_value_purged (2), was_submitted: ", slot_value_purged, was_submitted)
 
             if was_submitted == False:
                 print("[DEBUG] Ahora se hizo el was_submitted")
                 was_submitted = True
                 for asignatura in asignaturas_Input:
-                    for tipoDato in slot_value_purged:
+                    for tipoDato in tipo_dato_Input:
                         asignatura = asignatura.lower()
                         asignatura = unidecode.unidecode(asignatura)
                         tipoDato = tipoDato.lower()
@@ -211,6 +232,7 @@ class ValidateAsignaturaTipoDatoForm(FormValidationAction):
         in_Input = False
         global was_submitted
         slot_value_purged = []
+        asignaturas_Input = []
 
         # Comprobar si todavía no se ha dado el valor de la asignatura
         slot_asignatura = tracker.get_slot("asignatura")
@@ -223,7 +245,17 @@ class ValidateAsignaturaTipoDatoForm(FormValidationAction):
                 if i not in slot_value_purged:
                     slot_value_purged.append(i)
 
-        slot_asignatura = slot_value_purged
+        # obtener las asignaturas que pidió el usuario obtenido su correspondencia a las ALLOWED
+        for asignat in slot_value_purged:
+            input = asignat.lower()
+            # Eliminar tildes
+            input = unidecode.unidecode(input)
+            for key, lista in ALLOWED_SUBJECTS.items():
+                if input in lista:
+                    asignaturas_Input.append(key)
+                    in_Input = True
+                    break
+        slot_asignatura = asignaturas_Input
         print("[DEBUG] slot_asignatura: ", slot_asignatura)
 
         # eliminar duplicados en tipo_dato
@@ -237,6 +269,7 @@ class ValidateAsignaturaTipoDatoForm(FormValidationAction):
         # obtener los tipo_dato que pidió el usuario obtenido su correspondencia a las ALLOWED
         for tipoDato in slot_value_purged:
             input = tipoDato.lower()
+            # Eliminar tildes
             input = unidecode.unidecode(input)
 
             for key, lista in ALLOWED_DATA_TYPES.items():
@@ -262,14 +295,14 @@ class ValidateAsignaturaTipoDatoForm(FormValidationAction):
         if was_submitted == False:
             print("[DEBUG] Ahora se hizo el was_submitted")
             was_submitted = True
-            for i in slot_asignatura:
-                for j in slot_value_purged:
-                    i = i.lower()
-                    i = unidecode.unidecode(i)
-                    j = j.lower()
-                    j = unidecode.unidecode(j)
-                    print("[DEBUG] i (slot_asignatura),j (slot_value_purged): ", i, j)
-                    dispatcher.utter_message(text=f"La información que tengo en el caso de {i} sobre {j} es: {data.obtener_valor(i,j)}\n\n")
+            for asignatura in slot_asignatura:
+                for tipoDato in tipos_dato_Input:
+                    asignatura = asignatura.lower()
+                    asignatura = unidecode.unidecode(asignatura)
+                    tipoDato = tipoDato.lower()
+                    tipoDato = unidecode.unidecode(tipoDato)
+                    print("[DEBUG] i (slot_asignatura),j (slot_value_purged): ", asignatura, tipoDato)
+                    dispatcher.utter_message(text=f"La información que tengo en el caso de {asignatura} sobre {tipoDato} es: {data.obtener_valor(asignatura,tipoDato)}\n\n")
 
         # Se supone que esta función se llama siempre después de la primera, 
         # entonces después de que se ejecute esta se entiene que se va a hacer un nuevo submit en el siguiente input
