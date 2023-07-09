@@ -106,20 +106,13 @@ sobre las asignaturas:
 	- El chatbot se despide
 	
 ## Notas del útlimo release:
-## Beta v1.0: **Snowy Trainer**
-## Primer release beta del rasa-chatbot de mi trabajo de STEMBach.
+## Beta v1.5: **Central Volume**
+## Segundo release beta del rasa-chatbot de mi trabajo de STEMBach.
 ### Novedades:
-- Creada una DB en formato `.xlsx` que contiene la información que responde el chatbot
-- Añadidas múltiples _stories_ del _form_ de asignaturas y tipo_dato para el entrenamiento del chatbot
-- Eliminados de `domain.yml` los `utter_submit` y `utter_asignatura_tipo_dato_slots` porque tenían una función puramente de _debugging_
-- Modificado el tipo de los _slots_ de `asignatura` y `tipo_dato`, de `text` pasan a `list`, debido a la posibilidad de que el usuario en un solo input pida varias asignaturas y tipos de datos
-- Creado el _intent_ de `agradecer` y añadida la _rule_ de agradecer de vuelta cuando el usuario tiene el _intent_ de agradecer
-- Añadidas en el `nlu.yml` lookup tables para el `RegexEntityExtractor` con los posibles valores de `tipo_dato` y `asignatura` que contiene la DB
-- Añadidos más ejemplos del _intent_ de `informar` y del nuevo de `agradecer`
-- Creada la clase `manager_dataDB` en `actions.py` para el tratamiento de la DB en formato .xlsx
-- Creada la clase `ActionDefaultFallback` que hereda de `rasa_sdk.Actions` para tratar como _custom action_ el `nlu_fallback` que se produce cuando la seguridad con la que el chatbot detecta un intent es inferior a 0.7
-- Desarrollada la clase `ValidateAsignaturaTipoDatoForm` para tratar los _slots_ que ahora son listas. Además, se corrige el error de que en la lista que se extrae del _slot_ haya duplicados. Los métodos de la clase detectan cuando se tiene información suficiente y correcta para poder hacer el _fetch_ a la DB, para obtener los datos que hay que responder al usuario
+- Añadidas en el `nlu.yml` más ejemplos en los lookup tables para el `RegexEntityExtractor` con los posibles valores de `tipo_dato` y `asignatura` que contiene la DB
+- Añadidos más ejemplos del _intent_ de `informar` y de `agradecer`
+- Corregido un bug en `actions.py` por no usar las _keys_ de los diccionarios que contienen los `tipos_dato` y `asignaturas` para así poder después acceder correctamente a las columnas y filas de la DB, yaq ue las _keys_ son iguales a ellas.
+- Añadidas a la DB los siguientes `tipo_dato` : _requisitos_, _dedicacion_, _evaluacion_ y _universidad_
+- Añadidos en el _intent_ "informar" de `nlu.yml` ejemplos para detectar correctamente los nuevos valores que pueden tomar los _entitites_
 
-**Full Changelog**: https://github.com/Alumno420/rasa-chatbot/compare/v0.1...v1.0-beta-snowy-trainer
-
-
+**Full Changelog**: https://github.com/Alumno420/rasa-chatbot/compare/v1.0-beta-snowy-trainer...v1.5-beta-central-volume
