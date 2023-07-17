@@ -50,31 +50,31 @@ Actualmente (release v1.5 Beta Central Volume) el chatbot puede responder pregun
 - `dedicacion`
 - `evaluacion`
 - `universidad`
-- 'horas'
-- 'proyectos'
-- 'extracurriculares'
-- 'practicas'
+- `horas`
+- `proyectos`
+- `extracurriculares`
+- `practicas`
 
 sobre las asignaturas:
 - `matematicas`
 - `tecnologia`
 - `fisica`
 - 'aleman'
-- 'frances'
-- 'biologia'
-- 'dibujo artistico'
-- 'dibujo tecnico'
-- 'historia'
-- 'quimica'
-- 'tic'
-- 'geologia'
-- 'literatura'
-- 'lengua'
-- 'lingua'
-- 'musica'
-- 'ingles'
-- 'filosofia'
-- 'economia'
+- `frances`
+- `biologia`
+- `dibujo artistico`
+- `dibujo tecnico`
+- `historia`
+- `quimica`
+- `tic`
+- `geologia`
+- `literatura`
+- `lengua`
+- `lingua`
+- `musica`
+- `ingles`
+- `filosofia`
+- `economia`
 
 ## Árbol de archivos
 - **actions**
