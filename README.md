@@ -1,5 +1,5 @@
-# rasa-chatbot: mi proyecto de STEMBach
-![Demo Chatbot](https://raw.githubusercontent.com/Alumno420/rasa-chatbot/main/DEMO-chatbot.png)  
+# rasa-chatbot: rama sin tener en cuenta el feedback del usuario
+![Demo Chatbot]([https://raw.githubusercontent.com/Alumno420/rasa-chatbot/main/DEMO-chatbot.png](https://raw.githubusercontent.com/Alumno420/rasa-chatbot/1356cb33a58aff20f4d60f51c6125d8c47f4e5dd/DEMO-chatbot%20-%20non%20user%20centered.png))  
 ### Instalación:
 La última versión oficial de Rasa 6.0 tiene demasiados bugs, por lo que hay que empezar downgrading:
 
@@ -23,7 +23,10 @@ Viajar dentro del directorio del repositorio y ejecutar:
 
 `rasa train`
 
-`rasa shell` o `rasa interactive`
+Después:
+- En un terminal: `rasa run --enable-api --cors="*"`
+- En otra terminal distinta: `rasa run actions`
+- Cuando ambos servidores están `up and running` viajar al directorio `UI` y abrir en un navegador `ìndex.html`
 
 Si se tiene descargado el último release del model entrenado se puede evitar el `rasa train`:
 
@@ -106,13 +109,15 @@ sobre las asignaturas:
 	- El chatbot se despide
 	
 ## Notas del útlimo release:
-## Beta v1.5: **Central Volume**
-## Segundo release beta del rasa-chatbot de mi trabajo de STEMBach.
+## Beta v2.0: **Ecru Prior**
+## Tercer release beta del rasa-chatbot de mi trabajo de STEMBach. Esta versión es non user-centered.
 ### Novedades:
-- Añadidas en el `nlu.yml` más ejemplos en los lookup tables para el `RegexEntityExtractor` con los posibles valores de `tipo_dato` y `asignatura` que contiene la DB
-- Añadidos más ejemplos del _intent_ de `informar` y de `agradecer`
-- Corregido un bug en `actions.py` por no usar las _keys_ de los diccionarios que contienen los `tipos_dato` y `asignaturas` para así poder después acceder correctamente a las columnas y filas de la DB, yaq ue las _keys_ son iguales a ellas.
-- Añadidas a la DB los siguientes `tipo_dato` : _requisitos_, _dedicacion_, _evaluacion_ y _universidad_
-- Añadidos en el _intent_ "informar" de `nlu.yml` ejemplos para detectar correctamente los nuevos valores que pueden tomar los _entitites_
+- No se añadieron intents nuevos
+- Se añadió la `action` de RestetSlots
+- No se añadireron nuevos `tipo_dato`
+- Se añadieron nuevas `asignatura` como alemán, biología, dibujo técnico. francés, historia, química, TIC, lengua y lingua, inglés y filosofía
+- Se cambiaron las `lookup tables` por `synonym`
+- Añadidos múltiples ejemplos para el entrenamiento en `nlu.yml`
+- Se creo un `index.html` con un _snippet_ para tener una simple UI en el localhost:5005. Para poder correrlo hay que ejecutar en una terminal `rasa run --enable-api --cors="*"` y en otra `rasa run actions`, y por último, abrir en el navegador preferido `index.html`. El _endpoints.yml_ tiene que usar un puerto distinto al que usa el server API, en este caso distinto al 5005, y por eso uso 5055, en este puerto es donde se ejecuta el server que procesa con el _actions.py_ las _custom actions_ del chatbot de Rasa. En _credentials.yml_ noi hay que incluir nada más que `socketio`, no se especifican puertos porque el _default_ ya es el localhost:5005 .
 
-**Full Changelog**: https://github.com/Alumno420/rasa-chatbot/compare/v1.0-beta-snowy-trainer...v1.5-beta-central-volume
+**Full Changelog**: https://github.com/Alumno420/rasa-chatbot/compare/v1.5-beta-central-volume...v2.0-beta-ecru-prior
