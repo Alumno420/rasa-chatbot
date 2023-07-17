@@ -30,7 +30,10 @@ Después:
 
 Si se tiene descargado el último release del model entrenado se puede evitar el `rasa train`:
 
-`rasa shell --model <directorio_nombre_trained_model.tar.gz>`
+Después:
+- En un terminal: `rasa run --enable-api --cors="*"`
+- En otra terminal distinta: `rasa run actions`
+- Cuando ambos servidores están `up and running` viajar al directorio `UI` y abrir en un navegador `ìndex.html`
 
 ## Utilidad del Chatbot
 Este chatbot de Rasa fue creado para responder preguntas que podría tener los alumnos de 2º de bachillerato sobre las asignaturas.
