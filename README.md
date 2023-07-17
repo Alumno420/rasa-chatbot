@@ -52,7 +52,17 @@ sobre las asignaturas:
 - `matematicas`
 - `tecnologia`
 - `fisica`
-
+- 'aleman'
+- 'frances'
+- 'biologia'
+- 'dibujo tecnico'
+- 'historia'
+- 'quimica'
+- 'tic'
+- 'lengua'
+- 'lingua'
+- 'ingles'
+- 'filosofia'
 
 ## Árbol de archivos
 - **actions**
@@ -80,7 +90,7 @@ sobre las asignaturas:
 - **credentials.yml** : contiene credenciales para las plataformas de voz y chat, que no se usan en este caso. 
 
 - **domain.yml** : aquí se especifican los intents, entities, spaces y actions que se han deifinido que el chatbot conoce y maneja
-	* **intents:** se indican las intenciones definidas en el fichero nlu.md, representan las posibles peticiones que puede hacer el usuario
+	* **intents**: se indican las intenciones definidas en el fichero nlu.md, representan las posibles peticiones que puede hacer el usuario
 	* **entities**: variables que se van modificando conforme avanza el diálogo entre el usuario y el chatbot. Solo se usan `nombre`, `asignatura` y `tipo_dato`
 	* **slots**: se utilizan para almacenar información proporcionada por el usuario. Cada slot definido en domain.yml consiste en una clave a la cual se le asignará posteriormente un valor determinado.
 	* **responses**: en este apartado se encuentran mensajes que le aparecerán al usuario por el chatbot.
@@ -88,6 +98,10 @@ sobre las asignaturas:
 	* **forms**: formularios utilizados por el chatbot. Solo se usa uno que obtiene los valores para `asignatura` y `tipo_Dato`
 
 - **endpoints.yml** :  contiene los diferentes endpoints que el chatbot puede usar (DB). IMPORTANTE: contiene la salida a la que se envían las acciones (el server en el _localhost_ que monta `rasa run actions`)
+
+- **Ul** : contiene los archivos necesarios para la correcta implementación de una UI web para el chatbot
+	* **index.html**: archivo _HTML_ que sirve de entrada para la UI y que muestra los mensajes y los enviá a donde corre el servidor del chatbot, recibe los mensajes del mismo y los muestra.
+  
 
 ------------
 
