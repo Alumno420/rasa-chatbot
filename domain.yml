@@ -54,9 +54,11 @@ intents:
   - stop
   - bot_challenge
   - proporcionar_nombre
-  - interes_materias
   - informar
   - agradecer
+  - cuestion_subjetiva
+  - interes_tipo_dato
+  - interes_materias
 
 
 forms:
@@ -67,17 +69,17 @@ forms:
 
 actions:
   - utter_ask_asignatura
-#  - utter_submit
   - action_default_fallback
   - validate_asignatura_tipo_dato_form
   - action_deactivate_loop
+  - action_reset_all_slots
 
 responses:
   utter_de_nada:
     - text: De nada {nombre}.
     - text: De nada.
     - text: Un placer haberle ayudado, {nombre}.
-    - text: Un placee haberle ayudado.
+    - text: Un placer haberle ayudado.
 
   utter_saludo:
     - text: "Hola soy un Chatbot creado para informarle sobre las asignaturas. Primero, ¿cómo se llama?"
@@ -88,13 +90,16 @@ responses:
     - text: Saludos. Soy un Chatbot creado para asistirle con información sobre las asignaturas. Antes de continuar, ¿podría proporcionarme su nombre?
 
   utter_asignatura:
-    - text: "Hola, {nombre} ¿En qué asignatura puedo ayudarte? Puedes elegir entre Teoría del conocimiento, Matemáticas, Física o Tecnología."
-    - text: ¿En qué asignatura puedo ayudarte? Puedes elegir entre Teoría del conocimiento, Matemáticas, Física o Tecnología."
-    - text: ¡Hola, {nombre}! ¿En qué asignatura puedo brindarte ayuda? Puedes elegir entre Teoría del conocimiento, Matemáticas, Física o Tecnología.
-    - text: ¡Saludos! ¿En qué asignatura puedo asistirte? Puedes elegir entre Teoría del conocimiento, Matemáticas, Física o Tecnología.
-    - text: Hola, {nombre}, ¿necesitas ayuda en alguna asignatura en particular? Puedes elegir entre Teoría del conocimiento, Matemáticas, Física o Tecnología.
-    - text: ¡Hola! ¿En qué asignatura puedo ofrecerte ayuda? Tienes la opción de elegir entre Teoría del conocimiento, Matemáticas, Física o Tecnología.
-    - text: Saludos, {nombre}. ¿En qué asignatura puedo brindarte asistencia? Puedes seleccionar entre Teoría del conocimiento, Matemáticas, Física o Tecnología.
+    - text: "{nombre}. puede elegir entre matematicas, tecnologia, fisica, aleman, biologia, dibujo artistico, dibujo tecnico, frances, historia, quimica, tic, geologia, literatura, lengua, lingua, musica, ingles, filosofia y economia."
+    - text: Puede elegir entre matematicas, tecnologia, fisica, aleman, biologia, dibujo artistico, dibujo tecnico, frances, historia, quimica, tic, geologia, literatura, lengua, lingua, musica, ingles, filosofia y economia.
+    - text: "{nombre}, puede elegir entre matematicas, tecnologia, fisica, aleman, biologia, dibujo artistico, dibujo tecnico, frances, historia, quimica, tic, geologia, literatura, lengua, lingua, musica, ingles, filosofia y economia."
+    - text: Puede elegir entre matematicas, tecnologia, fisica, aleman, biologia, dibujo artistico, dibujo tecnico, frances, historia, quimica, tic, geologia, literatura, lengua, lingua, musica, ingles, filosofia y economia.
+    - text: "{nombre}, puede elegir entre matematicas, tecnologia, fisica, aleman, biologia, dibujo artistico, dibujo tecnico, frances, historia, quimica, tic, geologia, literatura, lengua, lingua, musica, ingles, filosofia y economia."
+    - text: Tienes la opción de elegir entre matematicas, tecnologia, fisica, aleman, biologia, dibujo artistico, dibujo tecnico, frances, historia, quimica, tic, geologia, literatura, lengua, lingua, musica, ingles, filosofia y economia.
+    - text: "{nombre}, puedes seleccionar entre matematicas, tecnologia, fisica, aleman, biologia, dibujo artistico, dibujo tecnico, frances, historia, quimica, tic, geologia, literatura, lengua, lingua, musica, ingles, filosofia y economia."
+
+  utter_tipo_dato:
+    - text: "Los tipos de datos que me puede solicitar sobre una asignatura son: resumen, examenes, libros, competencias, profesores, contenidos, metodologia, requisitos, dedicacion, evaluacion, universidad, horas, proyectos, extracurriculares y practicas" 
 
   utter_despedida:
     - text: Adiós, {nombre}. ¡Gracias por usar este chatbot!
@@ -120,7 +125,7 @@ responses:
     - text: Lamentablemente, no he logrado entender su mensaje. Le ruego que vuelva a plantear su pregunta.
   
   utter_default:
-    - text: "Lo siento, no lo he entendido. ¿Podría decirlo de otra manera?"
+    - text: Lo siento, no lo he entendido. ¿Podría decirlo de otra manera?
     - text: Mis disculpas, no he logrado entenderlo. ¿Podría reformular su pregunta, por favor?
     - text: Lo siento, no pude comprender su consulta. ¿Podría expresarlo de otra manera?
     - text: Disculpe, no he entendido su mensaje. ¿Podría reformularlo para que pueda ayudarle mejor?
@@ -132,15 +137,14 @@ responses:
     - text: ¿Estás seguro de que quieres dejar la conversación?
 
   utter_ask_asignatura:
-    - text: ¿Qué asignatura quieres consultar? De momento puedo informarte sobre matemáticas, física y tecnología.
-    - text: ¿Qué asignatura le interesa? De momento puedo informarte sobre matemáticas, física y tecnología.
+    - text: ¿Qué asignatura quieres consultar? De momento puedo informarte sobre matematicas, tecnologia, fisica, aleman, biologia, dibujo artistico, dibujo tecnico, frances, historia, quimica, tic, geologia, literatura, lengua, lingua, musica, ingles, filosofia y economia.
+    - text: ¿Qué asignatura le interesa? De momento puedo informarte sobre matematicas, tecnologia, fisica, aleman, biologia, dibujo artistico, dibujo tecnico, frances, historia, quimica, tic, geologia, literatura, lengua, lingua, musica, ingles, filosofia y economia.
   
   utter_ask_tipo_dato:
-    - text: ¿Qué tipo de datos quieres que te cuente sobre {asignatura}? Cuento con información de {asignatura}, sobre los profesores y sobre los exámenes.
+    - text: ¿Qué tipo de datos quieres que te cuente sobre {asignatura}? Cuento con información de {asignatura}, sobre resumen, examenes, libros, competencias, profesores, contenidos, metodologia, requisitos, dedicacion, evaluacion, universidad, horas, proyectos, extracurriculares y practicas.
 
-#  utter_submit:
-#    - text: De eso sí que te puedo hablar.
-#    - text: Tengo información de ello.
-#    - text: Ok, muy bien.
+  utter_cuestion_subjetiva:
+    - text: No puedo responder a cuestiones que requieren de una respuesta subjetiva. Hágame otra pregunta que pueda responder.
+    - text: No puedo responder, {nombre}, a cuestiones que requieren de una respuesta subjetiva. {nombre}, hágame otra pregunta que pueda responder. 
 
 

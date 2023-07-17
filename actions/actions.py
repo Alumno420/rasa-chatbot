@@ -11,6 +11,7 @@ from rasa_sdk.events import UserUtteranceReverted
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import EventType
 from rasa_sdk.types import DomainDict
+from rasa_sdk.events import SlotSet
 
 # Para eliminar las tildes
 import unidecode
@@ -95,28 +96,13 @@ data = manager_dataDB("dataDB.xlsx")
 # esto esrá para evitar que el chatbot responda dos veces 
 was_submitted = False
 
+# ['matematicas', 'tecnologia', 'fisica', 'aleman', 'biologia', 'dibujo artistico', 'dibujo tecnico', 'frances', 'historia', 'quimica', 'tic', 'geologia', 'literatura', 'lengua', 'lingua', 'musica', 'ingles', 'filosofia', 'economia']
 # la materias que contiene la DB en .xlsx
-ALLOWED_SUBJECTS = {"tecnologia" : ["tecnologia"],
-                    "matematicas" : ["matematicas"],
-                    "fisica" : ["fisica"]} 
+ALLOWED_SUBJECTS = data.obtener_valores_fila("ASIGNATURA") 
 
+# ['resumen', 'examenes', 'libros', 'competencias', 'profesores', 'contenidos', 'metodologia', 'requisitos', 'dedicacion', 'evaluacion', 'universidad', 'horas', 'proyectos', 'extracurriculares', 'practicas']
 # los tipos de datos que contiene la DB en .xlsx
-ALLOWED_DATA_TYPES = {"resumen":["resumen", "resumenes"],
-                      "examenes" : ["examenes", "examen"],
-                      "libros": ["libros", "libro"],
-                      "competencias" : ["competencias", "competencia"],
-                      "profesores":["profesores", "profesor"],
-                      "contenidos" : ["contenidos", "contenido"],
-                      "metodologia" : ["metodologias", "metodologia"],
-                      "requisitos" : ["requisito", "requisitos", "conocimiento", 
-                                      "conocimientos", "prerrequisito", "prerrequisitos",
-                                      "restricciones", "restricción"],
-                      "dedicacion" : ["esfuerzo", "tiempo", "dedicacion", "compromiso",
-                                      "entrega", "inversion", "implicacion", "enfoque"],
-                      "evaluacion" : ["evaluacion", "evaluaciones", "calificacion", 
-                                      "calificaciones", "valoracion", "valoraciones", "criterios", "criterio"],
-                      "universidad" : ["utilidad", "futuro", "carreras", "universidad", "relevancia",
-                                       "importancia", "oportunidades", "oportunidad", "carrera"]} 
+ALLOWED_DATA_TYPES = data.obtener_valores_columna("TIPO_DATO") 
 
 # Los print("[DEBUG] ...") se muestran solo en la terminal que contiene
 # el hilo con el syscall a `rasa run actions` que monta el server que procesa la custom actions
@@ -147,7 +133,7 @@ class ValidateAsignaturaTipoDatoForm(FormValidationAction):
         domain: DomainDict,
     ) -> Dict[Text, Any]:
 
-        subjects = ', '.join(list(ALLOWED_SUBJECTS.keys()))
+        subjects = ', '.join(ALLOWED_SUBJECTS)
         asignaturas_Input = []
         tipo_dato_Input = []
         in_Input = False
@@ -168,9 +154,9 @@ class ValidateAsignaturaTipoDatoForm(FormValidationAction):
             input = asignat.lower()
             # Eliminar tildes
             input = unidecode.unidecode(input)
-            for key, lista in ALLOWED_SUBJECTS.items():
+            for lista in ALLOWED_SUBJECTS:
                 if input in lista:
-                    asignaturas_Input.append(key)
+                    asignaturas_Input.append(lista)
                     in_Input = True
                     break
         
@@ -197,9 +183,9 @@ class ValidateAsignaturaTipoDatoForm(FormValidationAction):
                 input = tipoDato.lower()
                 # Eliminar tildes
                 input = unidecode.unidecode(input)
-                for key, lista in ALLOWED_DATA_TYPES.items():
+                for lista in ALLOWED_DATA_TYPES:
                     if input in lista:
-                        tipo_dato_Input.append(key)
+                        tipo_dato_Input.append(lista)
                         in_Input = True
                         break
             print("[DEBUG] slot_value_purged (2), was_submitted: ", slot_value_purged, was_submitted)
@@ -214,7 +200,7 @@ class ValidateAsignaturaTipoDatoForm(FormValidationAction):
                         tipoDato = tipoDato.lower()
                         tipoDato = unidecode.unidecode(tipoDato)
                         print("[DEBUG] i (asignaturas_Input),j (slot_value_purged): ", asignatura, tipoDato)
-                        dispatcher.utter_message(text=f"La información que tengo en el caso de {asignatura} sobre {tipoDato} es: {data.obtener_valor(asignatura,tipoDato)}\n\n")
+                        dispatcher.utter_message(text=f"{data.obtener_valor(asignatura,tipoDato)}\n\n")
                         
         return {"asignatura": asignaturas_Input}
 
@@ -227,7 +213,8 @@ class ValidateAsignaturaTipoDatoForm(FormValidationAction):
     ) -> Dict[Text, Any]:
         # Validar el tipo de dato
 
-        datas = ','.join(list(ALLOWED_DATA_TYPES.keys()))
+        datas = ','.join(ALLOWED_DATA_TYPES)
+        subs = ','.join(ALLOWED_SUBJECTS)
         tipos_dato_Input = []
         in_Input = False
         global was_submitted
@@ -237,7 +224,7 @@ class ValidateAsignaturaTipoDatoForm(FormValidationAction):
         # Comprobar si todavía no se ha dado el valor de la asignatura
         slot_asignatura = tracker.get_slot("asignatura")
         if slot_asignatura == None:
-            dispatcher.utter_message(text=f"Ahora necesito que me digas la asignatura que le interesa.")
+            dispatcher.utter_message(text=f"Ahora necesito que me digas la asignatura que le interesa de estas: {subs}")
         else:
             # eliminar duplicados en asignatura
             slot_value_purged = []
@@ -250,11 +237,12 @@ class ValidateAsignaturaTipoDatoForm(FormValidationAction):
             input = asignat.lower()
             # Eliminar tildes
             input = unidecode.unidecode(input)
-            for key, lista in ALLOWED_SUBJECTS.items():
+            for lista in ALLOWED_SUBJECTS:
                 if input in lista:
-                    asignaturas_Input.append(key)
+                    asignaturas_Input.append(lista)
                     in_Input = True
                     break
+
         slot_asignatura = asignaturas_Input
         print("[DEBUG] slot_asignatura: ", slot_asignatura)
 
@@ -272,9 +260,9 @@ class ValidateAsignaturaTipoDatoForm(FormValidationAction):
             # Eliminar tildes
             input = unidecode.unidecode(input)
 
-            for key, lista in ALLOWED_DATA_TYPES.items():
+            for lista in ALLOWED_DATA_TYPES:
                 if input in lista:
-                    tipos_dato_Input.append(key)
+                    tipos_dato_Input.append(lista)
                     in_Input = True 
                     break
         
@@ -302,7 +290,7 @@ class ValidateAsignaturaTipoDatoForm(FormValidationAction):
                     tipoDato = tipoDato.lower()
                     tipoDato = unidecode.unidecode(tipoDato)
                     print("[DEBUG] i (slot_asignatura),j (slot_value_purged): ", asignatura, tipoDato)
-                    dispatcher.utter_message(text=f"La información que tengo en el caso de {asignatura} sobre {tipoDato} es: {data.obtener_valor(asignatura,tipoDato)}\n\n")
+                    dispatcher.utter_message(text=f"{data.obtener_valor(asignatura,tipoDato)}\n\n")
 
         # Se supone que esta función se llama siempre después de la primera, 
         # entonces después de que se ejecute esta se entiene que se va a hacer un nuevo submit en el siguiente input
@@ -311,3 +299,12 @@ class ValidateAsignaturaTipoDatoForm(FormValidationAction):
             was_submitted = False
 
         return {"tipo_dato": slot_value}
+
+# Para evitar que el usuario siga preguntando y el chatbot responda info ya preguntada
+class ActionResetAllSlots(Action):
+    def name(self):
+        return "action_reset_all_slots"
+
+    def run(self, dispatcher, tracker, domain):
+        return [SlotSet("asignatura", None), SlotSet("tipo_dato", None)]
+    

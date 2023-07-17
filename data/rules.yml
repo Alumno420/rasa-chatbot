@@ -19,9 +19,7 @@ rules:
 
 - rule: Activar el formulario
   steps:
-    - or:
-      - intent: interes_materias
-      - intent: informar
+    - intent: informar
     - action: asignatura_tipo_dato_form
     - active_loop: asignatura_tipo_dato_form
 
@@ -33,7 +31,7 @@ rules:
     - active_loop: null
     - slot_was_set:
       - requested_slot: null
-    #- action: utter_submit
+    - action: action_reset_all_slots
   
 - rule: Interrupción del formulario
   condition:
@@ -43,9 +41,24 @@ rules:
     - action: action_default_fallback
     - action: asignatura_tipo_dato_form
     - active_loop: asignatura_tipo_dato_form
-    
+
+- rule: Cuestion subjetiva
+  steps:
+    - intent: cuestion_subjetiva
+    - action: utter_cuestion_subjetiva
+  
 - rule: NLU fallback
   steps:
     - intent: nlu_fallback
     - action: action_default_fallback
     - action: utter_default
+
+- rule: Interés en las materias
+  steps:
+    - intent: interes_materias
+    - action: utter_asignatura
+
+- rule: Interés en los tipos de datos
+  steps:
+    - intent: interes_tipo_dato
+    - action: utter_tipo_dato

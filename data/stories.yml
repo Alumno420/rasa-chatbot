@@ -12,9 +12,7 @@ stories:
     - slot_was_set:
       - nombre: Álvaro
     - action: utter_ask_asignatura
-    - or:
-      - intent: informar
-      - intent: interes_materias
+    - intent: informar
     - action: asignatura_tipo_dato_form
     - active_loop: asignatura_tipo_dato_form
     - slot_was_set:
@@ -28,6 +26,7 @@ stories:
     - slot_was_set:
       - requested_slot: null
     - active_loop: null
+    - action: action_reset_all_slots
     #- action: utter_submit
     - intent: despedida
     - action: utter_despedida
@@ -42,9 +41,7 @@ stories:
     - slot_was_set:
       - nombre: Juan
     - action: utter_ask_asignatura
-    - or:
-      - intent: informar
-      - intent: interes_materias
+    - intent: informar
     - action: asignatura_tipo_dato_form
     - active_loop: asignatura_tipo_dato_form
     - slot_was_set:
@@ -58,6 +55,7 @@ stories:
     - slot_was_set:
       - requested_slot: null
     - active_loop: null
+    - action: action_reset_all_slots
     #- action: utter_submit
     - intent: despedida
     - action: utter_despedida
@@ -70,9 +68,7 @@ stories:
     - slot_was_set:
       - nombre: Marcos
     - action: utter_ask_asignatura
-    - or:
-      - intent: informar
-      - intent: interes_materias
+    - intent: informar
     - action: asignatura_tipo_dato_form
     - active_loop: asignatura_tipo_dato_form
     - intent: stop
@@ -92,9 +88,7 @@ stories:
     - slot_was_set:
       - nombre: Marcos
     - action: utter_ask_asignatura
-    - or:
-      - intent: informar
-      - intent: interes_materias
+    - intent: informar
     - action: asignatura_tipo_dato_form
     - active_loop: asignatura_tipo_dato_form
     - slot_was_set:
@@ -108,6 +102,7 @@ stories:
     - active_loop: null
     - slot_was_set:
       - requested_slot: null
+    - action: action_reset_all_slots
     - intent: despedida
     - action: utter_despedida
 
@@ -133,6 +128,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: action_reset_all_slots
   - intent: despedida
   - action: utter_despedida
 
@@ -140,7 +136,7 @@ stories:
   steps:
   - intent: saludo
   - action: utter_saludo
-  - intent: interes_materias
+  - intent: informar
   - action: asignatura_tipo_dato_form
   - active_loop: asignatura_tipo_dato_form
   - slot_was_set:
@@ -152,9 +148,8 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
-  - or:
-    - intent: interes_materias
-    - intent: informar
+  - action: action_reset_all_slots
+  - intent: informar
   - action: asignatura_tipo_dato_form
   - active_loop: asignatura_tipo_dato_form
   - slot_was_set:
@@ -172,13 +167,14 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
+  - action: action_reset_all_slots
   #- action: utter_submit
 
 - story: historia interactiva 5
   steps:
   - intent: saludo
   - action: utter_saludo
-  - intent: interes_materias
+  - intent: informar
   - action: asignatura_tipo_dato_form
   - active_loop: asignatura_tipo_dato_form
   - slot_was_set:
@@ -195,6 +191,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: action_reset_all_slots
   - intent: despedida
   - action: utter_despedida
 
@@ -221,9 +218,10 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
+  - action: action_reset_all_slots
   #- action: utter_submit
 
-- story: interactive_story_1
+- story: interactive_story_A
   steps:
   - intent: saludo
   - action: utter_saludo
@@ -274,6 +272,7 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
+  - action: action_reset_all_slots
   - intent: informar
     entities:
     - tipo_dato: resumen
@@ -300,6 +299,7 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
+  - action: action_reset_all_slots
   - intent: informar
     entities:
     - tipo_dato: resumen
@@ -326,11 +326,12 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
+  - action: action_reset_all_slots
   - intent: despedida
   - action: utter_despedida
 
 
-- story: interactive_story_1
+- story: Interactive_story_B
   steps:
   - intent: proporcionar_nombre
     entities:
@@ -364,8 +365,10 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
+  - action: action_reset_all_slots
 
-- story: interactive_story_1
+
+- story: interactive_story_C
   steps:
   - intent: proporcionar_nombre
     entities:
@@ -399,8 +402,9 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
+  - action: action_reset_all_slots
 
-- story: interactive_story_1
+- story: interactive_story_D
   steps:
   - intent: proporcionar_nombre
     entities:
@@ -434,8 +438,9 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
+  - action: action_reset_all_slots
 
-- story: interactive_story_1
+- story: interactive_story_E
   steps:
   - intent: saludo
   - action: utter_saludo
@@ -469,6 +474,7 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
+  - action: action_reset_all_slots
   - intent: informar
     entities:
     - tipo_dato: profesores
@@ -506,8 +512,9 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
+  - action: action_reset_all_slots
 
-- story: interactive_story_1
+- story: interactive_story_F
   steps:
   - intent: proporcionar_nombre
     entities:
@@ -555,3 +562,144 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
+  - action: action_reset_all_slots
+
+- story: interactive_story_G
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: proporcionar_nombre
+    entities:
+    - nombre: ÁLvaro
+  - slot_was_set:
+    - nombre: ÁLvaro
+  - action: utter_ask_asignatura
+  - intent: informar
+    entities:
+    - asignatura: dibujo tecnico
+  - slot_was_set:
+    - asignatura:
+      - dibujo tecnico
+  - action: asignatura_tipo_dato_form
+  - active_loop: asignatura_tipo_dato_form
+  - slot_was_set:
+    - asignatura:
+      - dibujo tecnico
+  - slot_was_set:
+    - requested_slot: tipo_dato
+  - slot_was_set:
+    - tipo_dato:
+      - profesores
+  - slot_was_set:
+    - tipo_dato:
+      - profesores
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_reset_all_slots
+  - intent: interes_materias
+  - action: utter_asignatura
+  - intent: informar
+    entities:
+    - asignatura: frances
+  - action: asignatura_tipo_dato_form
+  - active_loop: asignatura_tipo_dato_form
+  - slot_was_set:
+    - asignatura:
+      - frances
+  - slot_was_set:
+    - requested_slot: tipo_dato
+  - slot_was_set:
+    - tipo_dato:
+      - examenes
+  - slot_was_set:
+    - tipo_dato:
+      - examenes
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_reset_all_slots
+  - intent: informar
+    entities:
+    - tipo_dato: profesores
+    - tipo_dato: examenes
+    - asignatura: ingles
+    - asignatura: filosofia
+  - slot_was_set:
+    - asignatura:
+      - ingles
+      - filosofia
+  - slot_was_set:
+    - tipo_dato:
+      - profesores
+      - examenes
+  - action: asignatura_tipo_dato_form
+  - active_loop: asignatura_tipo_dato_form
+  - slot_was_set:
+    - asignatura:
+      - ingles
+      - filosofia
+  - slot_was_set:
+    - tipo_dato:
+      - profesores
+      - examenes
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_reset_all_slots
+  - intent: informar
+    entities:
+    - tipo_dato: profesores
+    - tipo_dato: examenes
+    - asignatura: aleman
+    - asignatura: frances
+  - slot_was_set:
+    - asignatura:
+      - aleman
+      - frances
+  - slot_was_set:
+    - tipo_dato:
+      - profesores
+      - examenes
+  - action: asignatura_tipo_dato_form
+  - active_loop: asignatura_tipo_dato_form
+  - slot_was_set:
+    - asignatura:
+      - aleman
+      - frances
+  - slot_was_set:
+    - tipo_dato:
+      - profesores
+      - examenes
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_reset_all_slots
+  - intent: informar
+    entities:
+    - tipo_dato: profesores
+    - tipo_dato: examenes
+    - asignatura: ingles
+    - asignatura: filosofia
+  - slot_was_set:
+    - asignatura:
+      - ingles
+      - filosofia
+  - slot_was_set:
+    - tipo_dato:
+      - profesores
+      - examenes
+  - action: asignatura_tipo_dato_form
+  - active_loop: asignatura_tipo_dato_form
+  - slot_was_set:
+    - asignatura:
+      - ingles
+      - filosofia
+  - slot_was_set:
+    - tipo_dato:
+      - profesores
+      - examenes
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_reset_all_slots
