@@ -67,10 +67,10 @@ forms:
 
 actions:
   - utter_ask_asignatura
-#  - utter_submit
   - action_default_fallback
   - validate_asignatura_tipo_dato_form
   - action_deactivate_loop
+  - action_reset_all_slots
 
 responses:
   utter_de_nada:
@@ -88,13 +88,13 @@ responses:
     - text: Saludos. Soy un Chatbot creado para asistirle con información sobre las asignaturas. Antes de continuar, ¿podría proporcionarme su nombre?
 
   utter_asignatura:
-    - text: "Hola, {nombre} ¿En qué asignatura puedo ayudarte? Puedes elegir entre Teoría del conocimiento, Matemáticas, Física o Tecnología."
-    - text: ¿En qué asignatura puedo ayudarte? Puedes elegir entre Teoría del conocimiento, Matemáticas, Física o Tecnología."
-    - text: ¡Hola, {nombre}! ¿En qué asignatura puedo brindarte ayuda? Puedes elegir entre Teoría del conocimiento, Matemáticas, Física o Tecnología.
-    - text: ¡Saludos! ¿En qué asignatura puedo asistirte? Puedes elegir entre Teoría del conocimiento, Matemáticas, Física o Tecnología.
-    - text: Hola, {nombre}, ¿necesitas ayuda en alguna asignatura en particular? Puedes elegir entre Teoría del conocimiento, Matemáticas, Física o Tecnología.
-    - text: ¡Hola! ¿En qué asignatura puedo ofrecerte ayuda? Tienes la opción de elegir entre Teoría del conocimiento, Matemáticas, Física o Tecnología.
-    - text: Saludos, {nombre}. ¿En qué asignatura puedo brindarte asistencia? Puedes seleccionar entre Teoría del conocimiento, Matemáticas, Física o Tecnología.
+    - text: "{nombre}. puede elegir entre matematicas, tecnologia, fisica, aleman, biologia, dibujo tecnico, frances, quimica, tic, lengua, lingua, ingles y filosofia."
+    - text: Puede elegir entre matematicas, tecnologia, fisica, aleman, biologia, dibujo tecnico, frances, quimica, tic, lengua, lingua, ingles y filosofia.
+    - text: "{nombre}, puede elegir entre matematicas, tecnologia, fisica, aleman, biologia, dibujo tecnico, frances, quimica, tic, lengua, lingua, ingles y filosofia."
+    - text: Puede elegir entre matematicas, tecnologia, fisica, aleman, biologia, dibujo tecnico, frances, quimica, tic, lengua, lingua, ingles y filosofia. 
+    - text: "{nombre}, puede elegir entre matematicas, tecnologia, fisica, aleman, biologia, dibujo tecnico, frances, quimica, tic, lengua, lingua, ingles y filosofia."
+    - text: Tienes la opción de elegir entre matematicas, tecnologia, fisica, aleman, biologia, dibujo tecnico, frances, quimica, tic, lengua, lingua, ingles y filosofia.
+    - text: "{nombre}, puedes seleccionar entre matematicas, tecnologia, fisica, aleman, biologia, dibujo tecnico, frances, quimica, tic, lengua, lingua, ingles y filosofia."
 
   utter_despedida:
     - text: Adiós, {nombre}. ¡Gracias por usar este chatbot!
@@ -132,15 +132,10 @@ responses:
     - text: ¿Estás seguro de que quieres dejar la conversación?
 
   utter_ask_asignatura:
-    - text: ¿Qué asignatura quieres consultar? De momento puedo informarte sobre matemáticas, física y tecnología.
-    - text: ¿Qué asignatura le interesa? De momento puedo informarte sobre matemáticas, física y tecnología.
+    - text: ¿Qué asignatura quieres consultar? De momento puedo informarte sobre matematicas, tecnologia, fisica, aleman, biologia, dibujo tecnico, frances, quimica, tic, lengua, lingua, musica, ingles y filosofia.
+    - text: ¿Qué asignatura le interesa? De momento puedo informarte sobre matematicas, tecnologia, fisica, aleman, biologia, dibujo tecnico, frances, quimica, tic, lengua, lingua, musica, ingles y filosofia.
   
   utter_ask_tipo_dato:
-    - text: ¿Qué tipo de datos quieres que te cuente sobre {asignatura}? Cuento con información de {asignatura}, sobre los profesores y sobre los exámenes.
-
-#  utter_submit:
-#    - text: De eso sí que te puedo hablar.
-#    - text: Tengo información de ello.
-#    - text: Ok, muy bien.
+    - text: ¿Qué tipo de datos quieres que te cuente sobre {asignatura}? Cuento con información de {asignatura}, sobre resumen, examenes, libros, competencias, profesores, contenidos, metodologia, requisitos, dedicacion, evaluacion y universidad.
 
 

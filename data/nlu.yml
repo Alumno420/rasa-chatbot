@@ -493,29 +493,247 @@ nlu:
     - ¿Cuáles son las [oportunidades de investigación](tipo_dato) en la [carrera](tipo_dato) de [lenguaje](asignatura) dentro de la [universidad](tipo_dato)?
     - ¿En qué medida la asignatura de [psicología educativa](asignatura) contribuye a mi [futura práctica](tipo_dato) profesional en la [universidad](tipo_dato)?
     - ¿Cuáles son las [perspectivas laborales](tipo_dato) para la [carrera](tipo_dato) de [ciencias naturales](asignatura)?
+    - Dime [algo](tipo_dato) de [matemáticas](asignatura)
+    - ¿Cuáles son los beneficios de realizar [prácticas](tipo_dato) en [biología](asignatura)?
+    - ¿Cómo se estructuran las evaluaciones de las [prácticas](tipo_dato) en [química](asignatura)?
+    - ¿Cuál es el propósito de la última [tarea](tipo_dato) que se te asignó en [español](asignatura)?
+    - ¿Qué se espera que logres en los [proyectos](tipo_dato) [proyecs](tipo_dato) en el programa de [informática](asignatura)?
+    - ¿Cómo se pueden organizar eficientemente los [proyectos](tipo_dato) y [trabajos](tipo_dato) en el curso de [música](asignatura)?
+    - ¿Cuántas [horas](tipo_dato) de estudio se recomiendan para esta asignatura?
+    - ¿Cuál es la [hora](tipo_dato) de inicio de la clase de [matemáticas](asignatura)?
+    - ¿Cuál es la [carga](tipo_dato) horaria de este curso en el plan de estudios?
+    - ¿Cuántas [sesiones](tipo_dato) de laboratorio se llevan a cabo en el curso de [química](asignatura)?
+    - ¿Cuál es el objetivo de la próxima [sesión](tipo_dato) de tutoría en [física](asignatura)?
+    - ¿Cuál es la [duración](tipo_dato) estimada de la prueba de evaluación en [biología](asignatura)?
+    - ¿Cuánto [tiempo](tipo_dato) se dedica al estudio independiente en este programa de [historia](asignatura)?
+    - ¿En qué [período](tipo_dato) del año académico se imparte este curso de [inglés](asignatura)?
+    - ¿Cuántos [períodos](tipo_dato) lectivos hay en el día escolar en nuestra institución?
+    - ¿Cuál es la [duración](tipo_dato) total del programa de [arte](asignatura)?
+    - ¿Cuántos [hrs](tipo_dato) de práctica se requieren en el curso de [música](asignatura)?
+    - ¿Cuánto [tiempo](tipo_dato) se asigna para completar la tarea en [español](asignatura)?
+    - ¿Cuál es la importancia de la [universidad](tipo_dato) en la búsqueda de empleo?
+    - ¿Cómo crees que la [utilidad](tipo_dato) de esta asignatura se aplica en el mundo laboral?
+    - ¿Cuál es tu visión sobre tu [futuro](tipo_dato) después de completar esta carrera?
+    - ¿Cuáles son las diferentes [carreras](tipo_dato) relacionadas con la industria de la tecnología?
+    - ¿Cuál es el papel de la [universidad](tipo_dato) en el desarrollo de habilidades profesionales?
+    - ¿Qué [relevancia](tipo_dato) tiene esta asignatura en el campo de la medicina?
+    - ¿Cuál es la [importancia](tipo_dato) de la investigación en el ámbito académico?
+    - ¿Qué estrategias se utilizan para enseñar el [inglés](asignatura) como lengua extranjera a hablantes no nativos?
+    - ¿Cuáles son las ventajas de tener fluidez en [inglés](asignatura) como segunda lengua extranjera?
+    - ¿Qué recursos se utilizan para el aprendizaje autónomo del [ingl](asignatura)?
+    - ¿Cuáles son los niveles de competencia en el idioma [ingl](asignatura) que se establecen en el programa de estudios?
+    - ¿Cuáles son los aspectos fundamentales que se estudian en la asignatura de [música](asignatura)?
+    - ¿Cómo se exploran diferentes géneros y estilos de [musica](asignatura) en el programa de estudios?
+    - ¿Cuál es la relación entre la música y la [danza](asignatura) en el campo de las artes escénicas?
+    - ¿Qué se estudia en el campo del [arte sonoro](asignatura) en el programa académico?
+    - ¿Cuál es el enfoque de la asignatura de [musicología](asignatura) en la investigación y análisis musical?
+    - ¿Cuáles son los principales conceptos abordados en el campo de la [musicology](asignatura)?
+    - ¿Cuál es el papel de la [lingua](asignatura) galega en el currículo educativo de Galicia?
+    - ¿Qué características distinguen al [gallego](asignatura) como lengua autonómica en España?
+    - ¿Cuáles son los principales aspectos gramaticales de la [lengua gallega](asignatura) que se estudian en el programa académico?
+    - ¿Cómo se promueve el uso y la preservación de la [gal](asignatura) en la comunidad local?
+    - ¿Cuáles son los recursos y materiales utilizados para enseñar la [lengua gallega](asignatura) a hablantes no nativos?
+    - ¿Cuál es la importancia de la [lengua](asignatura) castellana en el currículo educativo?
+    - ¿Qué características definen al [castellano](asignatura) como idioma oficial en varios países?
+    - ¿Cuáles son los aspectos fundamentales que se estudian en la asignatura de [lengua castellana](asignatura)?
+    - ¿Cómo se promueve el aprendizaje del [español](asignatura) como segunda lengua extranjera?
+    - ¿Qué recursos y materiales se utilizan para enseñar el [idioma](asignatura) español de forma efectiva?
+    - ¿Cuál es la importancia de la [language](asignatura) en el contexto de la comunicación global?
+    - ¿Cuáles son los principales géneros literarios que se estudian en la asignatura de [literatura](asignatura)?
+    - ¿Cómo se analizan y se interpretan las obras de [lit](asignatura) en el programa académico?
+    - ¿Cuál es el papel de las [letras](asignatura) en la expresión artística y la comunicación escrita?
+    - ¿Qué aspectos se exploran en el estudio del [arte escrito](asignatura) en el ámbito de la literatura?
+    - ¿Cuáles son los períodos literarios más destacados en la historia de la [literature](asignatura)?
+    - ¿Cuáles son los principales fenómenos geológicos que se estudian en la asignatura de [geología](asignatura)?
+    - ¿Cómo se investiga la historia y formación de la Tierra en el campo de las [ciencias de la tierra](asignatura)?
+    - ¿Cuáles son los principios fundamentales que se estudian en la asignatura de [física](asignatura) y su importancia en el campo de las ciencias naturales?
+    - ¿Cómo se aplican los conceptos de [fisica](asignatura) en el análisis de fenómenos y procesos en el universo?
+    - ¿Cuál es la relación entre la [fisic](asignatura) y otras ramas de la ciencia, como la química y la biología?
+    - ¿Qué aspectos se exploran en el estudio de la [physic](asignatura) y su aplicación en el campo de la ingeniería y la tecnología?
+    - ¿Cuál es el enfoque principal del programa de [physik](asignatura) en la comprensión de las leyes y teorías fundamentales de la física?
+    - ¿Cuáles son los temas abordados en el campo de la [fís](asignatura) en el programa académico?
+    - ¿Cuáles son los conceptos fundamentales que se estudian en la asignatura de [matemáticas](asignatura) y su importancia en el campo de las ciencias exactas?
+    - ¿Cómo se aplican los principios de [matemática](asignatura) en la resolución de problemas y el razonamiento lógico?
+    - ¿Cuál es la relación entre las [mates](asignatura) y otras disciplinas científicas, como la física y la ingeniería?
+    - ¿Qué aspectos se exploran en el estudio de la [matematicas](asignatura) y su aplicación en el ámbito académico y profesional?
+    - ¿Cuál es el enfoque principal del programa de [math](asignatura) en el desarrollo de habilidades matemáticas y el análisis cuantitativo?
+    - ¿Cuáles son los temas abordados en el campo de las [mathematics](asignatura) en el programa académico?
+    - ¿Cuál es la importancia del cálculo en el estudio de las [matemáticas](asignatura) y su aplicación en diversas áreas de la ciencia y la tecnología?
+    - ¿Cuál es el impacto de la [tecnología](asignatura) en la sociedad y en el avance de la humanidad?
+    - ¿Cómo se aplican las [tecnologias](asignatura) en diferentes campos y sectores, como la industria, la medicina o las comunicaciones?
+    - ¿Cuál es la importancia de dominar el uso de [tecno](asignatura) en el mundo digital actual?
+    - ¿Qué avances y desarrollos recientes se han producido en el campo del [tech](asignatura) y su aplicación en la vida cotidiana?
+    - ¿Cuál es el papel de las [techs](asignatura) en la innovación y la transformación de los procesos y sistemas existentes?
+    
+# Sinónimos de las asignaturas
 
+- synonym: tecnologia
+  examples: |
+    - tecnología
+    - tecnologia
+    - tecno
+  
+- synonym: matematicas
+  examples: |
+    - matemáticas
+    - matemática
+    - mates
+    - matematicas
+    - matematica
 
+- synonym: fisica
+  examples: |
+    - física
+    - fisica
+    - fisic
+    
+- synonym: aleman
+  examples: |
+    - alemán
+    - aleman
+    - german
+    - deutsch
+    
+- synonym: biologia
+  examples: |
+    - biología
+    - biologia
+    - bio
+    - biology
 
-- lookup: tipo_dato
+   
+- synonym: dibujo tecnico
+  examples: |
+    - dibujo
+    - dibujo técnico
+    - dibujo tecnico
+    - tecnico
+    - debuxo
+    
+- synonym: frances
+  examples: |
+    - francés
+    - frances
+    - french
+    
+- synonym: historia
+  examples: |
+    - historia
+    - history
+    
+- synonym: quimica
+  examples: |
+    - quimica
+    - química
+    - qui
+    - chem
+    - chemistry
+    
+- synonym: tic
+  examples: |
+    - tic
+    - Tecnologías de la Información y las Comunicaciones
+    - Tecnologias de la Informacion y las Comunicaciones
+    - TICs
+    - informática
+
+- synonym: lengua
+  examples: |
+    - lengua
+    - castellano
+    - lengua castellana
+    - español
+    
+- synonym: lingua
+  examples: |
+    - lingua
+    - gallego
+    - galego
+    - lingua galega
+
+ 
+- synonym: ingles
+  examples: |
+    - inglés
+    - ingles
+    - english
+    
+- synonym: filosofia
+  examples: |
+    - filosofia
+    - filosofía
+    - filo
+
+# Sinónimos de los tipo_dato
+
+- synonym: resumen
   examples: |
     - resumen
     - resúmenes
     - resumenes
+    - algo
+    - síntesis
+    - sumario
+
+- synonym: examenes
+  examples: |
     - exámenes
     - examenes
     - examen
+    - pruebas
+    - prueba
+    - control
+    - controles
+    
+- synonym: libros
+  examples: |
     - libros
     - libro
+    - material
+    - textos
+    
+- synonym: competencias
+  examples: |
     - competencia
     - competencias
+    - habilidades
+    - habilidad
+    - destrezas
+    - destreza
+    
+- synonym: profesores
+  examples: |
     - profesor
     - profesores
+    - maestros
+    - profesora
+    - profesoras
+    - profe
+    - profes
+    
+- synonym: contenidos
+  examples: |
     - contenidos
     - contenido
+    - temario
+    - content
+    - contents
+
+    
+- synonym: metodologia
+  examples: |
     - metodología
     - metodologia
     - metodologías
     - metodologias
+    - métodos
+    - método
+    - metodos
+    - metodo
+    - metods
+    
+- synonym: requisitos
+  examples: |
     - requisitos
     - requisito
     - conocimiento
@@ -524,6 +742,9 @@ nlu:
     - prerrequisitos
     - restricciones
     - restriccion
+
+- synonym: dedicacion
+  examples: |
     - dedicación
     - esfuerzo
     - tiempo
@@ -531,16 +752,21 @@ nlu:
     - compromiso
     - entrega
     - inversion
+    - inversión
     - implicacion
-    - enfoque
+    - implicación
+    
+- synonym: evaluacion
+  examples: |
     - evaluacion
     - evaluaciones
     - calificacion
     - calificaciones
     - valoracion
     - valoraciones
-    - criterio
-    - criterios
+    
+- synonym: universidad
+  examples: |
     - universidad
     - utilidad
     - futuro
@@ -551,18 +777,7 @@ nlu:
     - oportunidades
     - oportunidad
     - carrera
-
-- lookup: asignatura
-  examples: |
-    - matemáticas
-    - matemática
-    - mates
-    - matematicas
-    - matematica
-    - tecnología
-    - tecnologia
-    - física
-    - fisica
+    
 
 - intent: proporcionar_nombre
   examples: |

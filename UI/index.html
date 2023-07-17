@@ -1,0 +1,40 @@
+<html>
+  <title>Chatbot proyecto STEMBach - Non User Centered Design</title>
+  <body>
+    <!-- https://github.com/Horizon733/rasa-webchat -->
+  <script>
+  !(function () {
+    localStorage.clear();
+    sessionStorage.clear();
+    let e = document.createElement("script"),
+    
+      t = document.head || document.getElementsByTagName("head")[0];
+    (e.src =
+      "https://cdn.jsdelivr.net/npm/rasa-webchat@1.x.x/lib/index.js"),
+      
+      // Replace 1.x.x with the version that you want
+      (e.async = !0),
+      (e.onload = () => {
+        window.WebChat.default(
+          {
+            title: "Chatbot Proyecto STEMBach",
+            subtitle: "Empiece saludando",
+            inputTextFieldHint: "Inserte aquí su mensaje",
+            showFullScreenButton: true,
+            showMessageDate: true,
+
+            initPayload: '/restart',
+            customData: { language: "es" },
+            socketUrl: "http://localhost:5005",
+            // add other props here
+          },
+          null
+        ); 
+        
+      }),
+      t.insertBefore(e, t.firstChild);
+  })();
+
+  </script>
+</body>
+</html>
