@@ -157,5 +157,5 @@ INTENTS AÑADIDOS (UTTERS CORRESPONDIENTES TAMBIÉN AÑADIDOS):
 - cuestion_subjetiva
 - interes_tipo_dato
 - interes_materias
-- 
+
 **Full Changelog**: https://github.com/Alumno420/rasa-chatbot/compare/v2.0-beta-ecru-prior...v2.1-beta-universal-container
