@@ -59,7 +59,7 @@ sobre las asignaturas:
 - `matematicas`
 - `tecnologia`
 - `fisica`
-- 'aleman'
+- `aleman`
 - `frances`
 - `biologia`
 - `dibujo artistico`
