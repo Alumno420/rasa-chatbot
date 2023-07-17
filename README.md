@@ -55,17 +55,17 @@ sobre las asignaturas:
 - `matematicas`
 - `tecnologia`
 - `fisica`
-- 'aleman'
-- 'frances'
-- 'biologia'
-- 'dibujo tecnico'
-- 'historia'
-- 'quimica'
-- 'tic'
-- 'lengua'
-- 'lingua'
-- 'ingles'
-- 'filosofia'
+- `aleman`
+- `frances`
+- `biologia`
+- `dibujo tecnico`
+- `historia`
+- `quimica`
+- `tic`
+- `lengua`
+- `lingua`
+- `ingles`
+- `filosofia`
 
 ## Árbol de archivos
 - **actions**
