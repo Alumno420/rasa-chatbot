@@ -27,6 +27,7 @@ nlu:
     - buenas
     - hi
     - yo
+    - holas
 
 
 - intent: despedida
@@ -64,6 +65,16 @@ nlu:
     - te agradezco mucho
     - estoy muy agradecido
     - gracias por todo
+    - grax
+    - graxs
+    - thks
+    - thk
+    - thanks
+    - thank
+    - ok gracias
+    - vale gracias
+    - gracia
+    - ok muchas gracias
 
 - intent: afirmar
   examples: |
@@ -234,6 +245,10 @@ nlu:
 
 - intent: interes_materias
   examples: |
+    - ok
+    - okey
+    - okay
+    - sobre qué materias me puedas hablar?
     - ¿Cuáles son las asignaturas disponibles?
     - Me gustaría saber más sobre las materias.
     - ¿Qué asignaturas se ofrecen?
@@ -247,17 +262,53 @@ nlu:
     - ¿Cuáles son las asignaturas en el instituto?
     - ¿Cuáles son las asignaturas en el centro?
     - ¿Se ofrecen asignaturas?
-    - ¿Cuáles son las asignaturas más populares?
+    - ¿Cuáles son las materias más populares?
     - ¿Cuáles son las asignaturas más actualizadas?
     - ¿Qué materias se ofrecen?
     - Estoy interesado en conocer las opciones de materias.
     - ¿Se ofrecen materias?
+    - ¿Sobre qué asignaturas me puedes hablar?
+    - ¿Sobre qué materias me puedes informar?
+    - ¿Cuál es tu área de conocimiento?
+    - ¿Qué temas puedes abordar?
+
+- intent: interes_tipo_dato
+  examples: |
+    - qué info me puedes dar?
+    - ¿Qué tipo de información me puedes aportar sobre las asignaturas?
+    - ¿Qué sabes sobre las materias?
+    - Qué me puedes decir sobre una asignatura?
+    - ¿Puedes proporcionarme detalles sobre los requisitos de las asignaturas?
+    - ¿Cuáles son las características principales de las asignaturas?
+    - ¿Cuál es la información relevante que puedo obtener sobre las asignaturas?
+    - ¿Qué conocimientos tienes sobre los contenidos de las materias?
+    - Me gustaría conocer más detalles acerca de una asignatura en particular.
+    - ¿Qué tipo de información puedo esperar encontrar sobre las asignaturas?
+    - qué me puedes contar de cada asignatura
 
 - intent: informar
   examples: |
+    - ahora dime cuántos [exámenes](tipo_dato) y [proyectos](tipo_dato) hay en [TIC](asignatura) y en [bio](asignatura)
+    - quiero consultar [qui](asignatura)
+    - me interesa la asignatura de [dibujo]{"entity": "asignatura", "value": "dibujo tecnico"}
+    - pues sobre los [profesores](tipo_dato)
+    - quiero info de [french]{"entity": "asignatura", "value": "frances"}
+    - sobre los [exámenes]{"entity": "tipo_dato", "value": "examenes"}
+    - ahora cuéntame sobre los [requisitos](tipo_dato)
+    - me interesa [gallego]{"entity": "asignatura", "value": "lingua"}
+    - me interesa [dibujo]{"entity": "asignatura", "value": "dibujo tecnico"}
+    - dame información sobre [música]{"entity": "asignatura", "value": "musica"}
+    - ahora dime los [profesores](tipo_dato) y [exámenes]{"entity": "tipo_dato", "value": "examenes"} de [inglés]{"entity": "asignatura", "value": "ingles"} y de [filo]{"entity": "asignatura", "value": "filosofia"}
+    - ahora dime los [profesores](tipo_dato) y [exámenes]{"entity": "tipo_dato", "value": "examenes"} de [alemán]{"entity": "asignatura", "value": "aleman"} y [francés]{"entity": "asignatura", "value": "frances"}
+    - cuéntame los [profesores](tipo_dato) y los [exámenes]{"entity": "tipo_dato", "value": "examenes"} de [ingles](asignatura) y [filo]{"entity": "asignatura", "value": "filosofia"}
+    - me interesa [gallego](asignatura)
+    - me interesa [dibujo](asignatura)
+    - ahora cuéntame los [requisitos](tipo_dato)
+    - sobre los [exámenes](tipo_dato)
+    - quiero info de [francés](asignatura)
+    - quiro información de [física](asignatura)
     - me interesa saber los [profesores](tipo_dato) de [matemáticas](asignatura)
-    - me interesa la [música](asignatura) hay    
-    - dame información
+    - me interesa la [música](asignatura)
     - quiero saber los [profesores](tipo_dato)
     - dame información sobre [biología](asignatura)
     - dame información sobre [biología](asignatura)
@@ -496,6 +547,59 @@ nlu:
     - Dime [algo](tipo_dato) de [matemáticas](asignatura)
     - ¿Cuáles son los beneficios de realizar [prácticas](tipo_dato) en [biología](asignatura)?
     - ¿Cómo se estructuran las evaluaciones de las [prácticas](tipo_dato) en [química](asignatura)?
+    - ¿Qué protocolos de seguridad se siguen en el [laboratorio](tipo_dato) de [química](asignatura)?
+    - ¿Cuáles son los materiales utilizados en las [prácticas](tipo_dato) de [física](asignatura)?
+    - ¿Cuál es el propósito de la [práctica](tipo_dato) en [matemáticas](asignatura)?
+    - ¿Cómo se desarrollan las [prácticas](tipo_dato) en el curso de [informática](asignatura)?
+    - ¿Qué habilidades se adquieren a través de los [ejercicios](tipo_dato) en [matemáticas](asignatura)?
+    - ¿Cuál es la importancia de los [experimentos](tipo_dato) en el estudio de [biología](asignatura)?
+    - ¿Cuál es la diferencia entre una [práctica](tipo_dato) y un [laboratorio](tipo_dato) en [física](asignatura)?
+    - ¿Cuáles son los objetivos de las [prácticas](tipo_dato) en el programa de [ingeniería](asignatura)?
+    - ¿Cómo se estructuran las [prács](tipo_dato) en el curso de [química](asignatura)?
+    - ¿Qué se espera que los estudiantes aprendan a través de las [pracs](tipo_dato) en [matemáticas](asignatura)?
+    - ¿Cuáles son los métodos utilizados en los [experimentos](tipo_dato) de [física](asignatura)?
+    - ¿Cuál es la relación entre los [practicas](tipo_dato) y la teoría en [biología](asignatura)?
+    - ¿Qué tipo de [prácticas](tipo_dato) se realizan en [informática](asignatura)?
+    - ¿Cómo se evalúan los resultados de los [lab](tipo_dato) en [química](asignatura)?
+    - ¿Cuál es la importancia de los [ejercicios](tipo_dato) en el estudio de [matemáticas](asignatura)?
+    - ¿Cuáles son las precauciones de seguridad en los [experimentos](tipo_dato) de [física](asignatura)?
+    - ¿Cómo se estructuran las [prácticas](tipo_dato) en el programa de [ingeniería](asignatura)?
+    - ¿Cuál es la duración de las [prács](tipo_dato) en [biología](asignatura)?
+    - ¿Cuáles son los pasos a seguir en una [practica](tipo_dato) de [química](asignatura)?
+    - ¿Cómo se organizan las [prácticas](tipo_dato) de [informática](asignatura)?
+    - ¿Cuál es la importancia de los [ejercicios](tipo_dato) en el aprendizaje de [matemáticas](asignatura)?
+    - ¿Qué tipo de [experimentos](tipo_dato) se realizan en las clases de [ciencias](asignatura)?
+    - ¿Cuál es la duración promedio de las [prács](tipo_dato) en [ingeniería](asignatura)?
+    - ¿Qué se espera que los estudiantes logren en las [pracs](tipo_dato) de [biología](asignatura)?
+    - ¿Qué se aprende a través de las [prácticas](tipo_dato) en [química](asignatura)?
+    - ¿Cuál es el propósito de las [practicas](tipo_dato) en el curso de [matemáticas](asignatura)?
+    - ¿Se realizan [prácticas](tipo_dato) en [matemáticas](asignatura)?
+    - ¿Cuántas [prácticas](tipo_dato) hay en el programa de [química](asignatura)?
+    - ¿Cuál es la importancia de la [práctica](tipo_dato) en el aprendizaje de [biología](asignatura)?
+    - ¿En qué consisten las [prácticas](tipo_dato) de [física](asignatura)?
+    - ¿Cuál es el objetivo de los [laboratorios](tipo_dato) en [química](asignatura)?
+    - ¿Cómo se organizan las [prácticas](tipo_dato) de [informática](asignatura)?
+    - ¿Cuántos [lab](tipo_dato) se requieren en el curso de [física](asignatura)?
+    - ¿Cuáles son los temas abordados en los [ejercicios](tipo_dato) de [matemáticas](asignatura)?
+    - ¿Qué tipo de [experimentos](tipo_dato) se realizan en las clases de [ciencias](asignatura)?
+    - ¿Cuál es la duración promedio de las [prács](tipo_dato) en [ingeniería](asignatura)?
+    - ¿Qué se espera que los estudiantes logren en las [pracs](tipo_dato) de [biología](asignatura)?
+    - ¿Cuál es el propósito de los [practicas](tipo_dato) en el curso de [química](asignatura)?
+    - ¿Cuáles son las [actividades](tipo_dato) [extracurriculares](tipo_dato) disponibles en nuestra escuela?
+    - ¿Cuál es el impacto de la participación en una actividad [extracurricular](tipo_dato) en el desarrollo personal?
+    - ¿Cuál es tu [actividad](tipo_dato) [extracurricular](tipo_dato) favorita y por qué?
+    - ¿Cómo puedes equilibrar tus [actividades](tipo_dato) [extracurriculares](tipo_dato) con tus responsabilidades académicas?
+    - ¿Cuáles son los [deberes](tipo_dato) y [obligaciones](tipo_dato) asociados con las [actividades](tipo_dato) [extracurriculares](tipo_dato)?
+    - ¿Cómo puedes cumplir con tus [deberes](tipo_dato) y [obligaciones](tipo_dato) en tus [actividades](tipo_dato) [extracurriculares](tipo_dato) de manera efectiva?
+    - ¿Qué beneficios adicionales te brindan las [actividades](tipo_dato) [extracurriculares](tipo_dato) [extras](tipo_dato)?
+    - ¿Cuál es la importancia de involucrarte en [actividades](tipo_dato) [extracurriculares](tipo_dato) [extras](tipo_dato) más allá del currículo regular?
+    - ¿Cómo contribuyen las [actividades](tipo_dato) [extracurriculares](tipo_dato) a tu desarrollo personal y académico?
+    - ¿Cuáles son las oportunidades [extras](tipo_dato) que se pueden obtener a través de las [actividades](tipo_dato) [extracurriculares](tipo_dato)?
+    - ¿Cuál es la importancia de los [trabajos](tipo_dato) en [matemáticas](asignatura)?
+    - ¿Cómo se evalúan los [proyectos](tipo_dato) en el curso de [ciencias](asignatura)?
+    - ¿Cuál es tu [proyecto](tipo_dato) favorito que has realizado en [arte](asignatura)?
+    - ¿Cuáles son las expectativas en términos de [trabajo](tipo_dato) grupal en el programa de [historia](asignatura)?
+    - ¿Cuántas [tareas](tipo_dato) se asignan semanalmente en [inglés](asignatura)?
     - ¿Cuál es el propósito de la última [tarea](tipo_dato) que se te asignó en [español](asignatura)?
     - ¿Qué se espera que logres en los [proyectos](tipo_dato) [proyecs](tipo_dato) en el programa de [informática](asignatura)?
     - ¿Cómo se pueden organizar eficientemente los [proyectos](tipo_dato) y [trabajos](tipo_dato) en el curso de [música](asignatura)?
@@ -518,6 +622,115 @@ nlu:
     - ¿Cuál es el papel de la [universidad](tipo_dato) en el desarrollo de habilidades profesionales?
     - ¿Qué [relevancia](tipo_dato) tiene esta asignatura en el campo de la medicina?
     - ¿Cuál es la [importancia](tipo_dato) de la investigación en el ámbito académico?
+    - ¿Qué [oportunidades](tipo_dato) de prácticas profesionales ofrece esta institución?
+    - ¿Cómo se prepara esta universidad para brindar [oportunidades](tipo_dato) de intercambio estudiantil?
+    - ¿Cuál es tu visión de [carrera](tipo_dato) después de completar este programa de estudio?
+    - ¿Qué diferencias encuentras entre estudiar en una [uni](tipo_dato) pública y una privada?
+    - ¿Cuáles son las ventajas de obtener un título en una de las mejores [unis](tipo_dato) del país?
+    - ¿Cuáles son los criterios utilizados en la [evaluación](tipo_dato) de este proyecto?
+    - ¿Cómo se realizan las [evaluaciones](tipo_dato) en el curso de [matemáticas](asignatura)?
+    - ¿Cuál es la importancia de obtener una buena [calificación](tipo_dato) en este examen?
+    - ¿Qué factores influyen en la determinación de las [calificaciones](tipo_dato) finales en esta asignatura?
+    - ¿Cuál es tu [valoración](tipo_dato) de la calidad de las prácticas en este programa de [ingeniería](asignatura)?
+    - ¿Cómo se llevan a cabo las [valoraciones](tipo_dato) de desempeño en el programa de [administración](asignatura)?
+    - ¿Cuáles son los [criterios](tipo_dato) utilizados para evaluar el trabajo en equipo en este proyecto?
+    - ¿Qué [criterios](tipo_dato) se utilizan para evaluar las presentaciones en el curso de [comunicación](asignatura)?
+    - ¿Cómo se realizan las [evals](tipo_dato) formativas a lo largo del semestre en este programa de [psicología](asignatura)?
+    - ¿Cuáles son los diferentes [criterios](tipo_dato) que se utilizan para evaluar los ensayos en este curso de [literatura](asignatura)?
+    - ¿Cuál es la importancia de la [dedicación](tipo_dato) en el estudio de [matemáticas](asignatura)?
+    - ¿Cómo se reconoce y valora el [esfuerzo](tipo_dato) en el programa de [ciencias](asignatura)?
+    - ¿Cuánto [tiempo](tipo_dato) se recomienda dedicar al estudio de esta asignatura?
+    - ¿Qué beneficios trae consigo la [dedicacion](tipo_dato) constante en el aprendizaje de [historia](asignatura)?
+    - ¿Cuál es el nivel de [compromiso](tipo_dato) esperado de los estudiantes en este proyecto?
+    - ¿Cómo se evalúa la [entrega](tipo_dato) y presentación de trabajos en este programa de [arte](asignatura)?
+    - ¿Cuál es la [inversión](tipo_dato) necesaria en términos de recursos para este curso de [economía](asignatura)?
+    - ¿Cuál es la importancia de la [inversión](tipo_dato) de tiempo y esfuerzo en el logro académico?
+    - ¿Cómo se fomenta la [implicación](tipo_dato) de los estudiantes en las actividades extracurriculares?
+    - ¿Cuál es el nivel de [implicación](tipo_dato) requerido en los proyectos de [ingeniería](asignatura)?
+    - ¿Qué estrategias se pueden utilizar para mantener el [enfoque](tipo_dato) y la concentración durante el estudio?
+    - ¿Cuál es la relación entre la [dedi](tipo_dato) y el rendimiento académico en esta asignatura?
+    - ¿Cuáles son los [requisitos](tipo_dato) para inscribirse en este curso de [informática](asignatura)?
+    - ¿Cuál es el [requisito](tipo_dato) mínimo de conocimientos previos para cursar esta asignatura?
+    - ¿Qué nivel de [conocimiento](tipo_dato) se espera tener en [matemáticas](asignatura) antes de tomar este curso?
+    - ¿Cuáles son los [conocimientos](tipo_dato) necesarios para desempeñarse en el campo de la [ingeniería](asignatura)?
+    - ¿Cuáles son los [prerrequisitos](tipo_dato) para participar en este proyecto de investigación?
+    - ¿Cuántos [prerrequisitos](tipo_dato) son necesarios para acceder a este programa de [medicina](asignatura)?
+    - ¿Cuáles son las [restricciones](tipo_dato) de horario para inscribirse en esta asignatura de [arte](asignatura)?
+    - ¿Existe alguna [restriccion](tipo_dato) en cuanto al número máximo de estudiantes en esta clase de [historia](asignatura)?
+    - ¿Cuáles son los [reqs](tipo_dato) necesarios para ser admitido en el programa de [economía](asignatura)?
+    - ¿Cuál es el [req](tipo_dato) específico para acceder a este taller de [literatura](asignatura)?
+    - ¿Cuál es la [metodología](tipo_dato) utilizada en el curso de [ciencias](asignatura)?
+    - ¿Cuáles son las diferentes [metodologías](tipo_dato) de investigación en el campo de la [psicología](asignatura)?
+    - ¿Qué [métodos](tipo_dato) de estudio son más efectivos para esta asignatura de [matemáticas](asignatura)?
+    - ¿Cuál es el [método](tipo_dato) recomendado para la resolución de problemas en el programa de [ingeniería](asignatura)?
+    - ¿Cuáles son los diferentes [métodos](tipo_dato) de evaluación utilizados en el curso de [educación física](asignatura)?
+    - ¿Cómo se aplican las diferentes [metodologías](tipo_dato) de enseñanza en este programa de [idiomas](asignatura)?
+    - ¿Cuál es el [metodo](tipo_dato) de investigación más utilizado en el campo de la [sociología](asignatura)?
+    - ¿Cuáles son los [metods](tipo_dato) de aprendizaje utilizados en el curso de [arte](asignatura)?
+    - ¿Cuáles son los principales [contenidos](tipo_dato) que se abordan en el curso de [ciencias](asignatura)?
+    - ¿Qué [contenido](tipo_dato) se está estudiando actualmente en el programa de [historia](asignatura)?
+    - ¿Cuál es el [temario](tipo_dato) completo del curso de [matemáticas](asignatura) para este semestre?
+    - ¿Qué [materiales](tipo_dato) se requieren para realizar el laboratorio en el programa de [química](asignatura)?
+    - ¿Cuáles son los [contes](tipo_dato) que se tratarán en la próxima sesión de clase de [literatura](asignatura)?
+    - ¿Cómo se organiza y estructura el [content](tipo_dato) del curso de [informática](asignatura)?
+    - ¿Cuáles son los principales [contents](tipo_dato) que se estudian en el programa de [biología](asignatura)?
+    - ¿Cómo describirías al [profesor](tipo_dato) de este curso de [matemáticas](asignatura)?
+    - ¿Cuáles son las cualidades deseables en los [profesores](tipo_dato) de la facultad de [ciencias sociales](asignatura)?
+    - ¿Qué características distinguen a los buenos [maestros](tipo_dato) en el ámbito de la educación infantil?
+    - ¿Cómo influye la presencia de una [profesora](tipo_dato) en el rendimiento académico de las alumnas en este programa de [historia](asignatura)?
+    - ¿Cuáles son las habilidades y competencias de las mejores [profesoras](tipo_dato) de [lengua española](asignatura)?
+    - ¿Qué cualidades valoras en un [maestro](tipo_dato) para el aprendizaje de [arte](asignatura)?
+    - ¿Cuál es el papel del [maestro](tipo_dato) en el desarrollo de habilidades cognitivas en el programa de [ciencias](asignatura)?
+    - ¿Cómo se puede establecer una buena relación con el [maestro](tipo_dato) en el programa de [educación física](asignatura)?
+    - ¿Cuál es tu [profe](tipo_dato) favorito y por qué?
+    - ¿Qué características hacen que algunos [profes](tipo_dato) sean más efectivos en la enseñanza que otros?
+    - ¿Cuáles son las principales [competencias](tipo_dato) que se desarrollan en el programa de [administración de empresas](asignatura)?
+    - ¿Cómo se pueden mejorar las [habilidades](tipo_dato) de comunicación en el curso de [comunicación oral](asignatura)?
+    - ¿Qué [habilidad](tipo_dato) consideras más importante para tener éxito en el campo de la [tecnología](asignatura)?
+    - ¿Cuáles son las principales [destrezas](tipo_dato) que se adquieren en el programa de [ingeniería](asignatura)?
+    - ¿Cuál es la importancia de desarrollar la [destreza](tipo_dato) de trabajo en equipo en el curso de [proyectos colaborativos](asignatura)?
+    - ¿Cuáles son las [compes](tipo_dato) que se requieren para desempeñarse en el campo de la [educación física](asignatura)?
+    - ¿Cuáles son los [libros](tipo_dato) de referencia recomendados para este curso de [literatura](asignatura)?
+    - ¿Qué [libro](tipo_dato) utilizas como recurso principal en el programa de [historia](asignatura)?
+    - ¿Qué [material](tipo_dato) adicional se necesita para realizar los experimentos en el curso de [ciencias](asignatura)?
+    - ¿Cuáles son los principales [textos](tipo_dato) utilizados en el estudio de [filosofía](asignatura)?
+    - ¿Cuál es la importancia de las [publicaciones](tipo_dato) científicas en el campo de la [investigación](asignatura)?
+    - ¿Cuál es la disponibilidad de [biblio](tipo_dato) en la biblioteca de la universidad para este programa de [estudios literarios](asignatura)?
+    - ¿Cuántos [exámenes](tipo_dato) se programan a lo largo del semestre en el curso de [matemáticas](asignatura)?
+    - ¿Cuál es la estructura del [examen](tipo_dato) final en el programa de [ciencias sociales](asignatura)?
+    - ¿Qué tipo de [pruebas](tipo_dato) se utilizan para evaluar las habilidades prácticas en el curso de [laboratorio](asignatura)?
+    - ¿Cuál es la importancia de la preparación previa para la [prueba](tipo_dato) oral en el programa de [idiomas](asignatura)?
+    - ¿Cuántos [controles](tipo_dato) se realizan a lo largo del año académico en el curso de [historia](asignatura)?
+    - ¿Qué tipo de [test](tipo_dato) se utiliza para evaluar el conocimiento en el programa de [psicología](asignatura)?
+    - ¿Cuáles son los principales temas que se evalúan en los [exáms](tipo_dato) parciales de [química](asignatura)?
+    - ¿Cómo se organizan los [exams](tipo_dato) de mitad de curso en el programa de [arte](asignatura)?
+    - ¿Cuál es el formato de los [exámenes](tipo_dato) escritos en el curso de [literatura](asignatura)?
+    - ¿Cuál es la importancia de realizar un [resumen](tipo_dato) después de cada sesión de clase en el curso de [literatura](asignatura)?
+    - ¿Cómo se pueden mejorar las habilidades de elaboración de [resúmenes](tipo_dato) en el programa de [historia](asignatura)?
+    - ¿Qué elementos se deben incluir en un [resumen](tipo_dato) de un artículo científico en el campo de [biología](asignatura)?
+    - ¿Cómo se puede hacer un [resumen](tipo_dato) efectivo de un texto largo en el curso de [filosofía](asignatura)?
+    - ¿Cuál es la importancia de un [síntesis](tipo_dato) claro y conciso en el campo de [investigación](asignatura)?
+    - ¿Qué información se debe incluir en un [sumario](tipo_dato) de un informe en el programa de [economía](asignatura)?
+    - ¿Cuál es la extensión recomendada para un [res](tipo_dato) de un capítulo de un libro en el curso de [literatura](asignatura)?
+    - ¿Cuáles son los principales conceptos que se estudian en la asignatura de [economía](asignatura)?
+    - ¿Cuál es la importancia de la asignatura de [economia](asignatura) en el programa de [administración de empresas](asignatura)?
+    - ¿Cómo se aplican los principios [eco](asignatura) en el campo de las finanzas?
+    - ¿Cuáles son las principales áreas de estudio en el programa de [económicas](asignatura)?
+    - ¿Cuál es la relación entre la asignatura de [business](asignatura) y el emprendimiento?
+    - ¿Qué aspectos se abordan en el curso de [econom](asignatura) internacional?
+    - ¿Cuáles son los fundamentos de la asignatura de [econ](asignatura) política?
+    - ¿Cómo se pueden aplicar los conceptos de [econ](asignatura) en el análisis de mercados?
+    - ¿Cuál es el enfoque principal del programa de [BWL](asignatura)?
+    - ¿Cuáles son los principales temas de estudio en la asignatura de [filosofía](asignatura)?
+    - ¿Cómo se puede aplicar la [filo](asignatura) en el análisis ético de situaciones complejas?
+    - ¿Cuál es la importancia de la asignatura de [philosophy](asignatura) en la formación humanística?
+    - ¿Cuáles son las principales corrientes de pensamiento abordadas en el estudio de [filo](asignatura)?
+    - ¿Cuál es la relación entre la asignatura de [filosofar](asignatura) y la reflexión crítica?
+    - ¿Qué se puede aprender sobre la ética personal en el programa de [filos](asignatura)?
+    - ¿Cuáles son las principales teorías filosóficas que se estudian en la asignatura de [filosofía](asignatura)?
+    - ¿Cuál es el enfoque principal en el aprendizaje del idioma [inglés](asignatura) como primera lengua extranjera?
+    - ¿Cómo se desarrollan las habilidades de comunicación en el curso de [ingles](asignatura)?
+    - ¿Cuál es la importancia de dominar el idioma [english](asignatura) en el campo de los negocios internacionales?
     - ¿Qué estrategias se utilizan para enseñar el [inglés](asignatura) como lengua extranjera a hablantes no nativos?
     - ¿Cuáles son las ventajas de tener fluidez en [inglés](asignatura) como segunda lengua extranjera?
     - ¿Qué recursos se utilizan para el aprendizaje autónomo del [ingl](asignatura)?
@@ -546,6 +759,56 @@ nlu:
     - ¿Cuáles son los períodos literarios más destacados en la historia de la [literature](asignatura)?
     - ¿Cuáles son los principales fenómenos geológicos que se estudian en la asignatura de [geología](asignatura)?
     - ¿Cómo se investiga la historia y formación de la Tierra en el campo de las [ciencias de la tierra](asignatura)?
+    - ¿Cuál es el enfoque de estudio de los procesos geológicos en el programa de [geol](asignatura)?
+    - ¿Cuáles son las ramas de la [xeoloxía](asignatura) que se exploran en el ámbito académico?
+    - ¿Cuáles son los conceptos fundamentales en el estudio del [geo](asignatura)?
+    - ¿Cuál es la relación entre la geología y las [ciencias de las rocas](asignatura) en el campo de la geociencia?
+    - ¿Cuál es la importancia de las [Tecnologías de la Información y las Comunicaciones (TIC)](asignatura) en la sociedad actual?
+    - ¿Cómo se aplican las [Tecnologias de la Informacion y las Comunicaciones](asignatura) en el campo de la educación?
+    - ¿Cuál es el papel de las [TICs](asignatura) en la transformación digital de las empresas?
+    - ¿Qué aspectos se abordan en el estudio de la [informática](asignatura) y sus aplicaciones prácticas?
+    - ¿Cuál es el enfoque principal del programa de [informatic](asignatura) en el desarrollo de software?
+    - ¿Cuáles son las principales áreas de estudio en el campo de las [IT](asignatura) en el ámbito empresarial?
+    - ¿Cuáles son los fundamentos de la asignatura de [química](asignatura) y su importancia en el estudio de las ciencias?
+    - ¿Cómo se aplican los conceptos de [química](asignatura) en el campo de la investigación científica?
+    - ¿Cuál es la relación entre la [qui](asignatura) y otras disciplinas científicas, como la física y la biología?
+    - ¿Qué aspectos se exploran en el estudio del [chem](asignatura) y su aplicación en la industria?
+    - ¿Cuál es el enfoque principal del programa de [chemistry](asignatura) en el análisis de reacciones químicas?
+    - ¿Cuáles son las ramas de las [ciencias químicas](asignatura) que se estudian en el programa académico?
+    - ¿Cuáles son los principales períodos históricos que se estudian en la asignatura de [historia](asignatura)?
+    - ¿Cómo se investiga y se analiza la [history](asignatura) a través de fuentes primarias y secundarias?
+    - ¿Cuál es la importancia de la asignatura de [hist](asignatura) en el campo de las ciencias sociales?
+    - ¿Qué aspectos se abordan en el estudio de la [humanidades](asignatura) en el programa académico?
+    - ¿Cuál es el enfoque principal en el aprendizaje del idioma [francés](asignatura) como segunda lengua extranjera?
+    - ¿Cómo se desarrollan las habilidades de comunicación en el curso de [frances](asignatura)?
+    - ¿Cuál es la importancia de dominar el idioma [french](asignatura) en el ámbito de la cultura y las relaciones internacionales?
+    - ¿Qué estrategias se utilizan para enseñar el [francés](asignatura) como lengua extranjera a hablantes no nativos?
+    - ¿Cuáles son las ventajas de tener fluidez en [franc](asignatura) como segunda lengua extranjera?
+    - ¿Qué recursos se utilizan para el aprendizaje autónomo del [francés](asignatura)?
+    - ¿Cuáles son los conceptos fundamentales que se estudian en la asignatura de [dibujo](asignatura) y su importancia en el campo de las artes visuales?
+    - ¿Cómo se aplican los principios del [dibujo técnico](asignatura) en la representación gráfica de planos y diseños arquitectónicos?
+    - ¿Cuál es la relación entre el [técnico](asignatura) y el arte en el campo del dibujo?
+    - ¿Qué aspectos se exploran en el estudio del [debuxo](asignatura) y su aplicación en el campo del diseño?
+    - ¿Cuál es el enfoque principal del programa de [dibu](asignatura) en el desarrollo de habilidades artísticas y creativas?
+    - ¿Cuáles son los métodos y técnicas utilizados en la representación gráfica en la asignatura de [representación gráfica](asignatura)?
+    - ¿Cuáles son los elementos fundamentales que se exploran en la asignatura de [arte](asignatura) y su importancia en la expresión creativa?
+    - ¿Cómo se aplican los principios del [dibujo artístico](asignatura) en la representación de formas y volúmenes?
+    - ¿Cuál es la relación entre la [pintura](asignatura) y el arte en el campo de las artes visuales?
+    - ¿Qué aspectos se estudian en el campo del [dibujo](asignatura) y su aplicación en la expresión artística?
+    - ¿Cuál es el enfoque principal del programa de [art](asignatura) en el desarrollo de habilidades artísticas y creativas?
+    - ¿Cuáles son los medios y técnicas utilizados en la creación de [artes plásticas](asignatura)?
+    - ¿Cuáles son los conceptos fundamentales que se estudian en la asignatura de [biología](asignatura) y su importancia en el campo de las ciencias de la vida?
+    - ¿Cómo se aplican los principios de [bio](asignatura) en el estudio de los organismos vivos y su funcionamiento?
+    - ¿Cuál es la relación entre la [biology](asignatura) y otras disciplinas científicas, como la química y la genética?
+    - ¿Qué aspectos se exploran en el estudio de la [bioloxía](asignatura) y su aplicación en la investigación biológica?
+    - ¿Cuál es el enfoque principal del programa de [biol](asignatura) en el análisis de los sistemas vivos y su interacción con el entorno?
+    - ¿Cuáles son los temas abordados en el campo de las [ciencias de la vida](asignatura) en el programa académico?
+    - ¿Cuál es el enfoque principal en el aprendizaje del idioma [alemán](asignatura) como segunda lengua extranjera?
+    - ¿Cómo se desarrollan las habilidades de comunicación en el curso de [aleman](asignatura)?
+    - ¿Cuál es la importancia de dominar el idioma [german](asignatura) en el ámbito de la comunicación internacional y los negocios?
+    - ¿Qué estrategias se utilizan para enseñar el [deutsch](asignatura) como lengua extranjera a hablantes no nativos?
+    - ¿Cuáles son las ventajas de tener fluidez en [alem](asignatura) como segunda lengua extranjera?
+    - ¿Qué recursos se utilizan para el aprendizaje autónomo del [alemán](asignatura)?
     - ¿Cuáles son los principios fundamentales que se estudian en la asignatura de [física](asignatura) y su importancia en el campo de las ciencias naturales?
     - ¿Cómo se aplican los conceptos de [fisica](asignatura) en el análisis de fenómenos y procesos en el universo?
     - ¿Cuál es la relación entre la [fisic](asignatura) y otras ramas de la ciencia, como la química y la biología?
@@ -572,6 +835,9 @@ nlu:
     - tecnología
     - tecnologia
     - tecno
+    - tec
+    - tech
+    - techs
   
 - synonym: matematicas
   examples: |
@@ -580,12 +846,21 @@ nlu:
     - mates
     - matematicas
     - matematica
+    - math
+    - mate
+    - mathematics
+    - maths
+    - cálculo
 
 - synonym: fisica
   examples: |
     - física
     - fisica
     - fisic
+    - physic
+    - physik
+    - fís
+    - físic
     
 - synonym: aleman
   examples: |
@@ -593,6 +868,9 @@ nlu:
     - aleman
     - german
     - deutsch
+    - alemán segunda lengua extranjera
+    - alem
+    - alemán como lengua extranjera
     
 - synonym: biologia
   examples: |
@@ -600,26 +878,50 @@ nlu:
     - biologia
     - bio
     - biology
-
-   
+    - bioloxía
+    - bioloxia
+    - biol
+    - ciencias de la vida
+    - ciencias naturales
+    
+- synonym: dibujo artistico
+  examples: |
+    - arte
+    - dibujo artístico
+    - artístico
+    - pintura
+    - art
+    - artes plásticas
+    - artes plasticas
+    - arte plastica
+    
 - synonym: dibujo tecnico
   examples: |
     - dibujo
     - dibujo técnico
     - dibujo tecnico
+    - técnico
     - tecnico
     - debuxo
+    - dibu
+    - representación gráfica
+    - representacion grafica
     
 - synonym: frances
   examples: |
     - francés
     - frances
     - french
+    - francés como segunda lengua extranjera
+    - franc
+    - francés como lengua extranjera
     
 - synonym: historia
   examples: |
     - historia
     - history
+    - histo
+    - humanidades
     
 - synonym: quimica
   examples: |
@@ -628,6 +930,10 @@ nlu:
     - qui
     - chem
     - chemistry
+    - quím
+    - ciencias químicas
+    - quim
+    - ciencias quimicas
     
 - synonym: tic
   examples: |
@@ -636,13 +942,36 @@ nlu:
     - Tecnologias de la Informacion y las Comunicaciones
     - TICs
     - informática
+    - informatic
+    - IT 
 
+- synonym: geologia
+  examples: |
+    - geología
+    - geologia
+    - geo
+    - xeo
+    - xeoloxía
+    - geol
+    - ciencias de la tierra
+    - ciencias de las rocas
+    
+- synonym: literatura
+  examples: |
+    - literatura
+    - lit
+    - letras
+    - arte escrito
+    - literature
+    
 - synonym: lengua
   examples: |
     - lengua
     - castellano
     - lengua castellana
     - español
+    - idioma
+    - language
     
 - synonym: lingua
   examples: |
@@ -650,19 +979,49 @@ nlu:
     - gallego
     - galego
     - lingua galega
-
- 
+    - gal
+    - lengua gallega
+    
+- synonym: musica
+  examples: |
+    - música
+    - musica
+    - music
+    - danza
+    - arte sonoro
+    - musicología
+    - musicology
+    
 - synonym: ingles
   examples: |
     - inglés
     - ingles
+    - primera lengua extranjera
     - english
+    - inglés como lengua extranjera
+    - ingl
     
 - synonym: filosofia
   examples: |
     - filosofia
     - filosofía
     - filo
+    - philosophy
+    - philo
+    - filosofar
+    - filos
+    
+- synonym: economia
+  examples: |
+    - economía
+    - economia
+    - eco
+    - económicas
+    - ecnomicas
+    - business
+    - econom
+    - econ
+    - BWL
 
 # Sinónimos de los tipo_dato
 
@@ -674,6 +1033,7 @@ nlu:
     - algo
     - síntesis
     - sumario
+    - res
 
 - synonym: examenes
   examples: |
@@ -684,6 +1044,11 @@ nlu:
     - prueba
     - control
     - controles
+    - test
+    - tests
+    - exáms
+    - exams
+    - exam
     
 - synonym: libros
   examples: |
@@ -691,6 +1056,8 @@ nlu:
     - libro
     - material
     - textos
+    - publicaciones
+    - biblio
     
 - synonym: competencias
   examples: |
@@ -700,6 +1067,7 @@ nlu:
     - habilidad
     - destrezas
     - destreza
+    - compes
     
 - synonym: profesores
   examples: |
@@ -708,6 +1076,9 @@ nlu:
     - maestros
     - profesora
     - profesoras
+    - maestras
+    - maestro
+    - maestra
     - profe
     - profes
     
@@ -716,6 +1087,8 @@ nlu:
     - contenidos
     - contenido
     - temario
+    - materiales
+    - contes
     - content
     - contents
 
@@ -730,6 +1103,7 @@ nlu:
     - método
     - metodos
     - metodo
+    - metod
     - metods
     
 - synonym: requisitos
@@ -742,6 +1116,8 @@ nlu:
     - prerrequisitos
     - restricciones
     - restriccion
+    - reqs
+    - req
 
 - synonym: dedicacion
   examples: |
@@ -755,6 +1131,8 @@ nlu:
     - inversión
     - implicacion
     - implicación
+    - enfoque
+    - dedi
     
 - synonym: evaluacion
   examples: |
@@ -764,6 +1142,10 @@ nlu:
     - calificaciones
     - valoracion
     - valoraciones
+    - criterio
+    - criterios
+    - eval
+    - evals
     
 - synonym: universidad
   examples: |
@@ -777,10 +1159,65 @@ nlu:
     - oportunidades
     - oportunidad
     - carrera
+    - uni
+    - unis
     
+- synonym: horas
+  examples: |
+    - horas
+    - hora
+    - carga
+    - sesiones
+    - sesión
+    - sesion
+    - duración
+    - período
+    - periodo
+    - períodos
+    - periodos
+    - hrs
+    - hr
+    
+- synonym: proyectos
+  examples: |
+    - trabajos
+    - proyectos
+    - proyecto
+    - trabajo
+    - tareas
+    - tarea
+    - proyecs
+    - proyec
+    
+- synonym: extracurriculares
+  examples: |
+    - extracurriculares
+    - extracurricular
+    - actividades
+    - actividad
+    - deberes
+    - obligaciones
+    - extra
+    - extras
+    
+- synonym: practicas
+  examples: |
+    - práctica
+    - prácticas
+    - practica
+    - practicas
+    - laboratorio
+    - lab
+    - ejercicios
+    - experimentos
+    - prács
+    - pracs
+    - prac
+
 
 - intent: proporcionar_nombre
   examples: |
+    - Soy [Alumno420](nombre)
     - mi nombre es [álvaro](nombre)
     - soy [Jorge](nombre)
     - mi nombre es [Juan](nombre)
@@ -831,3 +1268,68 @@ nlu:
     - puedes decirme [Julieta](nombre)
     - me conocen como [Maike](nombre)
     - hola me llaman [Tino](nombre)
+  
+- intent: cuestion_subjetiva
+  examples: |
+    - ¿Cuál es la mejor profesora?
+    - ¿Cuál es el mejor profesor?
+    - ¿Quién es el mejor profesor de física?
+    - ¿Quién es el mejor profesor en esta asignatura?
+    - Qué profesor es el más amable?
+    - ¿Cuál es la asignatura más fácil según tu experiencia?
+    - ¿Qué tan difícil es la física en comparación con otras asignaturas?
+    - ¿Cuál es la parte más interesante de esta asignatura para ti?
+    - ¿Cuál es la asignatura más desafiante que has cursado hasta ahora?
+    - ¿Qué estrategias o técnicas recomendarías para estudiar esta asignatura de manera efectiva?
+    - ¿Cuál es tu opinión sobre el enfoque de enseñanza utilizado en esta asignatura?
+    - ¿Qué aspectos te gustaría mejorar en esta asignatura?
+    - ¿Cuál ha sido tu proyecto o tarea favorita en esta asignatura y por qué?
+    - ¿Cómo crees que esta asignatura se relaciona con tu futuro académico o profesional?
+    - ¿Qué recursos o materiales adicionales recomendarías para complementar el estudio de esta asignatura?
+    - ¿Cuál es tu opinión sobre la importancia de esta asignatura en el currículo escolar?
+    - ¿Cuál es la asignatura que más disfrutas y por qué?
+    - ¿En qué aspectos consideras que esta asignatura podría ser más relevante para la vida cotidiana?
+    - ¿Cómo crees que esta asignatura podría aplicarse en situaciones del mundo real?
+    - ¿Cuál es tu opinión sobre la forma en que se evalúa esta asignatura?
+    - ¿Cuáles son los desafíos más comunes que los estudiantes enfrentan al estudiar esta asignatura?
+    - ¿Cuál es la relación entre esta asignatura y otras áreas del conocimiento?
+    - ¿Qué consejos tendrías para los estudiantes que encuentran dificultades en esta asignatura?
+    - ¿Cuál es tu opinión sobre la relevancia de esta asignatura en tu formación académica?
+    - ¿Qué te parece la forma en que se enseña esta asignatura en comparación con otras asignaturas?
+    - ¿Cuáles son tus aspectos favoritos de esta asignatura y por qué?
+    - ¿En qué medida crees que esta asignatura te ayuda a desarrollar habilidades útiles para tu futuro?
+    - ¿Qué desafíos consideras que presenta esta asignatura y cómo los enfrentas?
+    - ¿Cuál es tu percepción sobre la dificultad de esta asignatura en comparación con otras asignaturas que has cursado?
+    - ¿Cómo crees que esta asignatura se relaciona con tus intereses personales o aspiraciones profesionales?
+    - ¿Cuál es tu opinión sobre la forma en que se evalúa tu progreso en esta asignatura?
+    - ¿Qué estrategias utilizas para motivarte y mantener tu interés en el estudio de esta asignatura?
+    - ¿Cómo crees que tu experiencia en esta asignatura ha influido en tu perspectiva sobre el tema?
+    - ¿Cuál es tu opinión sobre la importancia de esta asignatura en tu desarrollo integral como estudiante?
+    - ¿Qué aspectos te resultan más interesantes o estimulantes en las actividades o proyectos relacionados con esta asignatura?
+    - ¿Qué impacto crees que tiene esta asignatura en tu capacidad para resolver problemas o enfrentar situaciones del mundo real?
+    - ¿Cuál es tu percepción sobre la relación entre el contenido teórico y las aplicaciones prácticas en esta asignatura?
+    - ¿Qué recomendaciones o consejos darías a otros estudiantes que estén por cursar esta asignatura?
+    - ¿Cuál ha sido el mayor aprendizaje o descubrimiento que has obtenido de esta asignatura hasta ahora?
+    - ¿Cómo crees que esta asignatura ha influido en tu forma de pensar o razonar en otros contextos académicos o personales?
+    - ¿Qué profesor te gusta más?
+    - ¿Qué profesores te gusta más?
+    - ¿Qué maestro te gusta más?
+    - ¿Qué maestros te gustan más?
+    - ¿Qué maestra te gusta más?
+    - ¿Qué maestras te gustan más?
+    - ¿Qué profesora te gusta más?
+    - ¿Qué profesoras te gustan más?
+    - ¿Qué profesor valoras más?
+    - ¿Qué profesores valoras más?
+    - ¿Qué maestro valoras más?
+    - ¿Qué maestros valoras más?
+    - ¿Qué maestra valoras más?
+    - ¿Qué maestras valoras más?
+    - ¿Qué profesora valoras más?
+    - ¿Qué profesoras valoras más?
+    - ¿Cuál es tu opinión?
+    - ¿Qué opinas?
+    - ¿Cuál es tu opinión sobre X?
+    - ¿Qué opinas sobre X?
+
+
