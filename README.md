@@ -1,5 +1,5 @@
-# rasa-chatbot: rama teniendo en cuenta el feedback del usuario
-![Demo Chatbot](https://raw.githubusercontent.com/Alumno420/rasa-chatbot/user-centered/DEMO-chatbot%20-%20user%20centered.png)
+# rasa-chatbot: rama teniendo en cuenta el feedback del usuario y en estilo formal
+![Demo Chatbot](https://raw.githubusercontent.com/Alumno420/rasa-chatbot/formal/DEMO-chatbot%20-%20formal.png)
 ### Instalación:
 La última versión oficial de Rasa 6.0 tiene demasiados bugs, por lo que hay que empezar downgrading:
 
