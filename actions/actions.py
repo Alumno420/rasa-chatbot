@@ -96,9 +96,11 @@ data = manager_dataDB("dataDB.xlsx")
 # esto esrá para evitar que el chatbot responda dos veces 
 was_submitted = False
 
+# ['matematicas', 'tecnologia', 'fisica', 'aleman', 'biologia', 'dibujo artistico', 'dibujo tecnico', 'frances', 'historia', 'quimica', 'tic', 'geologia', 'literatura', 'lengua', 'lingua', 'musica', 'ingles', 'filosofia', 'economia']
 # la materias que contiene la DB en .xlsx
-ALLOWED_SUBJECTS = data.obtener_valores_fila("ASIGNATURA")
+ALLOWED_SUBJECTS = data.obtener_valores_fila("ASIGNATURA") 
 
+# ['resumen', 'examenes', 'libros', 'competencias', 'profesores', 'contenidos', 'metodologia', 'requisitos', 'dedicacion', 'evaluacion', 'universidad', 'horas', 'proyectos', 'extracurriculares', 'practicas']
 # los tipos de datos que contiene la DB en .xlsx
 ALLOWED_DATA_TYPES = data.obtener_valores_columna("TIPO_DATO") 
 
@@ -113,7 +115,7 @@ class ActionDefaultFallback(Action):
     
     def run(self, dispatcher, tracker, domain):
             # output de un mensaje de que no se ha entendido el user input
-            message = "Disculpe, no le he entendido."
+            message = "Disculpe usted, no le he entendido."
             dispatcher.utter_message(text=message)
             # se deshace la última interacción del usuario
             return [UserUtteranceReverted()]
@@ -162,13 +164,13 @@ class ValidateAsignaturaTipoDatoForm(FormValidationAction):
 
         # Caso en el que la asignatura dada no esté en la DB
         if in_Input == False:
-            dispatcher.utter_message(text=f"De momento solo puedo informarte sobre las siguientes asignaturas: {subjects}")
+            dispatcher.utter_message(text=f"De momento solo puedo informarle sobre las siguientes asignaturas: {subjects}")
             return {"asignatura": None}
         
         # Para comprobar si ya se tiene el tipo_dato, en caso negativo se pide, en caso positivo se muestra la info solicitada
         slot_tipo_dato = tracker.get_slot("tipo_dato")
         if slot_tipo_dato == None:
-            dispatcher.utter_message(text=f"Ahora necesito que me digas el tipo de dato que quieres.")
+            dispatcher.utter_message(text=f"Ahora necesito que usted me diga el tipo de dato que desea.")
         else:
             # eliminar duplicados
             slot_value_purged = []
@@ -222,7 +224,7 @@ class ValidateAsignaturaTipoDatoForm(FormValidationAction):
         # Comprobar si todavía no se ha dado el valor de la asignatura
         slot_asignatura = tracker.get_slot("asignatura")
         if slot_asignatura == None:
-            dispatcher.utter_message(text=f"Ahora necesito que me digas la asignatura que le interesa de estas: {subs}")
+            dispatcher.utter_message(text=f"Ahora necesito que usted me diga la asignatura que le interesa de estas: {subs}")
         else:
             # eliminar duplicados en asignatura
             slot_value_purged = []
@@ -267,7 +269,7 @@ class ValidateAsignaturaTipoDatoForm(FormValidationAction):
         print("[DEBUG] tipos_dato_Input & in_Input, was_submitted: ", tipos_dato_Input, in_Input, was_submitted)
 
         if slot_asignatura == None and in_Input == False:
-            dispatcher.utter_message(text=f"No tengo {slot_value_purged} como tipo de dato, tengo datos de {datas}. Primero necesito que me digas la asignatura que te interesa.")
+            dispatcher.utter_message(text=f"No tengo {slot_value_purged} como tipo de dato, tengo datos de {datas}. Primero necesito que usted me diga la asignatura que le interesa.")
             return {"tipo_dato": None}
 
         if in_Input == False and slot_asignatura != None:
@@ -275,7 +277,7 @@ class ValidateAsignaturaTipoDatoForm(FormValidationAction):
             return {"tipo_dato": None}
         
         if slot_asignatura == None and in_Input == True:
-            dispatcher.utter_message(text=f"Tengo {slot_value} como tipo de dato, pero primero necesito que me digas la asignatura que te interesa.")
+            dispatcher.utter_message(text=f"Tengo {slot_value} como tipo de dato, pero primero necesito que usted me diga la asignatura que le interesa.")
             return {"tipo_dato": slot_value}
 
         if was_submitted == False:

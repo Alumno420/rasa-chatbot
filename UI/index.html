@@ -1,7 +1,20 @@
 <html>
-  <title>Chatbot proyecto STEMBach - Non User Centered Design</title>
+  <title>Chatbot proyecto STEMBach - Versión Formal</title>
   <body>
     <!-- https://github.com/Horizon733/rasa-webchat -->
+    <style>
+      @font-face 
+      {
+        font-family: myFirstFont;
+        src: url("SFUIText-Regular.otf");
+        font-weight: bold;
+      }
+      .rw-conversation-container .rw-header .rw-title .rw-loading{background-color: aqua;}
+      .rw-conversation-container .rw-messages-container .rw-message .rw-client{background-color:dodgerblue;font-family: myFirstFont;color: white;}
+      .rw-conversation-container .rw-messages-container .rw-message .rw-response{background-color:#37d05d;font-family: myFirstFont;color: white;}
+      .rw-conversation-container .rw-messages-container .rw-sender .rw-send{background-color:darkgreen;}
+      .rw-messages-container{background-image: url('bg.png');background-position: center;background-repeat: no-repeat;background-size: cover;height: 100%;}
+    </style>
   <script>
   !(function () {
     localStorage.clear();
@@ -20,6 +33,7 @@
             title: "Chatbot Proyecto STEMBach",
             subtitle: "Empiece saludando",
             inputTextFieldHint: "Inserte aquí su mensaje",
+            embedded: true,
             showFullScreenButton: true,
             showMessageDate: true,
 

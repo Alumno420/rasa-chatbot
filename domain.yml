@@ -54,9 +54,11 @@ intents:
   - stop
   - bot_challenge
   - proporcionar_nombre
-  - interes_materias
   - informar
   - agradecer
+  - cuestion_subjetiva
+  - interes_tipo_dato
+  - interes_materias
 
 
 forms:
@@ -77,32 +79,35 @@ responses:
     - text: De nada {nombre}.
     - text: De nada.
     - text: Un placer haberle ayudado, {nombre}.
-    - text: Un placee haberle ayudado.
+    - text: Un placer haberle ayudado.
 
   utter_saludo:
-    - text: "Hola soy un Chatbot creado para informarle sobre las asignaturas. Primero, ¿cómo se llama?"
-    - text: ¡Hola! Soy un Chatbot especializado en brindar información sobre las asignaturas. Antes de comenzar, ¿me podría decir su nombre?
-    - text: ¡Saludos! Soy un Chatbot diseñado para ayudarle con información sobre las asignaturas. Antes de empezar, ¿me gustaría saber cómo se llama?
-    - text: Bienvenido al Chatbot informativo sobre las asignaturas. Antes de continuar, ¿podría proporcionarme su nombre?
-    - text: ¡Hola! Soy un Chatbot especializado en brindar información sobre las asignaturas. Antes de empezar, ¿podría decirme su nombre?
-    - text: Saludos. Soy un Chatbot creado para asistirle con información sobre las asignaturas. Antes de continuar, ¿podría proporcionarme su nombre?
+    - text: "Hola soy un Chatbot creado para informarle sobre las asignaturas. Primero, ¿cómo se llama usted?"
+    - text: ¡Hola! Soy un Chatbot especializado en brindar información sobre las asignaturas. Antes de comenzar, ¿me podría decir su nombre por favor?
+    - text: ¡Cordiales saludos! Soy un Chatbot diseñado para ayudarle con información sobre las asignaturas. Antes de empezar, ¿me gustaría saber cómo se llama usted?
+    - text: Bienvenido al Chatbot informativo sobre las asignaturas. Antes de continuar, ¿podría usted proporcionarme su nombre por favor?
+    - text: ¡Hola! Soy un Chatbot especializado en brindar información sobre las asignaturas. Antes de empezar, ¿podría usted decirme su nombre?
+    - text: Cordiales saludos. Soy un Chatbot creado para asistirle con información sobre las asignaturas. Antes de continuar, ¿podría por favor proporcionarme su nombre?
 
   utter_asignatura:
-    - text: "{nombre}. puede elegir entre matematicas, tecnologia, fisica, aleman, biologia, dibujo tecnico, frances, quimica, tic, lengua, lingua, ingles y filosofia."
-    - text: Puede elegir entre matematicas, tecnologia, fisica, aleman, biologia, dibujo tecnico, frances, quimica, tic, lengua, lingua, ingles y filosofia.
-    - text: "{nombre}, puede elegir entre matematicas, tecnologia, fisica, aleman, biologia, dibujo tecnico, frances, quimica, tic, lengua, lingua, ingles y filosofia."
-    - text: Puede elegir entre matematicas, tecnologia, fisica, aleman, biologia, dibujo tecnico, frances, quimica, tic, lengua, lingua, ingles y filosofia. 
-    - text: "{nombre}, puede elegir entre matematicas, tecnologia, fisica, aleman, biologia, dibujo tecnico, frances, quimica, tic, lengua, lingua, ingles y filosofia."
-    - text: Tienes la opción de elegir entre matematicas, tecnologia, fisica, aleman, biologia, dibujo tecnico, frances, quimica, tic, lengua, lingua, ingles y filosofia.
-    - text: "{nombre}, puedes seleccionar entre matematicas, tecnologia, fisica, aleman, biologia, dibujo tecnico, frances, quimica, tic, lengua, lingua, ingles y filosofia."
+    - text: "{nombre}, usted puede elegir entre matematicas, tecnologia, fisica, aleman, biologia, dibujo artistico, dibujo tecnico, frances, historia, quimica, tic, geologia, literatura, lengua, lingua, musica, ingles, filosofia y economia."
+    - text: Usted puede elegir entre matematicas, tecnologia, fisica, aleman, biologia, dibujo artistico, dibujo tecnico, frances, historia, quimica, tic, geologia, literatura, lengua, lingua, musica, ingles, filosofia y economia.
+    - text: "{nombre}, usted puede elegir entre matematicas, tecnologia, fisica, aleman, biologia, dibujo artistico, dibujo tecnico, frances, historia, quimica, tic, geologia, literatura, lengua, lingua, musica, ingles, filosofia y economia."
+    - text: Usted puede elegir entre matematicas, tecnologia, fisica, aleman, biologia, dibujo artistico, dibujo tecnico, frances, historia, quimica, tic, geologia, literatura, lengua, lingua, musica, ingles, filosofia y economia.
+    - text: "{nombre}, usted puede elegir entre matematicas, tecnologia, fisica, aleman, biologia, dibujo artistico, dibujo tecnico, frances, historia, quimica, tic, geologia, literatura, lengua, lingua, musica, ingles, filosofia y economia."
+    - text: Usted tiene la opción de elegir entre matematicas, tecnologia, fisica, aleman, biologia, dibujo artistico, dibujo tecnico, frances, historia, quimica, tic, geologia, literatura, lengua, lingua, musica, ingles, filosofia y economia.
+    - text: "{nombre}, usted puede seleccionar entre matematicas, tecnologia, fisica, aleman, biologia, dibujo artistico, dibujo tecnico, frances, historia, quimica, tic, geologia, literatura, lengua, lingua, musica, ingles, filosofia y economia."
+
+  utter_tipo_dato:
+    - text: "Los tipos de datos que usted puede solicitar sobre una asignatura son: resumen, examenes, libros, competencias, profesores, contenidos, metodologia, requisitos, dedicacion, evaluacion, universidad, horas, proyectos, extracurriculares y practicas" 
 
   utter_despedida:
     - text: Adiós, {nombre}. ¡Gracias por usar este chatbot!
     - text: Adiós. ¡Gracias por usar este chatbot!
     - text: ¡Hasta luego! ¡Gracias por utilizar este chatbot!
-    - text: Adiós, que tengas un buen día. ¡Gracias por utilizar este chatbot!
-    - text: Espero haberte sido de ayuda. ¡Adiós y gracias por usar este chatbot!
-    - text: Gracias {nombre} por utilizar este chatbot. ¡Que tengas un excelente día!
+    - text: Adiós, que tenga usted un buen día. ¡Gracias por utilizar este chatbot!
+    - text: Espero haberle sido de ayuda. ¡Adiós y gracias por usar este chatbot!
+    - text: Gracias {nombre} por utilizar este chatbot. ¡Que tenga usted un excelente día!
 
   utter_iamabot:
     - text: "Soy un bot, potenciado por Rasa."
@@ -112,30 +117,34 @@ responses:
     - text: ¡Hola! Soy un bot alimentado por Rasa.
 
   utter_repite:
-    - text: "No le he entendido, por favor responda a mi cuestión."
+    - text: "No le he entendido, por favor, ¿podría responder a mi cuestión?."
     - text: Disculpe, no le he entendido. Por favor, responda a mi pregunta.
     - text: Lo siento, no he comprendido su mensaje. ¿Podría por favor repetir su consulta?
-    - text: Perdón, no he entendido su respuesta. Le agradecería que repita su pregunta.
-    - text: Disculpe, parece que no he entendido correctamente. ¿Podría repetir su cuestión, por favor?
+    - text: Perdón, no he entendido su respuesta. Le agradecería a usted que repita su pregunta.
+    - text: Disculpe, parece que no le he entendido correctamente. ¿Podría repetir su cuestión, por favor?
     - text: Lamentablemente, no he logrado entender su mensaje. Le ruego que vuelva a plantear su pregunta.
   
   utter_default:
-    - text: "Lo siento, no lo he entendido. ¿Podría decirlo de otra manera?"
+    - text: Lo siento, no le he entendido. ¿Podría, por favor, decirlo de otra manera?
     - text: Mis disculpas, no he logrado entenderlo. ¿Podría reformular su pregunta, por favor?
     - text: Lo siento, no pude comprender su consulta. ¿Podría expresarlo de otra manera?
-    - text: Disculpe, no he entendido su mensaje. ¿Podría reformularlo para que pueda ayudarle mejor?
+    - text: Disculpe usted, no he entendido su mensaje. ¿Podría reformularlo para que pueda ayudarle mejor?
     - text: Perdón, no pude captar su mensaje. ¿Podría expresarlo de otra manera, por favor?
-    - text: Lamentablemente, no he logrado comprenderlo. ¿Podría decirlo de otra forma para que pueda asistirle adecuadamente?
+    - text: Lamentablemente, no he logrado comprenderle. ¿Podría decirlo de otra forma para que pueda asistirle adecuadamente?
 
   utter_ask_continue:
-    - text: ¿Estás seguro de que quieres para abortar el formulario?
-    - text: ¿Estás seguro de que quieres dejar la conversación?
+    - text: ¿Está seguro de que quiere abortar el formulario?
+    - text: ¿Está seguro de que quiere dejar la conversación?
 
   utter_ask_asignatura:
-    - text: ¿Qué asignatura quieres consultar? De momento puedo informarte sobre matematicas, tecnologia, fisica, aleman, biologia, dibujo tecnico, frances, quimica, tic, lengua, lingua, musica, ingles y filosofia.
-    - text: ¿Qué asignatura le interesa? De momento puedo informarte sobre matematicas, tecnologia, fisica, aleman, biologia, dibujo tecnico, frances, quimica, tic, lengua, lingua, musica, ingles y filosofia.
+    - text: ¿Qué asignatura quiere consultar? De momento puedo informarle sobre matematicas, tecnologia, fisica, aleman, biologia, dibujo artistico, dibujo tecnico, frances, historia, quimica, tic, geologia, literatura, lengua, lingua, musica, ingles, filosofia y economia.
+    - text: ¿Qué asignatura le interesa? De momento puedo informarle sobre matematicas, tecnologia, fisica, aleman, biologia, dibujo artistico, dibujo tecnico, frances, historia, quimica, tic, geologia, literatura, lengua, lingua, musica, ingles, filosofia y economia.
   
   utter_ask_tipo_dato:
-    - text: ¿Qué tipo de datos quieres que te cuente sobre {asignatura}? Cuento con información de {asignatura}, sobre resumen, examenes, libros, competencias, profesores, contenidos, metodologia, requisitos, dedicacion, evaluacion y universidad.
+    - text: ¿Qué tipo de datos quiere usted que le cuente sobre {asignatura}? Cuento con información de {asignatura}, sobre resumen, examenes, libros, competencias, profesores, contenidos, metodologia, requisitos, dedicacion, evaluacion, universidad, horas, proyectos, extracurriculares y practicas.
+
+  utter_cuestion_subjetiva:
+    - text: No puedo responder a cuestiones que requieren de una respuesta subjetiva. Hágame, por favor, otra pregunta que pueda responder.
+    - text: No puedo responder, {nombre}, a cuestiones que requieren de una respuesta subjetiva. {nombre}, hágame usted otra pregunta que pueda responder. 
 
 
