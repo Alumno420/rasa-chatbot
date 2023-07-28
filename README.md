@@ -1,5 +1,5 @@
 # rasa-chatbot: rama del chatbot proactivo usando botones
-![Demo Chatbot](https://raw.githubusercontent.com/Alumno420/rasa-chatbot/user-centered/DEMO-chatbot%20-%20user%20centered.png)
+![Demo Chatbot](https://raw.githubusercontent.com/Alumno420/rasa-chatbot/proactivo/DEMO-chatbot%20-%20proactivo.png)
 ### Instalación:
 La última versión oficial de Rasa 6.0 tiene demasiados bugs, por lo que hay que empezar downgrading:
 
