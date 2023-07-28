@@ -81,6 +81,7 @@ responses:
     - text: Un placer haberle ayudado, {nombre}.
     - text: Un placer haberle ayudado.
 
+
   utter_saludo:
     - text: "Hola soy un Chatbot creado para informarle sobre las asignaturas. Primero, ¿cómo se llama?"
     - text: ¡Hola! Soy un Chatbot especializado en brindar información sobre las asignaturas. Antes de comenzar, ¿me podría decir su nombre?
@@ -90,13 +91,46 @@ responses:
     - text: Saludos. Soy un Chatbot creado para asistirle con información sobre las asignaturas. Antes de continuar, ¿podría proporcionarme su nombre?
 
   utter_asignatura:
-    - text: "{nombre}. puede elegir entre matematicas, tecnologia, fisica, aleman, biologia, dibujo artistico, dibujo tecnico, frances, historia, quimica, tic, geologia, literatura, lengua, lingua, musica, ingles, filosofia y economia."
     - text: Puede elegir entre matematicas, tecnologia, fisica, aleman, biologia, dibujo artistico, dibujo tecnico, frances, historia, quimica, tic, geologia, literatura, lengua, lingua, musica, ingles, filosofia y economia.
-    - text: "{nombre}, puede elegir entre matematicas, tecnologia, fisica, aleman, biologia, dibujo artistico, dibujo tecnico, frances, historia, quimica, tic, geologia, literatura, lengua, lingua, musica, ingles, filosofia y economia."
-    - text: Puede elegir entre matematicas, tecnologia, fisica, aleman, biologia, dibujo artistico, dibujo tecnico, frances, historia, quimica, tic, geologia, literatura, lengua, lingua, musica, ingles, filosofia y economia.
-    - text: "{nombre}, puede elegir entre matematicas, tecnologia, fisica, aleman, biologia, dibujo artistico, dibujo tecnico, frances, historia, quimica, tic, geologia, literatura, lengua, lingua, musica, ingles, filosofia y economia."
-    - text: Tienes la opción de elegir entre matematicas, tecnologia, fisica, aleman, biologia, dibujo artistico, dibujo tecnico, frances, historia, quimica, tic, geologia, literatura, lengua, lingua, musica, ingles, filosofia y economia.
-    - text: "{nombre}, puedes seleccionar entre matematicas, tecnologia, fisica, aleman, biologia, dibujo artistico, dibujo tecnico, frances, historia, quimica, tic, geologia, literatura, lengua, lingua, musica, ingles, filosofia y economia."
+      buttons:
+      - title: "matematicas"
+        payload: '/informar{{"asignatura" : "matematicas"}}'
+      - title: "tecnologia"
+        payload: '/informar{{"asignatura" : "tecnologia"}}'
+      - title: "fisica"
+        payload: '/informar{{"asignatura" : "fisica"}}'
+      - title: "aleman"
+        payload: '/informar{{"asignatura" : "aleman"}}'
+      - title: "biologia"
+        payload: '/informar{{"asignatura" : "biologia"}}'
+      - title: "dibujo artistico"
+        payload: '/informar{{"asignatura" : "dibujo artistico"}}'
+      - title: "dibujo tecnico"
+        payload: '/informar{{"asignatura" : "dibujo tecnico"}}'
+      - title: "frances"
+        payload: '/informar{{"asignatura" : "frances"}}'
+      - title: "historia"
+        payload: '/informar{{"asignatura" : "historia"}}'
+      - title: "quimica"
+        payload: '/informar{{"asignatura" : "quimica"}}'
+      - title: "tic"
+        payload: '/informar{{"asignatura" : "tic"}}'
+      - title: "geologia"
+        payload: '/informar{{"asignatura" : "geologia"}}'
+      - title: "literatura"
+        payload: '/informar{{"asignatura" : "literatura"}}'
+      - title: "lengua"
+        payload: '/informar{{"asignatura" : "lengua"}}'
+      - title: "lingua"
+        payload: '/informar{{"asignatura" : "lingua"}}'
+      - title: "musica"
+        payload: '/informar{{"asignatura" : "musica"}}'
+      - title: "ingles"
+        payload: '/informar{{"asignatura" : "ingles"}}'
+      - title: "filosofia"
+        payload: '/informar{{"asignatura" : "filosofia"}}'
+      - title: "economia"
+        payload: '/informar{{"asignatura" : "economia"}}'
 
   utter_tipo_dato:
     - text: "Los tipos de datos que me puede solicitar sobre una asignatura son: resumen, examenes, libros, competencias, profesores, contenidos, metodologia, requisitos, dedicacion, evaluacion, universidad, horas, proyectos, extracurriculares y practicas" 
@@ -133,15 +167,84 @@ responses:
     - text: Lamentablemente, no he logrado comprenderlo. ¿Podría decirlo de otra forma para que pueda asistirle adecuadamente?
 
   utter_ask_continue:
-    - text: ¿Estás seguro de que quieres para abortar el formulario?
+    - text: ¿Estás seguro de que quieres abortar el formulario?
     - text: ¿Estás seguro de que quieres dejar la conversación?
 
   utter_ask_asignatura:
-    - text: ¿Qué asignatura quieres consultar? De momento puedo informarte sobre matematicas, tecnologia, fisica, aleman, biologia, dibujo artistico, dibujo tecnico, frances, historia, quimica, tic, geologia, literatura, lengua, lingua, musica, ingles, filosofia y economia.
     - text: ¿Qué asignatura le interesa? De momento puedo informarte sobre matematicas, tecnologia, fisica, aleman, biologia, dibujo artistico, dibujo tecnico, frances, historia, quimica, tic, geologia, literatura, lengua, lingua, musica, ingles, filosofia y economia.
-  
+      buttons:
+        - title: "matematicas"
+          payload: '/informar{{"asignatura" : "matematicas"}}'
+        - title: "tecnologia"
+          payload: '/informar{{"asignatura" : "tecnologia"}}'
+        - title: "fisica"
+          payload: '/informar{{"asignatura" : "fisica"}}'
+        - title: "aleman"
+          payload: '/informar{{"asignatura" : "aleman"}}'
+        - title: "biologia"
+          payload: '/informar{{"asignatura" : "biologia"}}'
+        - title: "dibujo artistico"
+          payload: '/informar{{"asignatura" : "dibujo artistico"}}'
+        - title: "dibujo tecnico"
+          payload: '/informar{{"asignatura" : "dibujo tecnico"}}'
+        - title: "frances"
+          payload: '/informar{{"asignatura" : "frances"}}'
+        - title: "historia"
+          payload: '/informar{{"asignatura" : "historia"}}'
+        - title: "quimica"
+          payload: '/informar{{"asignatura" : "quimica"}}'
+        - title: "tic"
+          payload: '/informar{{"asignatura" : "tic"}}'
+        - title: "geologia"
+          payload: '/informar{{"asignatura" : "geologia"}}'
+        - title: "literatura"
+          payload: '/informar{{"asignatura" : "literatura"}}'
+        - title: "lengua"
+          payload: '/informar{{"asignatura" : "lengua"}}'
+        - title: "lingua"
+          payload: '/informar{{"asignatura" : "lingua"}}'
+        - title: "musica"
+          payload: '/informar{{"asignatura" : "musica"}}'
+        - title: "ingles"
+          payload: '/informar{{"asignatura" : "ingles"}}'
+        - title: "filosofia"
+          payload: '/informar{{"asignatura" : "filosofia"}}'
+        - title: "economia"
+          payload: '/informar{{"asignatura" : "economia"}}'
+
   utter_ask_tipo_dato:
     - text: ¿Qué tipo de datos quieres que te cuente sobre {asignatura}? Cuento con información de {asignatura}, sobre resumen, examenes, libros, competencias, profesores, contenidos, metodologia, requisitos, dedicacion, evaluacion, universidad, horas, proyectos, extracurriculares y practicas.
+      buttons:
+        - title: "resumen"
+          payload: '/informar{{"tipo_dato" : "resumen"}}'
+        - title: "examenes"
+          payload: '/informar{{"tipo_dato" : "examenes"}}'
+        - title: "libros"
+          payload: '/informar{{"tipo_dato" : "libros"}}'
+        - title: "competencias"
+          payload: '/informar{{"tipo_dato" : "competencias"}}'
+        - title: "profesores"
+          payload: '/informar{{"tipo_dato" : "profesores"}}'
+        - title: "contenidos"
+          payload: '/informar{{"tipo_dato" : "contenidos"}}'
+        - title: "metodologia"
+          payload: '/informar{{"tipo_dato" : "metodologia"}}'
+        - title: "requisitos"
+          payload: '/informar{{"tipo_dato" : "requisitos"}}'
+        - title: "dedicacion"
+          payload: '/informar{{"tipo_dato" : "dedicacion"}}'
+        - title: "evaluacion"
+          payload: '/informar{{"tipo_dato" : "evaluacion"}}'
+        - title: "universidad"
+          payload: '/informar{{"tipo_dato" : "universidad"}}'
+        - title: "horas"
+          payload: '/informar{{"tipo_dato" : "horas"}}'
+        - title: "proyectos"
+          payload: '/informar{{"tipo_dato" : "proyectos"}}'
+        - title: "extracurriculares"
+          payload: '/informar{{"tipo_dato" : "extracurriculares"}}'
+        - title: "practicas"
+          payload: '/informar{{"tipo_dato" : "practicas"}}'
 
   utter_cuestion_subjetiva:
     - text: No puedo responder a cuestiones que requieren de una respuesta subjetiva. Hágame otra pregunta que pueda responder.
