@@ -136,26 +136,7 @@ sobre las asignaturas:
 	- El chatbot se despide
 	
 ## Notas del útlimo release:
-## Beta v2.1: **Universal Container**
-## Cuarto release beta del rasa-chatbot de mi trabajo de STEMBach. Esta versión es user-centered design.
-### Novedades:
-### USER CENTERED Design
+## Beta v2.4: Recursive Bingo
+Añadidos botones para que el chatbot sea proactivo.
 
-Al recabar preguntas de varios compañeros sobre las perguntas que le harían al chatbot me he dado cuenta de que debo añadir la sección _synonym_ para los diferentes **tipo_dato** y **asignaturas**, ya que usan diferentes variaciones de nombres para referirse al mismo concepto o idea, como "mates", "tecno" o "lengua". 
-
-Además también me sirvió para conocer que asignaturas más tengo que añadir, porque son las más solicitadas por ellos, como: literatura, lengua, lingua, música, biología, geología, dibujo técnico, dibujo artístico, TIC, alemán, inglés, francés, filosofía, historia, química y economía.
-
-También pude ver que los tipo_dato que yo había pensado no son suficientes, ya que también hay otro tipo de info que les interesa, como: horas de clase, proyectos, actividades extracurriculares o prácticas.
-
-Además, detecté que ciertos compañeros hacían preguntas sobre las asignaturas que requieren de una repuesta subjetiva, como: _¿Son buenos los profesores de química?_ o _¿Qué asignatura es la más fácil?_. Esto me sirvió para crear un nuevo _intent_ en el _domain.yml_ y en el _nlu.yml_ que detecte cuando el usuario trata de introducir un input que requiere de una valoración personal para ser respondida. Y que por medio de una _rule_ le muestre un _utter_ que le indique el chatbot no hace ese tipo de valoraciones subjetivas.
-
-También se añadió un _reset_ de todos los _slots_, para que cada vez que se detecta el _intent_ de informar se inicie el form desde cero, y que no pueda existir la posibilidad de que el chatbot vuelva a repetir la última respuesta o se quede colgado.
-
-Por último, se creo un `index.html` con un _snippet_ para tener una simple UI en el localhost:5005. Para poder correrlo hay que ejecutar en una terminal `rasa run --enable-api --cors="*"` y en otra `rasa run actions`, y por último, abrir en el navegador preferido `index.html`. El _endpoints.yml_ tiene que usar un puerto distinto al que usa el server API, en este caso distinto al 5005, y por eso uso 5055, en este puerto es donde se ejecuta el server que procesa con el _actions.py_ las _custom actions_ del chatbot de Rasa. En _credentials.yml_ noi hay que incluir nada más que `socketio`, no se especifican puertos porque el _default_ ya es el localhost:5005 .
-
-INTENTS AÑADIDOS (UTTERS CORRESPONDIENTES TAMBIÉN AÑADIDOS):
-- cuestion_subjetiva
-- interes_tipo_dato
-- interes_materias
-
-**Full Changelog**: https://github.com/Alumno420/rasa-chatbot/compare/v2.0-beta-ecru-prior...v2.1-beta-universal-container
+**Full Changelog**: https://github.com/Alumno420/rasa-chatbot/compare/v1.5-beta-central-volume...v2.4-beta-recursive-bingo
