@@ -133,7 +133,7 @@ responses:
     - text: Lamentablemente, no he logrado comprenderlo. ¿Podría decirlo de otra forma para que pueda asistirle adecuadamente?
 
   utter_ask_continue:
-    - text: ¿Estás seguro de que quieres para abortar el formulario?
+    - text: ¿Estás seguro de que quieres abortar el formulario?
     - text: ¿Estás seguro de que quieres dejar la conversación?
 
   utter_ask_asignatura:
