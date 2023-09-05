@@ -137,7 +137,7 @@ sobre las asignaturas:
 	
 ## Notas del útlimo release:
 ## Beta v3.1: **Open Estuary**
-## Sexto release beta del rasa-chatbot de mi trabajo de STEMBach. Esta versión es user-centered design.
+## Sexto release beta del rasa-chatbot de mi trabajo de STEMBach.
 ### Novedades:
 # INFORMAL
 
