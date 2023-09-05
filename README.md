@@ -35,6 +35,20 @@ Después:
 - En otra terminal distinta: `rasa run actions`
 - Cuando ambos servidores están `up and running` viajar al directorio `UI` y abrir en un navegador `ìndex.html`
 
+Si se quiere modificar la DB para cambiar las respuestas del chatbot se puede modificar **actions/dataDB.csv**, después abrir una terminal en ese dir y ejecutar:
+
+`sqlite3`
+
+`sqlite> .open dataDB.sqlite`
+
+`sqlite> .separator ";"`
+
+`sqlite> .import dataDB.csv data`
+
+`sqlite> .exit`
+
+`cp ./dataDB.sqlite ../`
+
 ## Utilidad del Chatbot
 Este chatbot de Rasa fue creado para responder preguntas que podría tener los alumnos de 2º de bachillerato sobre las asignaturas.
 
