@@ -703,3 +703,125 @@ stories:
     - requested_slot: null
   - active_loop: null
   - action: action_reset_all_slots
+
+- story: interactive_story_101234
+  steps:
+  - intent: proporcionar_nombre
+    entities:
+    - nombre: álvaro
+  - slot_was_set:
+    - nombre: álvaro
+  - action: utter_ask_asignatura
+  - intent: informar
+    entities:
+    - asignatura: música
+    - asignatura: física
+    - asignatura: biologia
+    - asignatura: tecnologia
+  - action: asignatura_tipo_dato_form
+  - active_loop: asignatura_tipo_dato_form
+  - slot_was_set:
+    - asignatura:
+      - musica
+      - fisica
+      - biologia
+      - tecnologia
+  - slot_was_set:
+    - requested_slot: tipo_dato
+  - slot_was_set:
+    - tipo_dato:
+      - profesores
+      - libros
+      - requisitos
+      - horas
+  - slot_was_set:
+    - tipo_dato:
+      - profesores
+      - libros
+      - requisitos
+      - horas
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_reset_all_slots
+  - slot_was_set:
+    - asignatura: null
+  - slot_was_set:
+    - tipo_dato: null
+
+- story: interactive_story_2351
+  steps:
+  - intent: proporcionar_nombre
+    entities:
+    - nombre: álvaro
+  - slot_was_set:
+    - nombre: álvaro
+  - action: utter_ask_asignatura
+  - intent: informar
+    entities:
+    - asignatura: ingles
+    - asignatura: física
+    - asignatura: dibujo tecnico
+    - asignatura: aleman
+  - action: asignatura_tipo_dato_form
+  - active_loop: asignatura_tipo_dato_form
+  - slot_was_set:
+    - asignatura:
+      - ingles
+      - fisica
+      - dibujo tecnico
+      - aleman
+  - slot_was_set:
+    - requested_slot: tipo_dato
+  - slot_was_set:
+    - tipo_dato:
+      - resumen
+      - competencias
+      - metodologia
+      - extracurriculares
+  - slot_was_set:
+    - tipo_dato:
+      - resumen
+      - competencias
+      - metodologia
+      - extracurriculares
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_reset_all_slots
+  - slot_was_set:
+    - asignatura: null
+  - slot_was_set:
+    - tipo_dato: null
+  - intent: informar
+    entities:
+    - asignatura: ingles
+    - asignatura: física
+    - asignatura: dibujo tecnico
+    - asignatura: aleman
+    - tipo_dato: profesores
+    - tipo_dato: contenidos
+    - tipo_dato: universidad
+    - tipo_dato: horas
+  - action: asignatura_tipo_dato_form
+  - active_loop: asignatura_tipo_dato_form
+  - slot_was_set:
+    - asignatura:
+      - ingles
+      - fisica
+      - dibujo tecnico
+      - aleman
+  - slot_was_set:
+    - tipo_dato:
+      - profesores
+      - contenidos
+      - universidad
+      - horas
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_reset_all_slots
+  - slot_was_set:
+    - asignatura: null
+  - slot_was_set:
+    - tipo_dato: null

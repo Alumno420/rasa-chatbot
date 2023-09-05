@@ -76,6 +76,7 @@ nlu:
     - gracia
     - ok muchas gracias
 
+
 - intent: afirmar
   examples: |
     - sí
@@ -827,6 +828,23 @@ nlu:
     - ¿Cuál es la importancia de dominar el uso de [tecno](asignatura) en el mundo digital actual?
     - ¿Qué avances y desarrollos recientes se han producido en el campo del [tech](asignatura) y su aplicación en la vida cotidiana?
     - ¿Cuál es el papel de las [techs](asignatura) en la innovación y la transformación de los procesos y sistemas existentes?
+    - quiero saber los [libros](tipo_dato) [profesores](tipo_dato) y [evaluación](tipo_dato) de [inglés](asignatura) y [matemáticas](asignatura) [geología](asignatura) y [biologia](asignatura)
+    - quiero saber los [proyectos](tipo_dato) [prácticas](tipo_dato) y [evaluación](tipo_dato)
+    - dime los [examenes](tipo_dato) [dedicacion](tipo_dato) [universidad](tipo_dato) y [horas](tipo_dato)
+    - dime los [contenidos](tipo_dato) [metodología](tipo_dato) [competencias](tipo_dato) y [extracurrilares](tipo_dato) de [música](asignatura) y [química](asignatura) [física](asignatura) y [biologia](asignatura)
+    - informame de los [contenidos](tipo_dato) [metodología](tipo_dato) [competencias](tipo_dato) y [extracurrilares](tipo_dato) de [música](asignatura) y [química](asignatura) [física](asignatura) y [biologia](asignatura)
+    - [contenidos](tipo_dato) [metodología](tipo_dato) [competencias](tipo_dato) [extracurrilares](tipo_dato) [música](asignatura) [química](asignatura) [física](asignatura) [biologia](asignatura)
+    - [libros](tipo_dato) [profesores](tipo_dato) y [evaluación](tipo_dato) de [inglés](asignatura) y [matemáticas](asignatura) [geología](asignatura) y [biologia](asignatura)
+    - [libros](tipo_dato) [profesores](tipo_dato) [evaluación](tipo_dato) [inglés](asignatura) [matemáticas](asignatura) [geología](asignatura)
+    - que sabes de los [contenidos](tipo_dato) [metodología](tipo_dato) [competencias](tipo_dato) y [extracurrilares](tipo_dato) de [música](asignatura) y [química](asignatura) [física](asignatura) y [biologia](asignatura)
+    - me interesa [música](asignatura) [física](asignatura) [bio]{"entity": "asignatura", "value": "biologia"} y [tecno]{"entity": "asignatura", "value": "tecnologia"}
+    - quiero saber los [profesores](tipo_dato) [libros](tipo_dato) [requisitos](tipo_dato) [horas](tipo_dato)
+    - dime [ingles](asignatura) [física](asignatura) [dibujo](asignatura) [aleman](asignatura)
+    - dime [ingles](asignatura) [física](asignatura) [dibujo]{"entity": "asignatura", "value": "dibujo tecnico"} [aleman](asignatura)
+    - dime [resumen](tipo_dato) [competencias](tipo_dato) [metodología]{"entity": "tipo_dato", "value": "metodologia"}  [extracurriculares](tipo_dato)
+    - cuéntame de [ingles](asignatura) [física](asignatura) [dibujo]{"entity": "asignatura", "value": "dibujo tecnico"} [aleman](asignatura) [profesores](tipo_dato) [contenidos](tipo_dato) [universidad](tipo_dato) [horas](tipo_dato)
+
+
     
 # Sinónimos de las asignaturas
 
@@ -1268,6 +1286,7 @@ nlu:
     - puedes decirme [Julieta](nombre)
     - me conocen como [Maike](nombre)
     - hola me llaman [Tino](nombre)
+    - hola me llamo [álvaro](nombre)
   
 - intent: cuestion_subjetiva
   examples: |
