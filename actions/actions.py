@@ -29,7 +29,7 @@ class manager_dataDB:
         self.data_dict = {}
         # Establecer una conexión a la base de datos SQLite
         try:
-            self.conn = sqlite3.connect(self.db)  # Reemplaza 'data.sqlite' con el nombre de tu archivo SQLite
+            self.conn = sqlite3.connect(self.db)
         except sqlite3.Error as e:
             print("Error al conectar SQLite3:", e)
             exit(1)
@@ -50,13 +50,13 @@ class manager_dataDB:
         for columna in columnas:
             self.nombre_columnas.append(columna[1])
 
-            consulta_valores = f"SELECT \"{columna[1]}\" FROM data;"  # Reemplaza 'columna2' y 'nombre_tabla' según corresponda
+            consulta_valores = f"SELECT \"{columna[1]}\" FROM data;"
             try:
                 self.cursor.execute(consulta_valores)
                 valores = self.cursor.fetchall()
                 self.data_dict[columna[1]] = list(valores)
             except sqlite3.Error as e:
-                print(f"Error al acceder la tabla {self.table} en 3 {self.db} :", e)
+                print(f"Error al acceder la tabla {self.table} en {self.db} :", e)
                 self.conn.close()
                 exit(1)
         
